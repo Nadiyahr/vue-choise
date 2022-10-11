@@ -1,0 +1,61 @@
+@import './base.scss';
+
+$theme-colors: (
+  'primary': #3b2186,
+  'secondary': #f2cf7e,
+  'success': #74b566,
+  'info': #76bedb,
+  'warning': #e6af5f,
+  'danger': #d83538,
+  'light': #f9f5e6,
+  'dark': #2b146c,
+  'gray-80': #555560,
+  'gray-60': #7f7f88,
+  'gray-40': #aaaaaf,
+  'gray-20': #d4d4d7,
+  'gray-10': #eaeaeb,
+  'title': #222,
+  'body': #444,
+  'line1': #ececec,
+  'white': #fff,
+);
+
+// $font-size-base: 14px;
+
+@import "../../node_modules/bootstrap//scss/bootstrap";
+
+.btn {
+  font-weight: 600;
+  border: none;
+}
+
+.btn-primary:disabled, .btn-primary.disabled {
+  background-color: #e0e0f7;
+  color: #2b1765;
+}
+
+.btn-secondary:disabled, .btn-secondary.disabled {
+  background-color: #fdf8ec;
+  color: #e5c270;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  background-color: #2b1765;
+}
+
+.btn-secondary:focus, .btn-secondary.focus {
+  background-color: #e5c270;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #d4d4d7;
+}
+
+.btn-default {
+  background-color: #6053b1;
+  color: #fff;
+}
