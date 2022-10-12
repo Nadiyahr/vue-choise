@@ -1,4 +1,4 @@
-;<template>
+<template>
   <svg
     width="74"
     height="111"

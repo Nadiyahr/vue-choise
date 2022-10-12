@@ -20,8 +20,6 @@ $theme-colors: (
   'white': #fff,
 );
 
-// $font-size-base: 14px;
-
 @import "../../node_modules/bootstrap//scss/bootstrap";
 
 .btn {
@@ -55,7 +53,6 @@ $theme-colors: (
   color: #d4d4d7;
 }
 
-.btn-default {
-  background-color: #6053b1;
-  color: #fff;
+.w-btn {
+  width: 147px;
 }
