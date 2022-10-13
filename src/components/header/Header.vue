@@ -1,6 +1,5 @@
 <script lang="ts">
 import HeaderDesctop from './HeaderDesctop.vue'
-import HederMobile from './HeaderMobile.vue'
 import HeaderMobile from './HeaderMobile.vue'
 
 export default {

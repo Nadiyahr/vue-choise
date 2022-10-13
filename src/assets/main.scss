@@ -20,6 +20,19 @@ $theme-colors: (
   'white': #fff,
 );
 
+$font-sizes: (
+  1: 52px,
+  2: 36px,
+  3: 24px,
+  4: 18px,
+  5: 16px,
+  6: 14px,
+  7: 12px,
+);
+
+$input-placeholder-color: #fff;
+
+
 @import "../../node_modules/bootstrap//scss/bootstrap";
 
 .btn {
@@ -51,8 +64,4 @@ $theme-colors: (
 
 .nav-link:hover {
   color: #d4d4d7;
-}
-
-.w-btn {
-  width: 147px;
 }

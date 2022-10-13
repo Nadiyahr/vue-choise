@@ -1,9 +1,9 @@
 <template>
-  <section class="px-5">
-    <b-container fluid class="text-dark p-5">
-      <b-row class="vh-100 gap-3">
+  <section class="">
+    <b-container fluid class="text-dark py-5">
+      <b-row class="gap-3 pb-5">
         <b-col>
-          <div>
+          <div class="p-4">
             <h2 class="fw-bolder mb-3 p-2">Choicie&nbsp;is&nbsp;a&nbsp;universal menu&nbsp;for&nbsp;all&nbsp;estaurants.</h2>
             <div class="fs-xs">
               <p class="mb-3 p-2">Foreign language names are no longer a problem.</p>
@@ -25,12 +25,12 @@
         <b-img fluid src="/images/infoAbout1.png" alt="Info Image"></b-img>
       </b-col>
       </b-row>
-      <b-row class="vh-100 gap-3">
+      <b-row class=" gap-3 pt-5">
       <b-col>
         <b-img fluid src="/images/infoAbout2.png" alt="Info Image"></b-img>
       </b-col>
       <b-col>
-          <div>
+          <div class="p-4">
             <h2 class="fw-bolder mb-3 p-2">And a new social network</h2>
             <div class="fs-xs">
               <p class="mb-3 p-2">For those who love food! Become an Influencer: add new restaurants to the city map, earn points, get followers.</p>

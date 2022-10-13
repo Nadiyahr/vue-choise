@@ -5,8 +5,8 @@ import MapRestaurantIcon from '../icons/MapRestaurantIcon.vue'
 import BonusIcon from '../icons/BonusIcon.vue'
 </script>
 <template>
-  <section class="bg-primary px-5">
-   <b-container fluid class="text-light p-5 ">
+  <section class="bg-dark">
+   <b-container fluid class="text-light py-5 ">
     <b-row>
       <b-col>
       <div>
@@ -24,21 +24,19 @@ import BonusIcon from '../icons/BonusIcon.vue'
         </div>
       </div>
       </b-col>
-      <b-col  class="bg-primary">
+      <b-col  class="bg-dark">
         <b-img fluid src="/images/startImg.png" alt="Start Image"></b-img>
       </b-col>
-      <!-- <b-row> -->
-      <!-- </b-row> -->
     </b-row>
     <b-row>
-        <h3>We are the first of our kind! Here you can find:</h3>
+        <h4>We are the first of our kind! Here you can find:</h4>
       <b-col class="d-flex gap-4 align-items-center">
         <div class="col-sm-2">
           <RestaurantReview class="mb-3" />
         </div>
         <div>
-          <h5>Restaurant Review</h5>
-          <p>Get best tips from our users and Choicie</p>
+          <h6>Restaurant Review</h6>
+          <p class="fs-7">Get best tips from our users and Choicie</p>
         </div>
       </b-col>
       <b-col class="d-flex gap-4 align-items-center">
@@ -46,8 +44,8 @@ import BonusIcon from '../icons/BonusIcon.vue'
           <MapRestaurantIcon class="mb-3" />
         </div>
         <div>
-          <h5>Map with Restaurant Tags</h5>
-          <p>Make simple selection by your criteria</p>
+          <h6>Map with Restaurant Tags</h6>
+          <p class="fs-7">Make simple selection by your criteria</p>
         </div>
       </b-col>
     </b-row>
@@ -57,8 +55,8 @@ import BonusIcon from '../icons/BonusIcon.vue'
           <QrCode class="mb-3" />
         </div>
         <div>
-          <h5>QR Code Menu</h5>
-          <p>Use fast and convenient way to create orders</p>
+          <h6>QR Code Menu</h6>
+          <p class="fs-7">Use fast and convenient way to create orders</p>
         </div>
       </b-col>
       <b-col class="d-flex gap-4 align-items-center">
@@ -66,8 +64,8 @@ import BonusIcon from '../icons/BonusIcon.vue'
           <BonusIcon class="mb-3" />
         </div>
         <div>
-          <h5>Bonus Points for Clients</h5>
-          <p>Spend it and get free drinks and dishes</p>
+          <h6>Bonus Points for Clients</h6>
+          <p class="fs-7">Spend it and get free drinks and dishes</p>
         </div>
       </b-col>
     </b-row>

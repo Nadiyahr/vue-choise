@@ -4,6 +4,8 @@ import Top from '../components/top/Top.vue'
 import VideoComponent from '../components/videoComponent/VideoComponent.vue'
 import AboutSection from '../components/about/AboutSection.vue'
 import HowToUseSection from '../components/howToUse/HowToUseSection.vue'
+import WorldMap from '../components/worldMap/WorldMap.vue'
+import Subscribe from '../components/subscribe/Subscribe.vue'
 </script>
 
 <template>
@@ -13,7 +15,9 @@ import HowToUseSection from '../components/howToUse/HowToUseSection.vue'
         <Top />
         <VideoComponent />
         <AboutSection />
-        <HowToUseSection /> 
+        <HowToUseSection />
+        <WorldMap />
+        <Subscribe />
       </main>
     </Layout>
   </div>
