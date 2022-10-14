@@ -1,8 +1,9 @@
 <script lang="ts">
+import { defineComponent } from "vue";
 import HeaderDesctop from './HeaderDesctop.vue'
 import HeaderMobile from './HeaderMobile.vue'
 
-export default {
+export default defineComponent({
     name: "Header",
     components: {
       HeaderDesctop,
@@ -16,16 +17,17 @@ export default {
         };
     },
     mounted() {
-        window.onresize = () => {
+        window.onresize = (): void => {
             this.windowWidth = window.innerWidth;
         };
     },
     methods: {
         isDesktop(): boolean {
-            return this.windowWidth > this.mobile;
+          const isDesck = this.windowWidth > this.mobile
+            return isDesck;
         }
     }
-}
+})
 
 </script>
 

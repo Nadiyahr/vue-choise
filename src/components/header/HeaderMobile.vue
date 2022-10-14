@@ -1,9 +1,10 @@
 <script lang="ts">
+import { defineComponent } from "vue";
 import Alien from '../icons/AlienIcon.vue'
 import Android from '../icons/AndroidIcon.vue'
 import IOS from '../icons/iOSIcon.vue'
 
-export default {
+export default defineComponent({
   name: 'HeaderMobile',
   components: {
     Alien,
@@ -21,7 +22,7 @@ export default {
       this.isOpen = !this.isOpen
     }
   }
-}
+})
 
 // const primaryColor = '#3b2186'
 // let isOpen = true

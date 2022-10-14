@@ -4,6 +4,7 @@
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "../App.vue.ts"],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
+    "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
