@@ -10,9 +10,9 @@ export default {
     },
     data() {
         return {
-            windowWidth: window.innerWidth,
+            windowWidth: window.innerWidth as number,
             success: false,
-            mobile: 600
+            mobile: 600 as number
         };
     },
     mounted() {
@@ -21,7 +21,7 @@ export default {
         };
     },
     methods: {
-        isDesktop() {
+        isDesktop(): boolean {
             return this.windowWidth > this.mobile;
         }
     }

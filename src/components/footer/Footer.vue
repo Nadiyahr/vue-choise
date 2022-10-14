@@ -27,7 +27,7 @@ import Alien from '../icons/AlienIcon.vue'
           </ul>
         </b-col>
         <b-col cols="4" class="px-5">
-          <b-form @submit.stop.prevent @reset="" class="py-4 text-ligth">
+          <b-form @submit="" @reset="" class="py-4 text-ligth">
             <b-form-input
               placeholder="Name"
               class="rounded-pill bg-primary mb-3 text-light"

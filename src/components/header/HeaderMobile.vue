@@ -12,14 +12,13 @@ export default {
   },
   data() {
     return {
-      isOpen: true,
+      isOpen: true as boolean,
       primaryColor: '#3b2186'
     }
   },
   methods: {
-    togle() {
+    togle(): void {
       this.isOpen = !this.isOpen
-      console.log(this.isOpen)
     }
   }
 }

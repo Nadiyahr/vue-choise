@@ -37,7 +37,7 @@ const model = computed({
           </div>
         </b-col>
         <b-col>
-          <b-form @submit.stop.prevent @reset="" class="py-4 text-ligth">
+          <b-form @submit="" @reset="" class="py-4 text-ligth">
             <b-form-input
               v-model="model"
               placeholder="You email"
