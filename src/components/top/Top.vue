@@ -25,7 +25,7 @@ import BonusIcon from '../icons/BonusIcon.vue'
       </div>
       </b-col>
       <b-col  class="bg-dark">
-        <b-img fluid src="/images/startImg.png" alt="Start Image"></b-img>
+        <b-img fluid src="images/startImg.png" alt="Start Image"></b-img>
       </b-col>
     </b-row>
     <b-row>

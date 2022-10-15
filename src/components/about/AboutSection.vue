@@ -22,12 +22,12 @@
           </div>
       </b-col>
       <b-col>
-        <b-img fluid src="/images/infoAbout1.png" alt="Info Image"></b-img>
+        <b-img fluid src="images/infoAbout1.png" alt="Info Image"></b-img>
       </b-col>
       </b-row>
       <b-row class=" gap-3 pt-5">
       <b-col>
-        <b-img fluid src="/images/infoAbout2.png" alt="Info Image"></b-img>
+        <b-img fluid src="images/infoAbout2.png" alt="Info Image"></b-img>
       </b-col>
       <b-col>
           <div class="p-4">

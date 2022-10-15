@@ -20,7 +20,7 @@ import AlienIcon from '../icons/AlienIcon.vue'
             <b-col>
               <div
                 class="bg-image bg-posiiton" 
-                style="background-image: url('/images/1.png');"
+                style="background-image: url('images/1.png');"
               >
                 <QrMenu class="mb-4"/>
                 <p>Scan the QR-code on the foreign language menu.</p>
@@ -29,7 +29,7 @@ import AlienIcon from '../icons/AlienIcon.vue'
             <b-col>
               <div
                 class="bg-posiiton bg-image"
-                style="background-image: url('/images/2.png');"
+                style="background-image: url('images/2.png');"
               >
                 <OnlineMenu class="mb-4"/>
                 <p>Automatically get to the online version of menu — it will be translated into your native language.</p>
@@ -40,7 +40,7 @@ import AlienIcon from '../icons/AlienIcon.vue'
             <b-col>
               <div
                 class="bg-image bg-posiiton" 
-                style="background-image: url('/images/3.png');"
+                style="background-image: url('images/3.png');"
               >
                 <QrOrder class="mb-4"/>
                 <p>Choose and order one or more dishes you like, then show your QR-code from Choicie to the waiter.</p>
@@ -50,7 +50,7 @@ import AlienIcon from '../icons/AlienIcon.vue'
               <div
                 class="bg-posiiton
                 bg-image"
-                style="background-image: url('/images/4.png');"
+                style="background-image: url('images/4.png');"
               >
                 <Feadback class="mb-4"/>
                 <p>Share your impressions, tips, and ratings to help other Choicie users.</p>

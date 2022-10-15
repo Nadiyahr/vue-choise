@@ -5,7 +5,7 @@ import Alien from '../icons/AlienIcon.vue'
 <template>
   <footer
     class="bg-dark bg-position text-light py-5"
-    style="background-image: url('/images/cover.png');">
+    style="background-image: url('images/cover.png');">
     <b-container >
       <b-row>
         <b-col >
