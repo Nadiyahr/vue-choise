@@ -11,6 +11,9 @@ header,
 section,
 footer {
   padding: 0 10%;
+  @media (max-width: 600px) {
+    padding: 0 1.25rem;
+  }
 }
 
 a {

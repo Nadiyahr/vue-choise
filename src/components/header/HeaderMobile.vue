@@ -13,7 +13,7 @@ export default defineComponent({
   },
   data() {
     return {
-      isOpen: true as boolean,
+      isOpen: false as boolean,
       primaryColor: '#3b2186'
     }
   },
@@ -35,12 +35,10 @@ export default defineComponent({
 
 <template>
   <div>
-  <b-navbar toggleable="lg" type="light" variant="" :class="isOpen ? 'when-opened' : 'when-closed'">
-    <!-- <b-navbar-toggle target="nav-collapse" type="light"> -->
-    <b-button @click="togle" id="menu-toggle" v-b-toggle="'sidebar-toggle'">
+  <b-navbar toggleable="lg" type="light" variant="ligth" :class="isOpen ? 'when-opened' : 'when-closed' ">
+    <b-button @click="togle" id="menu-toggle" v-b-toggle="'sidebar-toggle'" class="bg-white">
       <span class="navbar-toggler-icon mb-1 text-light" aria-hidden="true"></span>
     </b-button>
-    <!-- </b-navbar-toggle> -->
     <b-navbar-brand href="#" class="fs-5 text-dark fw-bolder d-flex flex justify-content-between align-items-center gap-3">
       <Alien :svgColor="primaryColor" />
       CHOICIE
@@ -50,21 +48,19 @@ export default defineComponent({
       <b-nav-form class="gap-3">
         <b-button pill size="sm" variant="primary" style="background-color: rgba(96, 83, 177, 1)">
           <Android />
-          <!-- <span class="d-none d-md-inline">Android</span> -->
         </b-button>
         <b-button pill size="sm" variant="secondary">
           <IOS />
-          <!-- <span class="d-none d-md-inline">iOS</span> -->
         </b-button>
       </b-nav-form>
     </b-navbar-nav>
-    <b-collapse id="collapse" v-model="isOpen" type="light" is-nav>
-      <b-navbar-nav class="fs-6">
-        <b-nav-item href="#">Home</b-nav-item>
-        <b-nav-item href="#">About</b-nav-item>
-        <b-nav-item href="#">Client</b-nav-item>
-        <b-nav-item href="#">How to use</b-nav-item>
-        <b-nav-item href="#">Contact</b-nav-item>
+    <b-collapse id="collapse" v-model="isOpen" type="dark" is-nav>
+      <b-navbar-nav class="fs-4 text-dark">
+        <b-nav-item to="#" class="mx-auto">Home</b-nav-item>
+        <b-nav-item to="#" class="mx-auto">About</b-nav-item>
+        <b-nav-item to="#" class="mx-auto">Client</b-nav-item>
+        <b-nav-item to="#" class="mx-auto">How to use</b-nav-item>
+        <b-nav-item to="#" class="mx-auto">Contact</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

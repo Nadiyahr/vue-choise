@@ -9,13 +9,13 @@ const secondaryColor = '#f2cf7e'
 <template>
   <header class="bg-dark">
     <b-navbar type="dark" variant="dark" class="fs-4">
-      <b-navbar-nav class="fs-6 fw-bold">
-        <b-navbar-brand href="#" class="fs-3 text-light fw-bolder d-flex flex justify-content-between align-items-center gap-3">
+      <b-navbar-nav class="fs-6 fw-bold ">
+        <b-navbar-brand to="/" class="fs-3 text-light fw-bolder d-flex flex justify-content-between align-items-center gap-3">
           <Alien :svgColor="secondaryColor" />
           CHOICIE
         </b-navbar-brand>
-        <b-nav-item href="#">Home</b-nav-item>
-        <b-nav-item href="#">About</b-nav-item>
+        <b-nav-item router-component-name="/" to="/">Home</b-nav-item>
+        <b-nav-item router-component-name="/vue-choise/about" to="/about">About</b-nav-item>
         <b-nav-item href="#">Client</b-nav-item>
         <b-nav-item href="#">How to use</b-nav-item>
         <b-nav-item href="#">Contact</b-nav-item>

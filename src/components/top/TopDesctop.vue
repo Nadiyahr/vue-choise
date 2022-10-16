@@ -3,26 +3,14 @@ import RestaurantReview from '../icons/RestaurantReviewIcon.vue'
 import QrCode from '../icons/QrCode.vue'
 import MapRestaurantIcon from '../icons/MapRestaurantIcon.vue'
 import BonusIcon from '../icons/BonusIcon.vue'
+import TopGetStarted from './TopGetStarted.vue'
 </script>
 <template>
   <section class="bg-dark">
    <b-container fluid class="text-light py-5 ">
     <b-row>
       <b-col>
-      <div>
-        <h1 class="mb-3 p-2 fw-bolder">All&nbsp;the&nbsp;restaurants in&nbsp;the&nbsp;world&nbsp;-<br/>with&nbsp;one&nbsp;tap</h1>
-        <p class="mb-3 p-2">And a good friend with the same name. He understands that feeling of being an alien in another country, so here is Choicie, an app. It can make your journey, date or meeting with friends much better. </p>
-        <div class="p-2">
-          <b-button
-            pill
-            size="md"
-            variant="secondary"
-            class="w-btn"
-          >
-            Get Started
-          </b-button>
-        </div>
-      </div>
+        <TopGetStarted />
       </b-col>
       <b-col  class="bg-dark">
         <b-img fluid src="images/startImg.png" alt="Start Image"></b-img>

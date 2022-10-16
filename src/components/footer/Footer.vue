@@ -19,12 +19,10 @@ import Alien from '../icons/AlienIcon.vue'
           <h5>Privacy Policy</h5>
         </b-col>
         <b-col>
-          <ul>
-          <li class="pb-2"><a href="/"><h5>Facebook</h5></a></li>
-          <li class="pb-2"><a href="/"><h5>Twitter</h5></a></li>
-          <li class="pb-2"><a href="/"><h5>Instagram</h5></a></li>
-          <li class="pb-2"><a href="/"><h5>LinkedIn</h5></a></li>
-          </ul>
+          <b-nav-item class="pb-2"><h5>Facebook</h5></b-nav-item>
+          <b-nav-item class="pb-2"><h5>Twitter</h5></b-nav-item>
+          <b-nav-item class="pb-2"><h5>Instagram</h5></b-nav-item>
+          <b-nav-item class="pb-2"><h5>LinkedIn</h5></b-nav-item>
         </b-col>
         <b-col cols="4" class="px-5">
           <b-form @submit="" @reset="" class="py-4 text-ligth">
