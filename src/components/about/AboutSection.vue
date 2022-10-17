@@ -10,10 +10,10 @@ const props = withDefaults(defineProps<Props>(), {
 })
 </script>
 <template>
-  <section class="p-2">
+  <section class="md-p-2">
     <div fluid class="text-dark py-5">
       <b-row class="gap-3 pb-5">
-        <b-col v-if="isMobile">
+        <b-col v-if="props.isMobile">
         <b-img center src="images/infoMobile1.png" alt="Info Image" class="mx-auto"></b-img>
        </b-col>
         <b-col>
@@ -35,15 +35,15 @@ const props = withDefaults(defineProps<Props>(), {
             </div>
           </div>
       </b-col>
-      <b-col v-if="!isMobile">
+      <b-col v-if="!props.isMobile">
         <b-img fluid src="images/infoAbout1.png" alt="Info Image"></b-img>
       </b-col>
       </b-row>
       <b-row class=" gap-3 pt-5" :class="isMobile && 'flex-column'">
-        <b-col v-if="isMobile">
+        <b-col v-if="props.isMobile">
         <b-img center src="images/infoMobile2.png" alt="Info Image"></b-img>
       </b-col>
-      <b-col v-if="!isMobile">
+      <b-col v-if="!props.isMobile">
         <b-img fluid src="images/infoAbout2.png" alt="Info Image"></b-img>
       </b-col>
       <b-col>
