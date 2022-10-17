@@ -1,13 +1,31 @@
+<script setup lang="ts">
+import type { ColorVariant } from 'bootstrap-vue-3';
+
+export interface Props {
+  isMobile?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  isMobile: false
+})
+</script>
+
 <template>
-  <article>
+  <article class="sm-fs-7 sm-flex ">
     <div>
-        <h1 class="mb-5 p-2 pb-4 fw-bolder">All&nbsp;the&nbsp;restaurants in&nbsp;the&nbsp;world&nbsp;-<br/>with&nbsp;one&nbsp;tap</h1>
-        <p class="mb-5 p-2">And a good friend with the same name. He understands that feeling of being an alien in another country, so here is Choicie, an app. It can make your journey, date or meeting with friends much better. </p>
+        <h1
+          class="fw-bolder py-4 lg-pb-4 lg-mb-5 lg-p-2"
+        >
+          All&nbsp;the&nbsp;restaurants <br/>in&nbsp;the&nbsp;world&nbsp;-<br/>with&nbsp;one&nbsp;tap
+        </h1>
+        <p class="pb-3 lg-pb-0 lg-mb-5">
+          And a good friend with the same name. He understands that feeling of being an alien in another country, so here is Choicie, an app. It can make your journey, date or meeting with friends much better.
+        </p>
         <div class="p-2">
           <b-button
             pill
             size="md"
-            variant="secondary"
+            :variant="isMobile ? 'primary' : 'secondary'"
             class="w-btn"
           >
             Get Started

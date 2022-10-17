@@ -4,6 +4,7 @@ import QrCode from '../icons/QrCode.vue'
 import MapRestaurantIcon from '../icons/MapRestaurantIcon.vue'
 import BonusIcon from '../icons/BonusIcon.vue'
 import TopGetStarted from './TopGetStarted.vue'
+
 </script>
 <template>
   <section class="bg-dark">

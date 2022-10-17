@@ -5,8 +5,8 @@ import TopWeAre from './TopWeAre.vue'
 </script>
 
 <template>
-  <section class="bg-ligth">
-    <TopGetStarted />
+  <section class="bg-light">
+    <TopGetStarted is-mobile/>
     <TopWeAre />
   </section>
 </template>

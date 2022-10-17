@@ -31,4 +31,7 @@ ul, li {
 
 .w-btn {
   width: 147px;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
