@@ -1,16 +1,29 @@
 <script setup lang="ts">
-import Header from './header/Header.vue'
 import HeaderDesctop from './header/HeaderDesctop.vue'
 import HeaderMobile from './header/HeaderMobile.vue'
 import Footer from './footer/Footer.vue'
+
+export interface Props {
+  isHome?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  isHome: false
+})
 
 const windowWidth = window.innerWidth
 const mobile = 600
 
 function isDesktop(): boolean {
-    const isDesck = windowWidth > mobile
-      return isDesck;
-  }
+
+  return windowWidth > mobile
+}
+
+function home(): boolean {
+
+  return (isDesktop() && props.isHome) || (isDesktop() && !props.isHome)
+}
+
 </script>
 
 <template>
@@ -19,6 +32,6 @@ function isDesktop(): boolean {
     <HeaderMobile v-else />
     <!-- <Header /> -->
     <slot></slot>
-    <Footer />
+    <Footer :is-home="home()"/>
   </main>
 </template>

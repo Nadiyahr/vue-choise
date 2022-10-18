@@ -20,7 +20,7 @@ function isDesktop(): boolean {
 
 <template>
   <div>
-    <Layout>
+    <Layout is-home>
       <main v-if="isDesktop()">
         <TopDesctop />
         <VideoComponent />
@@ -33,7 +33,7 @@ function isDesktop(): boolean {
         <TopMobile />
         <AboutSection is-mobile/>
         <HowToUseMobile />
-        <WorldMap />
+        <WorldMap is-mobile/>
         <Subscribe />
       </main>
     </Layout>

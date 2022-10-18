@@ -25,7 +25,7 @@ const model = computed({
   <section class=" bg-primary text-light">
     <b-container fluid class="">
       <b-row>
-        <b-col cols="8">
+        <b-col sm="12" md="8">
           <div class="py-4">
             <h2 class="text-ligth fw-bolder">
               Subscribe and become a part of Choicie

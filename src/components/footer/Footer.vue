@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import Alien from '../icons/AlienIcon.vue'
+export interface Props {
+  isHome?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  isHome: false
+})
 </script>
 
 <template>
@@ -7,25 +14,32 @@ import Alien from '../icons/AlienIcon.vue'
     class="bg-dark bg-position text-light py-5"
     style="background-image: url('images/cover.png');">
     <!-- <b-container > -->
-      <b-row>
-        <b-col >
-        <div class="fs-3 text-light fw-bolder d-flex flex gap-4 align-items-center">
+      <b-row class="px-2 lg-px-0">
+        <b-col sm="12" md="3" class="pb-3">
+        <div class="fs-4 lg-fs-3 text-light fw-bolder d-flex flex gap-4 align-items-center">
           <Alien :svgColor="'#f2cf7e'" />
           CHOICIE
         </div>
         <p class="fs-7">You know what you choose!</p>
         </b-col>
-        <b-col>
-          <h5>Privacy Policy</h5>
+        <b-col class="pb-4 fs-5 text ps-2">
+          <div v-if="!isHome">
+            <p>Home</p>
+            <p>Universal Menu</p>
+            <p>How do use</p>
+            <p>Growth Factor</p>
+            <p>Growth Factor</p>
+          </div>
+          <p>Privacy Policy</p>
         </b-col>
-        <b-col>
-          <b-nav-item class="pb-2"><h5>Facebook</h5></b-nav-item>
-          <b-nav-item class="pb-2"><h5>Twitter</h5></b-nav-item>
-          <b-nav-item class="pb-2"><h5>Instagram</h5></b-nav-item>
-          <b-nav-item class="pb-2"><h5>LinkedIn</h5></b-nav-item>
+        <b-col class="ps-5 fs-5">
+          <b-nav-item class=""><p>Facebook</p></b-nav-item>
+          <b-nav-item class=""><p>Twitter</p></b-nav-item>
+          <b-nav-item class=""><p>Instagram</p></b-nav-item>
+          <b-nav-item class=""><p>LinkedIn</p></b-nav-item>
         </b-col>
-        <b-col cols="4" class="px-5">
-          <b-form @submit="" @reset="" class="py-4 text-ligth">
+        <b-col lg="4" class="lg-px-5">
+          <b-form @submit="" @reset="" class="text-ligth">
             <b-form-input
               placeholder="Name"
               class="rounded-pill bg-primary mb-3 text-light"
