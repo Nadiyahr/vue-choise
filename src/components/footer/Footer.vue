@@ -7,6 +7,7 @@ export interface Props {
 const props = withDefaults(defineProps<Props>(), {
   isHome: false
 })
+
 </script>
 
 <template>

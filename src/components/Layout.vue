@@ -27,11 +27,11 @@ function home(): boolean {
 </script>
 
 <template>
-  <main class="fs-6">
+  <div class="fs-6">
     <HeaderDesctop v-if="isDesktop()" />
     <HeaderMobile v-else />
     <!-- <Header /> -->
     <slot></slot>
     <Footer :is-home="home()"/>
-  </main>
+  </div>
 </template>

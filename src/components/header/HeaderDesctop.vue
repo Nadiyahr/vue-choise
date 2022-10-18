@@ -14,11 +14,11 @@ const secondaryColor = '#f2cf7e'
           <Alien :svgColor="secondaryColor" />
           CHOICIE
         </b-navbar-brand>
-        <b-nav-item router-component-name="/" to="/">Home</b-nav-item>
-        <b-nav-item router-component-name="/vue-choise/about" to="/about">About</b-nav-item>
-        <b-nav-item href="#">Client</b-nav-item>
-        <b-nav-item href="#">How to use</b-nav-item>
-        <b-nav-item href="#">Contact</b-nav-item>
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/">Client</router-link>
+        <router-link to="/">How to use</router-link>
+        <router-link to="/">Contact</router-link>
       </b-navbar-nav>
       <!-- Right aligned nav items -->
         <b-navbar-nav class="">
@@ -47,3 +47,11 @@ const secondaryColor = '#f2cf7e'
     </b-navbar>
 </header>
 </template>
+
+<style scoped>
+a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+</style>
