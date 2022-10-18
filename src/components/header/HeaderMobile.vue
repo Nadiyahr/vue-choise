@@ -31,7 +31,7 @@ export default defineComponent({
 
 <template>
   <div>
-  <b-navbar toggleable="lg" :variant="isOpen ? 'primary' : 'light'" >
+  <b-navbar toggleable :variant="isOpen ? 'primary' : 'light'" >
     <b-button @click="togle" id="menu-toggle" v-b-toggle="'sidebar-toggle'" :class="isOpen ? 'bg-primary' : 'bg-light'">
       <span class="navbar-toggler-icon mb-1" aria-hidden="true"></span>
     </b-button>

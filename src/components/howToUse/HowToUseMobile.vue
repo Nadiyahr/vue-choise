@@ -3,11 +3,12 @@ import Barcode from "../icons/Barcode.vue";
 import Chat from "../icons/Chat.vue";
 import MenuMobile from "../icons/MenuMobile.vue";
 import HowToGetStart from "./HowToGetStart.vue";
+import Ellipse from "../icons/Ellipse.vue";
 </script>
 
 <template>
-  <section class="bg-light">
-    <b-container class="p-2 vw-100 overflow-auto no-scroll">
+  <section class="bg-light py-4">
+    <b-container class="p-2 vw-100 overflow-auto no-scroll pb-4">
      <b-row class="w-max">
       <b-col>
         <div
@@ -47,7 +48,10 @@ import HowToGetStart from "./HowToGetStart.vue";
       </b-col>
      </b-row>
     </b-container>
-    <div class="p-2">
+    <div class="p-2 border-top pt-5 position-relative">
+      <div class="w-max position-absolute top-0 start-50 translate-middle">
+        <Ellipse />
+      </div>
       <HowToGetStart />
     </div>
   </section>
@@ -58,13 +62,14 @@ import HowToGetStart from "./HowToGetStart.vue";
   width: max-content;
 }
 
-.w-fit {
-  width: fit-content;
-}
-
 .bg-posiiton {
   width: 250px;
   background-repeat: no-repeat;
   background-position: 75% 10%;
 }
+ellipse{
+  position: relative;
+}
+
+
 </style>

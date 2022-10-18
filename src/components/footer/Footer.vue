@@ -6,7 +6,7 @@ import Alien from '../icons/AlienIcon.vue'
   <footer
     class="bg-dark bg-position text-light py-5"
     style="background-image: url('images/cover.png');">
-    <b-container >
+    <!-- <b-container > -->
       <b-row>
         <b-col >
         <div class="fs-3 text-light fw-bolder d-flex flex gap-4 align-items-center">
@@ -49,7 +49,7 @@ import Alien from '../icons/AlienIcon.vue'
           </b-form>
         </b-col>
       </b-row>
-    </b-container>
+    <!-- </b-container> -->
   </footer>
 </template>
 
