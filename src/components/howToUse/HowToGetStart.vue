@@ -17,7 +17,7 @@ import AlienIcon from "../icons/AlienIcon.vue";
       <AlienIcon :svgColor="'#aaaaaf'" class="mb-3"/>
       <p>No need to install any translator — all you need is Choicie </p>
     </div>
-    <div class="p-2 mt-5 lg-ps-5">
+    <div class="p-2 mt-4 lg-mt-5 lg-ps-5">
       <b-button
         pill
         size="md"

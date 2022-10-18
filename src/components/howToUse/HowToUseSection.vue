@@ -10,7 +10,7 @@ import HowToGetStart from './HowToGetStart.vue'
 </script>
 
 <template>
-  <section class="bg-light">
+  <section id="howTo" class="bg-light">
     <b-container fluid class="text-dark py-5">
       <h2 class="fw-bolder text-center mb-5 p-2">
         How do I use Choicie?

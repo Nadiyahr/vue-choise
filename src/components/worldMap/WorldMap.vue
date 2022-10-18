@@ -1,14 +1,5 @@
-<script setup lang="ts">
-export interface Props {
-  isMobile?: boolean
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  isMobile: false
-})
-</script>
 <template>
-  <section class="py-5">
+  <section id="map" class="py-5">
     <div class="">
       <p class="text-primary md-fs-5 text fw-semibold md-fw-bold text-center mb-4">We work with cafe and restaurant <br v-if="isMobile" /> owners from</p>
       <h2 v-if="isMobile" class="fw-bolder fs-2 text-center mb-4">10 countries, 5 continents</h2>
@@ -19,3 +10,13 @@ const props = withDefaults(defineProps<Props>(), {
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+export interface Props {
+  isMobile?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  isMobile: false
+})
+</script>

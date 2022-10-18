@@ -2,23 +2,32 @@
 import Alien from '../icons/AlienIcon.vue'
 import Android from '../icons/AndroidIcon.vue'
 import IOS from '../icons/iOSIcon.vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const path = route.path
+
+function isAbout() {
+  return path === '/about'
+}
 
 const secondaryColor = '#f2cf7e'
+const darkColor = '#2b146c'
 </script>
 
 <template>
-  <header class="bg-dark">
-    <b-navbar type="dark" variant="dark" class="fs-4">
-      <b-navbar-nav class="fs-6 fw-bold ">
-        <b-navbar-brand to="/" class="fs-3 text-light fw-bolder d-flex flex justify-content-between align-items-center gap-3">
-          <Alien :svgColor="secondaryColor" />
+  <header :class="isAbout() ? 'bg-light1 text-dark' : 'bg-dark text-white'">
+    <b-navbar type="light" class="fs-4" :class="isAbout() ? 'bg-light1 text-dark' : 'bg-dark text-white'" >
+      <b-navbar-nav class="fs-6 fw-bold" >
+        <b-navbar-brand to="/" class="fs-3 text-light fw-bolder d-flex flex justify-content-between align-items-center gap-3" :class="isAbout() ? 'text-dark' : 'text-white'">
+          <Alien :svgColor="isAbout() ? darkColor : secondaryColor" />
           CHOICIE
         </b-navbar-brand>
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/">Client</router-link>
-        <router-link to="/">How to use</router-link>
-        <router-link to="/">Contact</router-link>
+        <b-nav-item to="/" class="py-2 pe-2" :class="isAbout() ? 'text-dark' : 'text-white'">Home</b-nav-item>
+        <b-nav-item to="/about" class="py-2 pe-2" :class="isAbout() ? 'text-dark' : 'text-white'">About</b-nav-item>
+        <b-nav-item href="#map" class="py-2 pe-2" :class="isAbout() ? 'text-dark' : 'text-white'">Client</b-nav-item>
+        <b-nav-item href="#howTo" class="py-2 pe-2" :class="isAbout() ? 'text-dark' : 'text-white'">How to use</b-nav-item>
+        <b-nav-item href="#contact" class="py-2" :class="isAbout() ? 'text-dark' : 'text-white'">Contact</b-nav-item>
       </b-navbar-nav>
       <!-- Right aligned nav items -->
         <b-navbar-nav class="">
@@ -45,7 +54,7 @@ const secondaryColor = '#f2cf7e'
           </b-nav-form>
         </b-navbar-nav>
     </b-navbar>
-</header>
+  </header>
 </template>
 
 <style scoped>
