@@ -6,6 +6,7 @@ import Feadback from '../icons/Feadback.vue'
 import Apps from '../icons/Apps.vue'
 import Language from '../icons/Language.vue'
 import AlienIcon from '../icons/AlienIcon.vue'
+import HowToGetStart from './HowToGetStart.vue'
 </script>
 
 <template>
@@ -14,7 +15,7 @@ import AlienIcon from '../icons/AlienIcon.vue'
       <h2 class="fw-bolder text-center mb-5 p-2">
         How do I use Choicie?
       </h2>
-      <div class="d-flex ">
+      <div class="d-flex">
         <div class="w-75">
           <b-row>
             <b-col>
@@ -60,28 +61,7 @@ import AlienIcon from '../icons/AlienIcon.vue'
         </div>
         <div class="border-start pl-5 ">
           <b-col class="px-5">
-          <div class="d-flex gap-4 align-items-center ps-5">
-            <Apps class="mb-3"/>
-            <p>No language barrier</p>
-          </div>
-          <div class="d-flex gap-4 align-items-center ps-5">
-            <Language class="mb-3"/>
-            <p>No need to search for reviews — all collected in one place</p>
-          </div>
-          <div class="d-flex gap-4 align-items-center ps-5">
-            <AlienIcon :svgColor="'#aaaaaf'" class="mb-3"/>
-            <p>No need to install any translator — all you need is Choicie </p>
-          </div>
-          <div class="p-2 mt-5 ps-5">
-            <b-button
-              pill
-              size="md"
-              variant="secondary"
-              class="w-btn"
-            >
-              Get Started
-            </b-button>
-          </div>
+           <HowToGetStart />
           </b-col>
         </div>
       </div>

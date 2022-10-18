@@ -7,6 +7,7 @@ import HowToUseSection from '../components/howToUse/HowToUseSection.vue'
 import WorldMap from '../components/worldMap/WorldMap.vue'
 import Subscribe from '../components/subscribe/Subscribe.vue'
 import TopMobile from '../components/top/TopMobile.vue'
+import HowToUseMobile from '../components/howToUse/HowToUseMobile.vue'
 
 const windowWidth = window.innerWidth
 const mobile = 600
@@ -31,7 +32,7 @@ function isDesktop(): boolean {
       <main v-else>
         <TopMobile />
         <AboutSection is-mobile/>
-        <HowToUseSection />
+        <HowToUseMobile />
         <WorldMap />
         <Subscribe />
       </main>

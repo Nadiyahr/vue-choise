@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { ColorVariant } from 'bootstrap-vue-3';
-
 export interface Props {
   isMobile?: boolean
 }
@@ -8,7 +6,9 @@ export interface Props {
 const props = withDefaults(defineProps<Props>(), {
   isMobile: false
 })
+
 </script>
+
 <template>
   <section class="md-p-2">
     <div fluid class="text-dark py-5">
@@ -39,7 +39,7 @@ const props = withDefaults(defineProps<Props>(), {
         <b-img fluid src="images/infoAbout1.png" alt="Info Image"></b-img>
       </b-col>
       </b-row>
-      <b-row class=" gap-3 pt-5" :class="isMobile && 'flex-column'">
+      <b-row class=" gap-3 pt-5" :class="props.isMobile && 'flex-column'">
         <b-col v-if="props.isMobile">
         <b-img center src="images/infoMobile2.png" alt="Info Image"></b-img>
       </b-col>
