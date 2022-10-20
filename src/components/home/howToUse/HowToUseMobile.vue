@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Barcode from "../icons/Barcode.vue";
+import Barcode from "../../icons/Barcode.vue";
 import Chat from "../../icons/Chat.vue";
 import MenuMobile from "../../icons/MenuMobile.vue";
 import Ellipse from "../../icons/Ellipse.vue";
