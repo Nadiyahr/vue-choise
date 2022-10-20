@@ -27,7 +27,7 @@ const model = computed({
       <b-row>
         <b-col sm="12" md="8">
           <div class="py-4">
-            <h2 class="text-ligth fw-bolder">
+            <h2 class="text-white fw-bolder">
               Subscribe and become a part of Choicie
             </h2>
             <p class="fs-4">

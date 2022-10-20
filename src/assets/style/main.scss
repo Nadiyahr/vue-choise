@@ -1,24 +1,26 @@
 @import './base.scss';
+@import './vars.scss';
 
 $theme-colors: (
-  'primary': #3b2186,
-  'secondary': #f2cf7e,
-  'success': #74b566,
-  'info': #76bedb,
-  'warning': #e6af5f,
-  'danger': #d83538,
-  'light': #f9f5e6,
-  'dark': #2b146c,
-  'gray-80': #555560,
-  'gray-60': #7f7f88,
-  'gray-40': #aaaaaf,
-  'gray-20': #d4d4d7,
-  'gray-10': #eaeaeb,
-  'title': #222,
-  'body': #444,
-  'line1': #ececec,
-  'white': #fff,
-  'light1': #e1efff
+  'primary': $my-prymary,
+  'secondary': $my-secondary,
+  'success': $my-success,
+  'info': $my-info,
+  'warning': $my-warning,
+  'danger': $my-danger,
+  'light': $my-light,
+  'dark': $my-dark,
+  'gray-80': $gray-80,
+  'gray-60': $gray-60,
+  'gray-40': $gray-40,
+  'gray-20': $gray-20,
+  'gray-10': $gray-10,
+  // 'title': #222,
+  'body': $my-body,
+  'line1': $line1,
+  'white': $white,
+  'prymary-light': $my-prymary-2,
+  'content-heading': $content-heading
 );
 
 $font-sizes: (
@@ -34,7 +36,7 @@ $font-sizes: (
 $input-placeholder-color: #fff;
 
 
-@import "../../node_modules/bootstrap//scss/bootstrap";
+@import "../../../node_modules/bootstrap//scss/bootstrap";
 
 .btn {
   font-weight: 600;

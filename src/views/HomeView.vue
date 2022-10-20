@@ -22,30 +22,26 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
-import Layout from '../components/Layout.vue'
-import VideoComponent from '../components/videoComponent/VideoComponent.vue'
-import AboutSection from '../components/about/AboutSection.vue'
-import WorldMap from '../components/worldMap/WorldMap.vue'
-import Subscribe from '../components/subscribe/Subscribe.vue'
-// import HowToUseMobile from '../components/howToUse/HowToUseMobile.vue'
-// import HowToUseSection from '../components/howToUse/HowToUseSection.vue'
-// import TopMobile from '../components/top/TopMobile.vue'
-// import TopDesctop from '../components/top/TopDesctop.vue'
+import Layout from '../components/layout/index.vue'
+import VideoComponent from '../components/home/videoComponent/VideoComponent.vue'
+import AboutSection from '../components/home/about/AboutSection.vue'
+import WorldMap from '../components/home/worldMap/WorldMap.vue'
+import Subscribe from '../components/home/subscribe/Subscribe.vue'
 
 const TopDesctop = defineAsyncComponent(() =>
-  import('../components/top/TopDesctop.vue')
+  import('../components/home/top/TopDesctop.vue')
 )
 
 const TopMobile = defineAsyncComponent(() =>
-  import('../components/top/TopMobile.vue')
+  import('../components/home/top/TopMobile.vue')
 )
 
 const HowToUseSection = defineAsyncComponent(() =>
-  import('../components/howToUse/HowToUseSection.vue')
+  import('../components/home/howToUse/HowToUseSection.vue')
 )
 
 const HowToUseMobile = defineAsyncComponent(() =>
-  import('../components/howToUse/HowToUseMobile.vue')
+  import('../components/home/howToUse/HowToUseMobile.vue')
 )
 
 const windowWidth = window.innerWidth

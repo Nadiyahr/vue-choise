@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Review from '../icons/Review.vue'
-import QrCodeMobile from '../icons/QrCodeMobile.vue'
-import MapTagMobile from '../icons/MapTagMobile.vue'
-import BonusMobile from '../icons/BonusMobile.vue'
+import Review from '../../icons/Review.vue'
+import QrCodeMobile from '../../icons/QrCodeMobile.vue'
+import MapTagMobile from '../../icons/MapTagMobile.vue'
+import BonusMobile from '../../icons/BonusMobile.vue'
 
 </script>
 

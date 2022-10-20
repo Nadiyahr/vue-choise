@@ -8,16 +8,48 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: {
+        headerClass: 'bg-dark',
+        iconClass: '$my-dark',
+        textClass: 'text-white',
+        brandClass: '$content-heading'
+      }
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
+      meta: {
+        headerClass: 'bg-prymary-light',
+        iconClass: '$my-dark',
+        textClass: 'text-dark',
+        brandClass: ''
+      }
+    },
+    {
+      path: '/client',
+      name: 'client',
+      component: () => import('../views/ClientView.vue'),
+      meta: {
+        headerClass: 'bg-prymary-light',
+        iconClass: '$my-dark',
+        textClass: 'text-dark',
+        brandClass: ''
+      }
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      };
+    }
+    return { x: 0, y: 0 };
+  },
 })
 
 export default router

@@ -3,6 +3,7 @@
     <HeaderDesctop v-if="isDesktop()" />
     <HeaderMobile v-else />
     <slot></slot>
+      <!-- <RouterView /> -->
     <Footer />
   </div>
 </template>

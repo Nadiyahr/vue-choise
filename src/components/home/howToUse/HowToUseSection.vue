@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import QrMenu from '../icons/QrMenu.vue'
-import QrOrder from '../icons/QrOrder.vue'
-import OnlineMenu from '../icons/OnlineMenu.vue'
-import Feadback from '../icons/Feadback.vue'
-import Apps from '../icons/Apps.vue'
-import Language from '../icons/Language.vue'
-import AlienIcon from '../icons/AlienIcon.vue'
+import QrMenu from '../../icons/QrMenu.vue'
+import QrOrder from '../../icons/QrOrder.vue'
+import OnlineMenu from '../../icons/OnlineMenu.vue'
+import Feadback from '../../icons/Feadback.vue'
 import HowToGetStart from './HowToGetStart.vue'
 </script>
 

@@ -1,20 +1,8 @@
-<script setup lang="ts">
-import type { ColorVariant } from 'bootstrap-vue-3';
-
-export interface Props {
-  isMobile?: boolean
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  isMobile: false
-})
-</script>
-
 <template>
   <article class="sm-fs-7 sm-flex ">
     <div>
         <h1
-          class="fw-bolder py-4 lg-pb-4 lg-mb-5 lg-p-2"
+          class="fw-bolder py-4 lg-pb-4 lg-mb-5 lg-p-2 text-white"
         >
           All&nbsp;the&nbsp;restaurants <br/>in&nbsp;the&nbsp;world&nbsp;-<br/>with&nbsp;one&nbsp;tap
         </h1>
@@ -34,3 +22,14 @@ const props = withDefaults(defineProps<Props>(), {
       </div>
   </article>
 </template>
+
+<script setup lang="ts">
+
+export interface Props {
+  isMobile?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  isMobile: false
+})
+</script>

@@ -53,7 +53,7 @@
 </template>
 
 <script setup lang="ts">
-import Alien from '../icons/AlienIcon.vue'
+import Alien from '../../icons/AlienIcon.vue'
 </script>
 
 <style scoped>

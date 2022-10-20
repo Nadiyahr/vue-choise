@@ -1,8 +1,8 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import Alien from '../icons/AlienIcon.vue'
-import Android from '../icons/AndroidIcon.vue'
-import IOS from '../icons/iOSIcon.vue'
+import Alien from '../../icons/AlienIcon.vue'
+import Android from '../../icons/AndroidIcon.vue'
+import IOS from '../../icons/iOSIcon.vue'
 
 export default defineComponent({
   name: 'HeaderMobile',
@@ -52,11 +52,11 @@ export default defineComponent({
       </b-navbar-nav>
       <b-collapse id="collapse" v-model="isOpen"  is-nav>
         <b-navbar-nav class="fs-4 text-white " >
-          <b-nav-item align="center" to="/" class="border-bottom border-light"><span> Home</span></b-nav-item>
-          <b-nav-item align="center" to="/about" class="border-bottom border-light"><span>About</span></b-nav-item>
-          <b-nav-item align="center" href="#map" class="border-bottom border-light"><span>Client</span></b-nav-item>
-          <b-nav-item align="center" href="#howTo" class="border-bottom border-light"><span>How to use</span></b-nav-item>
-          <b-nav-item align="center" href="#contact" class=""><span>Contact</span></b-nav-item>
+          <b-nav-item align="center" to="/" class="border-bottom border-light"> Home</b-nav-item>
+          <b-nav-item align="center" to="/about" class="border-bottom border-light">About</b-nav-item>
+          <b-nav-item align="center" href="/client" class="border-bottom border-light">Client</b-nav-item>
+          <b-nav-item align="center" href="#howTo" class="border-bottom border-light">How to use</b-nav-item>
+          <b-nav-item align="center" href="#contact" class="">Contact</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -75,8 +75,7 @@ export default defineComponent({
     background-color: #f9f5e6;
 }
 
-/* .navbar-nav .nav-link.active {
-    margin: 0 auto;
-    color:#fff;
-} */
+.mobile-active {
+  color: #f2cf7e;
+}
 </style>

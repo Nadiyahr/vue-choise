@@ -30,6 +30,15 @@ footer {
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2A2A38;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -60,7 +69,36 @@ ul, li {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
-.router-link a {
-  color: white;
-  text-decoration: none;
+.active-link {
+  position: relative;
+}
+
+.active-link::after {
+  content:" ";
+  height: 2px;
+  width: 16px;
+  background: #2b146c;
+  display: block;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 37%;
+}
+
+.active-link-home {
+  position: relative;
+}
+
+.active-link-home::after {
+  content:" ";
+  height: 2px;
+  width: 16px;
+  background: #f2cf7e;
+  display: block;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 37%;
+}
+
+.ls-2 {
+  letter-spacing: 0.2rem;
 }

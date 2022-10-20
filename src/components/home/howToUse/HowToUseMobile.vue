@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import Barcode from "../icons/Barcode.vue";
-import Chat from "../icons/Chat.vue";
-import MenuMobile from "../icons/MenuMobile.vue";
+import Chat from "../../icons/Chat.vue";
+import MenuMobile from "../../icons/MenuMobile.vue";
+import Ellipse from "../../icons/Ellipse.vue";
 import HowToGetStart from "./HowToGetStart.vue";
-import Ellipse from "../icons/Ellipse.vue";
 </script>
 
 <template>

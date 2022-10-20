@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Apps from "../icons/Apps.vue";
-import Language from "../icons/Language.vue";
-import AlienIcon from "../icons/AlienIcon.vue";
+import Apps from "../../icons/AlienIcon.vue";
+import Language from "../../icons/Language.vue";
+import AlienIcon from "../../icons/AlienIcon.vue";
 </script>
 
 <template>
