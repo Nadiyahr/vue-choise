@@ -10,9 +10,9 @@ const router = createRouter({
       component: HomeView,
       meta: {
         headerClass: 'bg-dark',
-        iconClass: '$my-dark',
+        iconClass: '#f2cf7e',
         textClass: 'text-white',
-        brandClass: '$content-heading'
+        brandClass: 'text-white'
       }
     },
     {
@@ -21,7 +21,7 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
       meta: {
         headerClass: 'bg-prymary-light',
-        iconClass: '$my-dark',
+        iconClass: '#2b146c',
         textClass: 'text-dark',
         brandClass: ''
       }
@@ -32,7 +32,7 @@ const router = createRouter({
       component: () => import('../views/ClientView.vue'),
       meta: {
         headerClass: 'bg-prymary-light',
-        iconClass: '$my-dark',
+        iconClass: '#2b146c',
         textClass: 'text-dark',
         brandClass: ''
       }
