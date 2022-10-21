@@ -10,6 +10,7 @@ const router = createRouter({
       component: HomeView,
       meta: {
         headerClass: 'bg-dark',
+        headerMobile: 'bg-light',
         iconClass: '#f2cf7e',
         textClass: 'text-white',
         brandClass: 'text-white'
@@ -21,6 +22,7 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
       meta: {
         headerClass: 'bg-prymary-light',
+        headerMobile: 'bg-prymary-light',
         iconClass: '#2b146c',
         textClass: 'text-dark',
         brandClass: ''
@@ -33,6 +35,7 @@ const router = createRouter({
       props: true,
       meta: {
         headerClass: 'bg-prymary-light',
+        headerMobile: 'bg-prymary-light',
         iconClass: '#2b146c',
         textClass: 'text-dark',
         brandClass: ''

@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import Apps from "../../icons/AlienIcon.vue";
-import Language from "../../icons/Language.vue";
-import AlienIcon from "../../icons/AlienIcon.vue";
-</script>
-
 <template>
     <div class="d-flex gap-4 align-items-center lg-ps-5">
       <Apps class="mb-3"/>
@@ -28,3 +22,9 @@ import AlienIcon from "../../icons/AlienIcon.vue";
       </b-button>
     </div>
 </template>
+
+<script setup lang="ts">
+import Apps from "../../icons/AlienIcon.vue";
+import Language from "../../icons/Language.vue";
+import AlienIcon from "../../icons/AlienIcon.vue";
+</script>

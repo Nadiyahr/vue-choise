@@ -48,24 +48,15 @@ export default defineComponent({
     IOS,
     Menu
   },
-  // props() {
-  //   name
-  //   bgColor = route.meta.headerClass
-    // let isOpen = false
-    // let primaryColor = '#3b2186'
-
-    // function togle(): void {
-    //   isOpen = !isOpen
-    //   primaryColor = isOpen ? '#3b2186' : b
-    // }
-  // },
   data() {
     const route = useRoute()
-    const bgColor = route.meta.headerClass as string
+    const bgColor = route.meta.headerMobile as string
+    const name = route.name as string
     return {
       isOpen: false,
       primaryColor: '#3b2186',
-      bgColor
+      bgColor,
+      name
     }
   },
   methods: {
@@ -74,7 +65,7 @@ export default defineComponent({
       this.primaryColor = this.primaryColor === '#3b2186'
         ? '#f2cf7e'
         : '#3b2186'
-    }
+    },
   }
 })
 

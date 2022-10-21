@@ -2,7 +2,8 @@
   <article class="sm-fs-7 sm-flex ">
     <div>
         <h1
-          class="fw-bolder py-4 lg-pb-4 lg-mb-5 lg-p-2 text-white"
+          class="fw-bolder py-4 lg-pb-4 lg-mb-5 lg-p-2"
+          :class="isMobile ? 'text-content-heading' : 'text-white'"
         >
           All&nbsp;the&nbsp;restaurants <br/>in&nbsp;the&nbsp;world&nbsp;-<br/>with&nbsp;one&nbsp;tap
         </h1>
