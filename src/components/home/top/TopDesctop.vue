@@ -7,7 +7,7 @@ import TopGetStarted from './TopGetStarted.vue'
 
 </script>
 <template>
-  <section class="bg-dark">
+  <section class="bg-dark py-5">
    <b-container fluid class="text-light py-5 ">
     <b-row>
       <b-col>

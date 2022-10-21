@@ -30,6 +30,7 @@ const router = createRouter({
       path: '/client',
       name: 'client',
       component: () => import('../views/ClientView.vue'),
+      props: true,
       meta: {
         headerClass: 'bg-prymary-light',
         iconClass: '#2b146c',

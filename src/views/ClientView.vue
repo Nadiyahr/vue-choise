@@ -2,9 +2,11 @@
    <Layout>
    <main v-if="isDesktop()">
      <ChoiceMore />
+     <Brands />
    </main>
    <main v-else>
     <ChoiceMore is-mobile />
+    <Brands is-mobile />
    </main>
   </Layout>
 </template>
@@ -12,6 +14,7 @@
 <script setup lang="ts">
 import Layout from "../components/layout/index.vue";
 import ChoiceMore from "../components/client/ChoiceMore.vue";
+import Brands from "../components/client/Brands.vue";
 
 const windowWidth = window.innerWidth
 const mobile = 600
