@@ -20,3 +20,13 @@ $white: #fff;
 $content-heading: #2a2a38;
 
 $line1: #ececec;
+$black: #000
+
+
+// @each $breakpoint, $width in $widths {
+//   @media (min-width: map.get($breakpoints, $breakpoint)) { // <- $breakpoints undefined
+//       .container {
+//           max-width: $width;
+//       }
+//   }
+// }

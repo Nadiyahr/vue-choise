@@ -3,21 +3,20 @@
     <b-container fluid class="brand">
       <b-row>
         <b-col sm="12" lg="3" class="text-center brand__text">
-          <p class="fs-7 text-white p-0  m-0 mt-2 w-fit">500+ RESTAURANTS TRUST CHOICIE</p>
+          <p class="fs-7 text-white p-0 m-0 mt-2 w-fit">500+ RESTAURANTS TRUST CHOICIE</p>
         </b-col>
         <b-col class="brand__stamp">
           <div class="brand__container ">
-            <div class="brand__container-side">
-              <Brand1 class="brand__item"/>
-              <Brand2 class="brand__item"/>
-              <Brand3 class="brand__item"/>
-            </div>
-            <div class="brand__container-side brand__container-side-right">
-              <Brand4 class="brand__item"/>
-              <Brand5 class="brand__item"/>
-            </div>
+            <Brand1 class="order-1 brand__item me-2 lg-me-0"/>
+            <Brand2 class="order-2 brand__item me-2 lg-me-0"/>
+            <Brand3 class="order-4 order-md-3 brand__item"/>
+            <Brand4 class="order-3 order-md-3 brand__item"/>
+            <Brand5 class="order-5 brand__item"/>
           </div>
         </b-col>
+      </b-row>
+      <b-row>
+
       </b-row>
     </b-container>
   </section>
@@ -29,13 +28,12 @@ import Brand2 from "../icons/Brand2.vue";
 import Brand3 from "../icons/Brand3.vue";
 import Brand4 from "../icons/Brand4.vue";
 import Brand5 from "../icons/Brand5.vue";
+
 export interface Props {
   isMobile?: boolean
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  isMobile: false
-})
+const { isMobile = false } = defineProps<Props>()
 </script>
 
 <style scoped lang="scss">
@@ -44,7 +42,7 @@ const props = withDefaults(defineProps<Props>(), {
   &__text {
     padding: 0;
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
       padding-bottom: 3rem;
     }
   }
@@ -58,22 +56,12 @@ const props = withDefaults(defineProps<Props>(), {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    align-items: center;
 
-    &-side {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-
-      @media (max-width: 600px) {
-        gap: 0;
-        padding-bottom: 1rem;
-      }
-
-      &-right {
-        @media (max-width: 600px) {
-          margin: 0 auto;
-        }
-      }
+    @media (max-width: 600px) {
+      gap: 0;
+      justify-content: center;
+      // align-items: center;
     }
   }
 
@@ -82,6 +70,7 @@ const props = withDefaults(defineProps<Props>(), {
 
     @media (max-width: 600px) {
       padding: 0 16px;
+      margin-bottom: 20px;
     }
   }
 }

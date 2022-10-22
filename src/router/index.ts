@@ -21,8 +21,8 @@ const router = createRouter({
       name: 'about',
       component: () => import('../views/AboutView.vue'),
       meta: {
-        headerClass: 'bg-prymary-light',
-        headerMobile: 'bg-prymary-light',
+        headerClass: 'bg-info',
+        headerMobile: 'bg-info',
         iconClass: '#2b146c',
         textClass: 'text-dark',
         brandClass: ''
@@ -34,8 +34,8 @@ const router = createRouter({
       component: () => import('../views/ClientView.vue'),
       props: true,
       meta: {
-        headerClass: 'bg-prymary-light',
-        headerMobile: 'bg-prymary-light',
+        headerClass: 'bg-info',
+        headerMobile: 'bg-info',
         iconClass: '#2b146c',
         textClass: 'text-dark',
         brandClass: ''

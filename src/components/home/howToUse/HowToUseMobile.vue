@@ -7,7 +7,7 @@ import HowToGetStart from "./HowToGetStart.vue";
 </script>
 
 <template>
-  <section id="howTo" class="bg-light vh-100">
+  <section id="howTo" class="bg-light">
     <h2 class="fw-bolder text-center mb-3 pt-4">
         How do I use Choicie?
       </h2>
@@ -51,7 +51,7 @@ import HowToGetStart from "./HowToGetStart.vue";
       </b-col>
      </b-row>
     </b-container>
-    <div class="px-2 border-top pt-5 position-relative">
+    <div class="px-2 border-top py-5 position-relative">
       <div class="w-max position-absolute top-0 start-50 translate-middle">
         <Ellipse />
       </div>

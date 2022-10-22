@@ -14,7 +14,6 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2",
     "bootstrap-vue-3": "^0.3.11",
-    "sass": "^1.55.0",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5",
     "vue-window-size": "^1.0.8",
@@ -22,6 +21,7 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
+    "@types/bootstrap": "^5.2.5",
     "@types/node": "^16.11.56",
     "@vitejs/plugin-vue": "^3.0.3",
     "@vitejs/plugin-vue-jsx": "^2.0.1",
@@ -32,6 +32,7 @@
     "eslint-plugin-vue": "^9.3.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
+    "sass": "^1.55.0",
     "typescript": "~4.7.4",
     "vite": "^3.0.9",
     "vue-svg-loader": "^0.16.0",

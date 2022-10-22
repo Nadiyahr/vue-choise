@@ -61,9 +61,7 @@ const route = useRoute()
 const bgColor = route.meta.headerClass
 
 
-const props = withDefaults(defineProps<Props>(), {
-  isMobile: false
-})
+const { isMobile = false } = defineProps<Props>()
 </script>
 
 <style scoped lang="scss">

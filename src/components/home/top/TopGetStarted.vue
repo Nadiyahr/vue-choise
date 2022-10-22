@@ -30,7 +30,5 @@ export interface Props {
   isMobile?: boolean
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  isMobile: false
-})
+const { isMobile = false } = defineProps<Props>()
 </script>

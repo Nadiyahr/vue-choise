@@ -1,11 +1,11 @@
-@import './vars.scss';
+// @import './vars.scss';
 @import './base.scss';
 
 $theme-colors: (
   'primary': $my-prymary,
   'secondary': $my-secondary,
   'success': $my-success,
-  'info': $my-info,
+  'info': $my-prymary-2,
   'warning': $my-warning,
   'danger': $my-danger,
   'light': $my-light,
@@ -19,8 +19,9 @@ $theme-colors: (
   'body': $my-body,
   'line1': $line1,
   'white': $white,
-  'prymary-light': $my-prymary-2,
-  'content-heading': $content-heading
+  'prymary-light': $my-info,
+  'content-heading': $content-heading,
+  'black': $black
 );
 
 $font-sizes: (
@@ -35,8 +36,7 @@ $font-sizes: (
 
 $input-placeholder-color: #fff;
 
-
-@import "../../../node_modules/bootstrap//scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 
 .btn {
   font-weight: 600;

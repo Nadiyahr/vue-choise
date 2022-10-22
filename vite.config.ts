@@ -3,7 +3,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-
+const path = require('path')
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/vue-choise/',
@@ -11,13 +11,14 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
     }
   },
-  // css: {
-  //   preprocessorOptions: {
-  //     scss: {
-  //       additionalData: '@/assets/style/vars.scss'
-  //     }
-  //   }
-  // }
+  css: {
+    preprocessorOptions: {
+        scss: {
+            additionalData: '@import "./src/assets/style/vars.scss";',
+        },
+    },
+},
 })
