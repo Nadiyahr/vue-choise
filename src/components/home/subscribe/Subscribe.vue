@@ -1,38 +1,36 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from "vue";
 
 const props = defineProps({
   modelValue: {
     type: [String, Number],
-    default: ''
-  }
-})
+    default: "",
+  },
+});
 
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(["update:modelValue"]);
 
 const model = computed({
-  get () {
-    return props.modelValue
+  get() {
+    return props.modelValue;
   },
 
-  set (value) {
-    return emit('update:modelValue', value)
-  }
-})
+  set(value) {
+    return emit("update:modelValue", value);
+  },
+});
 </script>
 
 <template>
-  <section class=" bg-primary text-light">
+  <section class="bg-primary text-light">
     <b-container fluid class="">
       <b-row>
         <b-col sm="12" md="8">
           <div class="py-4">
-            <h2 class="text-white fw-bolder">
-              Subscribe and become a part of Choicie
-            </h2>
+            <h2 class="text-white fw-bolder">Subscribe and become a part of Choicie</h2>
             <p class="fs-4">
-              Leave your email and get all the information about product updates, 
-              blog updates, exclusive updates.
+              Leave your email and get all the information about product updates, blog
+              updates, exclusive updates.
             </p>
           </div>
         </b-col>
@@ -52,7 +50,7 @@ const model = computed({
             >
               Register to Newsletter
             </b-button>
-        </b-form>
+          </b-form>
         </b-col>
       </b-row>
     </b-container>

@@ -1,26 +1,19 @@
 <template>
-    <div class="d-flex gap-4 align-items-center lg-ps-5">
-      <Apps class="mb-3"/>
-      <p>No language barrier</p>
-    </div>
-    <div class="d-flex gap-4 align-items-center lg-ps-5">
-      <Language class="mb-3"/>
-      <p>No need to search for reviews — all collected in one place</p>
-    </div>
-    <div class="d-flex gap-4 align-items-center lg-ps-5">
-      <AlienIcon :svgColor="'#aaaaaf'" class="mb-3"/>
-      <p>No need to install any translator — all you need is Choicie </p>
-    </div>
-    <div class="p-2 mt-4 lg-mt-5 lg-ps-5">
-      <b-button
-        pill
-        size="md"
-        variant="secondary"
-        class="w-btn"
-      >
-        Get Started
-      </b-button>
-    </div>
+  <div class="d-flex gap-4 align-items-center lg-ps-5">
+    <Apps class="mb-3" />
+    <p>No language barrier</p>
+  </div>
+  <div class="d-flex gap-4 align-items-center lg-ps-5">
+    <Language class="mb-3" />
+    <p>No need to search for reviews — all collected in one place</p>
+  </div>
+  <div class="d-flex gap-4 align-items-center lg-ps-5">
+    <AlienIcon :svgColor="'#aaaaaf'" class="mb-3" />
+    <p>No need to install any translator — all you need is Choicie</p>
+  </div>
+  <div class="p-2 mt-4 lg-mt-5 lg-ps-5">
+    <b-button pill size="md" variant="secondary" class="w-btn"> Get Started </b-button>
+  </div>
 </template>
 
 <script setup lang="ts">

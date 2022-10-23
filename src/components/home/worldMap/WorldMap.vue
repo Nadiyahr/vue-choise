@@ -14,7 +14,7 @@
         Choicie is ready to work internationally. We work with customers in 8 different
         time zones.
       </p>
-      <b-img  src="images/map.png" alt="Map Image"></b-img>
+      <b-img fluid src="images/map.png" alt="Map Image"></b-img>
     </div>
   </section>
 </template>

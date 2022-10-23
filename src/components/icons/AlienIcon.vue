@@ -23,10 +23,10 @@
 
 <script setup lang="ts">
 interface Props {
-  svgColor?: string
+  svgColor?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  svgColor: '#f2cf7e'
-})
+  svgColor: "#f2cf7e",
+});
 </script>

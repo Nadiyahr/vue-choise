@@ -6,14 +6,14 @@
       <div class="skeleton_point"></div>
     </div>
     <div class="d-flex gap-3 m-3 ms-4 me-0">
-      <b-col cols="3" class="bg-black p-2 pt-2">
-        <Placeholder width="70%" height="5%" />
-        <Placeholder />
-        <Placeholder />
-        <Placeholder />
-        <Placeholder />
-        <Placeholder />
-        <Placeholder />
+      <b-col cols="3" class="bg-black p-2 pt-3">
+        <Placeholder width="70%" height="5%" gray="80" />
+        <Placeholder gray="80" />
+        <Placeholder gray="80" />
+        <Placeholder gray="80" />
+        <Placeholder gray="80" />
+        <Placeholder gray="80" />
+        <Placeholder gray="80" />
       </b-col>
       <b-col v-if="inner" class="skeleton_col 4 position-relative">
         <div class="bg-gray-10 skeleton_header skeleton_header-gr">
@@ -24,11 +24,11 @@
             <div class="skeleton_point skeleton_point--lg"></div>
           </div>
         </div>
-        <b-img fluid class="my-4" src="images/bgLine1.png" alt="Map Image"></b-img>
+        <b-img fluid class="my-4" src="images/bgLine1.svg" alt="Map Image"></b-img>
         <b-img
           fluid
           class="position-absolute start-0 t-30"
-          src="images/bgLine2.png"
+          src="images/bgLine2.svg"
           alt="Map Image"
         ></b-img>
         <div class="bg-gray-10 w-100 skeleton_line"></div>
