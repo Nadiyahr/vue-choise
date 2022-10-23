@@ -7,7 +7,7 @@
       <h2 class="fw-bolder fs-2 text-center mb-4">
         Manage your menu so your customers’ll like it
       </h2>
-      <p class="fs-4 text-prymary-light text-center mb-4">
+      <p class="fs-4 text-prymary-light text-center mb-5">
         We created an advanced dashboard. You can see: it’s very easy to implement our
         product.
       </p>
@@ -19,7 +19,7 @@
           border-variant="info"
           text-variant="content-heading"
           style="min-height: 30rem"
-          class="pt-3 px-3 rounded-0"
+          class="pt-3 px-3 rounded-0 mb-3"
         >
           <b-card-title class="fs-2 fw-bold">
             Creation of<br />a Restaurant menu
@@ -28,31 +28,14 @@
             Upload your cafe or restaurant menu to the app. Choicie will automatically
             translate it into the users’ native language and add food photos.
           </b-card-text>
-          <ManageMenuCard bottom="0" right="0" />
-          <!-- <b-card header-bg-variant="dark" class="sceletton">
-            <template #header>
-              <div class="sceletton_point"></div>
-              <div class="sceletton_point"></div>
-              <div class="sceletton_point"></div>
-              <div class="sceletton_point sceletton_point--lg"></div>
-            </template>
-            <b-card-body class="flex">
-              <b-col cols="3" class="bg-black sceletton_col">
-                <div class="sceletton_lg"></div>
-                <div class="sceletton_sm"></div>
-                <div class="sceletton_sm"></div>
-                <div class="sceletton_sm"></div>
-                <div class="sceletton_sm"></div>
-                <div class="sceletton_sm"></div>
-              </b-col>
-            </b-card-body>
-          </b-card> -->
+          <ManageMenuCard bottom="0" right="0" inner />
         </b-card>
         <b-card
           bg-variant="light"
           border-variant="light"
           text-variant="content-heading"
-          class="pt-3 px-3 rounded-0"
+          style="min-height: 30rem"
+          class="pt-3 px-3 rounded-0 mb-3"
         >
           <b-card-title class="fs-2 fw-bold">
             The biggest feedback from your customers
@@ -70,7 +53,7 @@
 </template>
 
 <script setup lang="ts">
-import ManageMenuCard from "./ManageMenuCard.vue";
+import ManageMenuCard from "./menuCard/ManageMenuCard.vue";
 export interface Props {
   isMobile?: boolean;
 }
