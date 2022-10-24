@@ -11,6 +11,7 @@
       <Brands is-mobile />
       <ManageMenu is-mobile />
       <BecomePartner is-mobile />
+      <Subscribe />
     </main>
   </Layout>
 </template>
@@ -21,6 +22,7 @@ import ChoiceMore from "../components/client/ChoiceMore.vue";
 import Brands from "../components/client/Brands.vue";
 import ManageMenu from "../components/client/manageMenu/ManageMenu.vue";
 import BecomePartner from "../components/client/bacomePartner/BecomePartner.vue";
+import Subscribe from "../components/home/subscribe/Subscribe.vue";
 
 const windowWidth = window.innerWidth;
 const mobile = 600;

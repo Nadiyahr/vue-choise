@@ -77,6 +77,8 @@ const { isMobile = false } = defineProps<Props>();
   }
 
   &__title {
+    font-size: 24px;
+    font-weight: 700;
     margin-top: 3rem;
 
     @media (max-width: 600px) {
@@ -90,7 +92,7 @@ const { isMobile = false } = defineProps<Props>();
     margin-top: 2rem;
 
     @media (max-width: 600px) {
-      width: 90%;
+      width: 100%;
     }
   }
 }
