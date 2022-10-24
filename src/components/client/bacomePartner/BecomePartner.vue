@@ -35,7 +35,8 @@
       </b-button>
     </div>
     <div class="absolute">
-      <WaveLine class="w-100" />
+      <WaveMobile v-if="isMobile" />
+      <WaveLine v-else class="w-100" />
     </div>
   </section>
 </template>
@@ -47,6 +48,13 @@ import Scan from "../../icons/Scan.vue";
 import UserProfile from "../../icons/UserProfile.vue";
 import Happy from "../../icons/Happy.vue";
 import WaveLine from "../../icons/WaveLine.vue";
+import WaveMobile from "../../icons/WaveMobile.vue";
+
+export interface Props {
+  isMobile?: boolean;
+}
+
+const { isMobile = false } = defineProps<Props>();
 </script>
 
 <style scoped lang="scss">
@@ -89,14 +97,15 @@ import WaveLine from "../../icons/WaveLine.vue";
 
 .absolute {
   width: 100%;
-  height: 100%;
+  height: 40em;
   position: absolute;
-  bottom: -20em;
+  bottom: 0em;
   left: 0em;
+  overflow: hidden;
   z-index: -1;
 
   @media (max-width: 600px) {
-    bottom: -45em;
+    height: 20em;
   }
 }
 </style>

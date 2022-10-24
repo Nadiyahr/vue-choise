@@ -10,7 +10,7 @@
       <ChoiceMore is-mobile />
       <Brands is-mobile />
       <ManageMenu is-mobile />
-      <BecomePartner />
+      <BecomePartner is-mobile />
     </main>
   </Layout>
 </template>
