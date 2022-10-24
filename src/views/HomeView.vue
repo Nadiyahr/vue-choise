@@ -7,14 +7,12 @@
         <AboutSection />
         <HowToUseSection />
         <WorldMap />
-        <Subscribe />
       </main>
       <main v-else>
         <TopMobile />
         <AboutSection is-mobile />
         <HowToUseMobile />
         <WorldMap is-mobile />
-        <Subscribe />
       </main>
     </Layout>
   </div>
@@ -26,7 +24,6 @@ import Layout from "../components/layout/index.vue";
 import VideoComponent from "../components/home/videoComponent/VideoComponent.vue";
 import AboutSection from "../components/home/about/AboutSection.vue";
 import WorldMap from "../components/home/worldMap/WorldMap.vue";
-import Subscribe from "../components/home/subscribe/Subscribe.vue";
 
 const TopDesctop = defineAsyncComponent(
   () => import("../components/home/top/TopDesctop.vue")

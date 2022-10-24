@@ -3,13 +3,14 @@
     <HeaderDesctop v-if="isDesktop()" />
     <HeaderMobile v-else />
     <slot></slot>
-    <!-- <RouterView /> -->
+    <Subscribe />
     <Footer />
   </div>
 </template>
 
 <script setup lang="ts">
 import { defineAsyncComponent } from "vue";
+import Subscribe from "./subscribe/Subscribe.vue";
 import Footer from "./footer/Footer.vue";
 
 export interface Props {

@@ -1,12 +1,9 @@
 <template>
   <section class="last">
-    <div class="mt-5 pt-5 ps-5 d-flex justify-content-end">
-      <b-card
-        no-body
-        class="w-75 bg-gray-0 border-0 ps-5 pt-4 pe-2 position-relative mt-5"
-      >
-        <b-row no-gutters class="p-3 ps-5">
-          <b-col sm="12" md="7" class="py-3 px-5 last__after">
+    <div class="mt-lg-5 pt-5 ps-lg-5 d-flex justify-content-end">
+      <b-card no-body class="last__card bg-gray-0">
+        <b-row no-gutters class="last__row">
+          <b-col sm="12" md="7" class="last__after">
             <h6 class="text-primary">
               Our restaurant becomes more popular after joining Choicie!
             </h6>
@@ -18,8 +15,8 @@
               <span class="fw-bold">Nelly Spender</span> — Restaurant name
             </p>
           </b-col>
-          <b-col class="py-3 px-4">
-            <h4 class="text-primary">+ 40%</h4>
+          <b-col class="last__col">
+            <h4 class="text-primary">+40%</h4>
             <p class="pt-2">
               The restaurant’s revenue increased due to menu adjustments, as well as lower
               grocery costs.
@@ -28,6 +25,8 @@
         </b-row>
         <b-img
           src="images/testimonial.png"
+          :srcset="`${myImg.img_sm} 272w, ${myImg.img_lg} 390w`"
+          sizes="(max-width: 600px) 272px, 390px"
           alt="Map Image"
           class="last__absolute"
         ></b-img>
@@ -36,19 +35,72 @@
   </section>
 </template>
 
+<script setup lang="ts">
+import { computed } from "@vue/reactivity";
+import smImage from "/images/testimonialMobile.png";
+import lgImage from "/images/testimonial.png";
+
+const images = {
+  img_sm: smImage,
+  img_lg: lgImage,
+};
+
+const myImg = computed(() => images);
+</script>
+
 <style scoped lang="scss">
 .last {
   padding-top: 10rem;
   padding-bottom: 10rem;
+
+  @media (max-width: 600px) {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+  }
+
+  &__card {
+    width: 85%;
+    position: relative;
+    padding-top: 3rem;
+    padding-left: 4rem;
+    padding-right: 1.5rem;
+    margin-top: 3rem;
+
+    border: 0;
+    @media (max-width: 600px) {
+      width: 100%;
+      padding-top: 10rem;
+      padding-left: 1.3rem;
+      padding-right: 1.3rem;
+      margin: 0;
+    }
+  }
+
+  &__row {
+    padding: 0.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   &__after {
+    padding: 0.5rem 4rem;
+
     &::after {
       content: "";
       width: 0;
-      height: 50%;
+      height: 48%;
       position: absolute;
       border: 1px solid $gray-10;
       top: 20%;
       right: 40%;
+    }
+  }
+
+  &__col {
+    padding: 0.5rem 3rem;
+
+    @media (max-width: 600px) {
+      padding: 2rem 7rem 1rem 0;
+      border-top: 2px solid $gray-20;
     }
   }
 
@@ -57,6 +109,11 @@
     top: -5%;
     left: -5%;
     transform: translate(-50%, -50%);
+
+    @media (max-width: 600px) {
+      top: 0;
+      left: 50%;
+    }
   }
 }
 </style>

@@ -1,28 +1,5 @@
-<script setup lang="ts">
-import { computed } from "vue";
-
-const props = defineProps({
-  modelValue: {
-    type: [String, Number],
-    default: "",
-  },
-});
-
-const emit = defineEmits(["update:modelValue"]);
-
-const model = computed({
-  get() {
-    return props.modelValue;
-  },
-
-  set(value) {
-    return emit("update:modelValue", value);
-  },
-});
-</script>
-
 <template>
-  <section class="bg-primary text-light">
+  <section class="bg-primary text-light py-4">
     <b-container fluid class="">
       <b-row>
         <b-col sm="12" md="8">
@@ -56,3 +33,26 @@ const model = computed({
     </b-container>
   </section>
 </template>
+
+<script setup lang="ts">
+import { computed } from "vue";
+
+const props = defineProps({
+  modelValue: {
+    type: [String, Number],
+    default: "",
+  },
+});
+
+const emit = defineEmits(["update:modelValue"]);
+
+const model = computed({
+  get() {
+    return props.modelValue;
+  },
+
+  set(value) {
+    return emit("update:modelValue", value);
+  },
+});
+</script>
