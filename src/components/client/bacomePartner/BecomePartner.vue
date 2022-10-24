@@ -61,7 +61,7 @@ const { isMobile = false } = defineProps<Props>();
 .relative {
   position: relative;
   padding-top: 2rem;
-  padding-bottom: 20rem;
+  padding-bottom: 22rem;
   background-color: transparent;
 
   @media (max-width: 600px) {
@@ -99,7 +99,7 @@ const { isMobile = false } = defineProps<Props>();
 
 .absolute {
   width: 100%;
-  height: 40em;
+  height: 42em;
   position: absolute;
   bottom: 0em;
   left: 0em;
@@ -107,7 +107,7 @@ const { isMobile = false } = defineProps<Props>();
   z-index: -1;
 
   @media (max-width: 600px) {
-    height: 20em;
+    height: 22em;
   }
 }
 </style>
