@@ -54,11 +54,7 @@
 
 <script setup lang="ts">
 import ManageMenuCard from "./menuCard/ManageMenuCard.vue";
-export interface Props {
-  isMobile?: boolean;
-}
 
-const { isMobile = false } = defineProps<Props>();
 </script>
 
 <style scoped lang="scss"></style>
