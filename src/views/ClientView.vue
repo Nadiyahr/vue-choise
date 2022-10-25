@@ -1,6 +1,11 @@
 <template>
   <Layout>
-    <main v-if="isDesktop()">
+    <ChoiceMore :is-mobile="isMobile" />
+    <Brands />
+    <ManageMenu />
+    <BecomePartner />
+    <Testimonial />
+    <!-- <main v-if="isDesktop()">
       <ChoiceMore />
       <Brands />
       <ManageMenu />
@@ -13,7 +18,7 @@
       <ManageMenu is-mobile />
       <BecomePartner is-mobile />
       <Testimonial />
-    </main>
+    </main> -->
   </Layout>
 </template>
 
@@ -24,12 +29,9 @@ import Brands from "../components/client/Brands.vue";
 import ManageMenu from "../components/client/manageMenu/ManageMenu.vue";
 import BecomePartner from "../components/client/bacomePartner/BecomePartner.vue";
 import Testimonial from "../components/client/testimonial/Testimonial.vue";
+import { useBreakpoints } from "../plugins/breakpoints";
 
-const windowWidth = window.innerWidth;
-const mobile = 600;
+const brackpoint = useBreakpoints().type.value;
 
-function isDesktop(): boolean {
-  const isDesck = windowWidth > mobile;
-  return isDesck;
-}
+const { isMobile, isDesktop, isTablet } = useBreakpoints();
 </script>

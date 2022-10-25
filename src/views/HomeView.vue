@@ -1,7 +1,14 @@
 <template>
   <div>
     <Layout is-home>
-      <main v-if="isDesktop()">
+      <TopDesctop v-if="isDesktop" />
+      <TopMobile v-if="isTablet || isMobile" />
+      <VideoComponent v-if="isTablet || isMobile" />
+      <AboutSection :is-mobile="isMobile" />
+      <HowToUseSection v-if="isDesktop" />
+      <HowToUseMobile v-if="isTablet || isMobile" />
+      <WorldMap :is-mobile="isTablet || isMobile" />
+      <!-- <main v-if="isDesktop()">
         <TopDesctop />
         <VideoComponent />
         <AboutSection />
@@ -13,7 +20,7 @@
         <AboutSection is-mobile />
         <HowToUseMobile />
         <WorldMap is-mobile />
-      </main>
+      </main> -->
     </Layout>
   </div>
 </template>
@@ -24,6 +31,9 @@ import Layout from "../components/layout/index.vue";
 import VideoComponent from "../components/home/videoComponent/VideoComponent.vue";
 import AboutSection from "../components/home/about/AboutSection.vue";
 import WorldMap from "../components/home/worldMap/WorldMap.vue";
+import { useBreakpoints } from "../plugins/breakpoints";
+
+const {isMobile, isDesktop, isTablet } = useBreakpoints();
 
 const TopDesctop = defineAsyncComponent(
   () => import("../components/home/top/TopDesctop.vue")
@@ -41,11 +51,4 @@ const HowToUseMobile = defineAsyncComponent(
   () => import("../components/home/howToUse/HowToUseMobile.vue")
 );
 
-const windowWidth = window.innerWidth;
-const mobile = 600;
-
-function isDesktop(): boolean {
-  const isDesck = windowWidth > mobile;
-  return isDesck;
-}
 </script>

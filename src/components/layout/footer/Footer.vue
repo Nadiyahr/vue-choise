@@ -1,10 +1,10 @@
 <template>
   <footer
-    class="bg-dark bg-position text-light py-5"
+    class="bg-dark footer__position text-light"
     style="background-image: url('images/cover.png')"
   >
-    <b-row class="px-2 lg-px-0">
-      <b-col sm="12" md="3" class="pb-3">
+    <b-row class="px-2">
+      <b-col sm="12" md="12" lg="4" class="pb-4 footer__brand">
         <div
           class="fs-4 lg-fs-3 text-light fw-bolder d-flex flex gap-4 align-items-center"
         >
@@ -13,7 +13,7 @@
         </div>
         <p class="fs-7">You know what you choose!</p>
       </b-col>
-      <b-col class="pb-4 lg-pb-0 fs-5 text ps-2">
+      <b-col md="4" lg="2" lass="pb-4 fs-5 text ps-2">
         <b-nav-item href="#"><p>Home</p></b-nav-item>
         <b-nav-item href="#"><p>Universal Menu</p></b-nav-item>
         <b-nav-item href="#howTo"><p>How do use</p></b-nav-item>
@@ -21,7 +21,7 @@
         <b-nav-item href="#contact"><p>Contact</p></b-nav-item>
         <b-nav-item href="#"><p>Privacy Policy</p></b-nav-item>
       </b-col>
-      <b-col class="ps-5 fs-5">
+      <b-col md="4" lg="2" class="ps-5 fs-5 text">
         <b-nav-item target="_blank" href="https://www.facebook.com/"
           ><p>Facebook</p></b-nav-item
         >
@@ -37,7 +37,7 @@
           ><p>LinkedIn</p></b-nav-item
         >
       </b-col>
-      <b-col id="contact" lg="4" class="lg-px-5">
+      <b-col id="contact" md="4" class="footer__form">
         <b-form @submit="" @reset="" class="text-ligth">
           <b-form-input
             placeholder="Name"
@@ -62,10 +62,22 @@
 import Alien from "../../icons/AlienIcon.vue";
 </script>
 
-<style scoped>
-.bg-position {
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
-  background-size: 400px;
+<style scoped lang="scss">
+.footer {
+  &__position {
+    padding-top: 4.2rem;
+    padding-bottom: 4.2rem;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 400px;
+  }
+
+  &__form {
+    padding: 0 2rem;
+
+    @media (max-width: 900px) and (min-width: 601px) {
+      padding: 0 0.5rem;
+    }
+  }
 }
 </style>

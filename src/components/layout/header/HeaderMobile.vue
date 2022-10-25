@@ -21,11 +21,18 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav>
         <b-nav-form class="gap-3">
-          <b-button pill size="md" style="background-color: rgba(96, 83, 177, 1)">
+          <b-button
+            pill
+            size="md"
+            style="background-color: rgba(96, 83, 177, 1)"
+            class="w-btn"
+          >
             <Android class="mb-1" />
+            <span v-if="isTablet" class="mx-2 text-white">Android</span>
           </b-button>
-          <b-button pill size="md" variant="secondary">
+          <b-button pill size="md" variant="secondary" class="w-btn">
             <IOS class="mb-1" />
+            <span v-if="isTablet" class="mx-2 text-white">iOS</span>
           </b-button>
         </b-nav-form>
       </b-navbar-nav>
@@ -57,6 +64,7 @@ import Alien from "../../icons/AlienIcon.vue";
 import Android from "../../icons/AndroidIcon.vue";
 import IOS from "../../icons/iOSIcon.vue";
 import Menu from "../../icons/Menu.vue";
+import { useBreakpoints } from "../../../plugins/breakpoints";
 
 export default defineComponent({
   components: {
@@ -67,6 +75,7 @@ export default defineComponent({
   },
   data() {
     const route = useRoute();
+    const { isMobile, isTablet } = useBreakpoints();
     const bgColor = route.meta.headerMobile as string;
     const name = route.name as string;
     return {
@@ -74,6 +83,8 @@ export default defineComponent({
       primaryColor: "#3b2186",
       bgColor,
       name,
+      isTablet,
+      isMobile,
     };
   },
   methods: {
@@ -100,4 +111,5 @@ export default defineComponent({
 .mobile-active {
   color: #f2cf7e;
 }
+
 </style>

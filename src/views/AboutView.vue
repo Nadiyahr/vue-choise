@@ -1,15 +1,12 @@
 <template>
   <Layout>
-    <div class="vh-50">
-      <h1>This is an about page</h1>
-    </div>
+    <AboutTop />
   </Layout>
 </template>
 
 <script setup lang="ts">
-import Layout from '../components/layout/index.vue'
+import AboutTop from "../components/about/AboutTop.vue";
+import Layout from "../components/layout/index.vue";
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

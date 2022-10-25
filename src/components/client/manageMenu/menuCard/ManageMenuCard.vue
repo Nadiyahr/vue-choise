@@ -81,8 +81,8 @@ const { inner = true, bottom, right } = defineProps<Props>();
   position: absolute;
   max-width: 92%;
   min-width: 92%;
-  max-height: 17rem;
-  min-height: 17rem;
+  max-height: 52%;
+  min-height: 50%;
   overflow: hidden;
 
   &_header {

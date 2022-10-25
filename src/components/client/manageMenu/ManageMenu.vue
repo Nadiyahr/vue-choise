@@ -18,7 +18,7 @@
           bg-variant="info"
           border-variant="info"
           text-variant="content-heading"
-          style="min-height: 30rem"
+          style="min-height: 32rem"
           class="pt-3 px-3 rounded-0 mb-3"
         >
           <b-card-title class="fs-2 fw-bold">
@@ -54,7 +54,6 @@
 
 <script setup lang="ts">
 import ManageMenuCard from "./menuCard/ManageMenuCard.vue";
-
 </script>
 
 <style scoped lang="scss"></style>

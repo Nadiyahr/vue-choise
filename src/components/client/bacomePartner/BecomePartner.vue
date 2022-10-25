@@ -49,12 +49,9 @@ import UserProfile from "../../icons/UserProfile.vue";
 import Happy from "../../icons/Happy.vue";
 import WaveLine from "../../icons/WaveLine.vue";
 import WaveMobile from "../../icons/WaveMobile.vue";
+import { useBreakpoints } from "../../../plugins/breakpoints";
 
-export interface Props {
-  isMobile?: boolean;
-}
-
-const { isMobile = false } = defineProps<Props>();
+const { isMobile } = useBreakpoints();
 </script>
 
 <style scoped lang="scss">

@@ -12,10 +12,13 @@
 import { defineAsyncComponent } from "vue";
 import Subscribe from "./subscribe/Subscribe.vue";
 import Footer from "./footer/Footer.vue";
+import { useBreakpoints } from "../../plugins/breakpoints";
 
 export interface Props {
   isHome?: boolean;
 }
+
+const brackpoint = useBreakpoints().type.value;
 
 const HeaderDesctop = defineAsyncComponent(() => import("./header/HeaderDesctop.vue"));
 
@@ -25,6 +28,6 @@ const windowWidth = window.innerWidth;
 const mobile = 600;
 
 function isDesktop(): boolean {
-  return windowWidth > mobile;
+  return brackpoint === "lg";
 }
 </script>

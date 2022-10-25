@@ -90,6 +90,15 @@ const { isMobile = false } = defineProps<Props>();
       top: 90%;
       left: 8%;
     }
+
+    @media (max-width: 900px) and (min-width: 601px) {
+      width: 17rem;
+      padding: 2em;
+      font-weight: 400;
+      top: 85%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 </style>

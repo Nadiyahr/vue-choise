@@ -1,9 +1,9 @@
 <template>
-  <section class="last">
+  <section class="testimonial">
     <div class="mt-lg-5 pt-5 ps-lg-5 d-flex justify-content-end">
-      <b-card no-body class="last__card bg-gray-0">
-        <b-row no-gutters class="last__row">
-          <b-col sm="12" md="7" class="last__after">
+      <b-card no-body class="testimonial__card bg-gray-0">
+        <b-row no-gutters class="testimonial__row">
+          <b-col sm="12" md="7" class="testimonial__after">
             <h6 class="text-primary">
               Our restaurant becomes more popular after joining Choicie!
             </h6>
@@ -15,7 +15,7 @@
               <span class="fw-bold">Nelly Spender</span> — Restaurant name
             </p>
           </b-col>
-          <b-col class="last__col">
+          <b-col class="testimonial__col">
             <h4 class="text-primary">+40%</h4>
             <p class="pt-2">
               The restaurant’s revenue increased due to menu adjustments, as well as lower
@@ -26,9 +26,9 @@
         <b-img
           src="images/testimonial.png"
           :srcset="`${myImg.img_sm} 272w, ${myImg.img_lg} 390w`"
-          sizes="(max-width: 600px) 272px, 390px"
+          sizes="(max-width: 900px) 272px, 390px"
           alt="Map Image"
-          class="last__absolute"
+          class="testimonial__absolute"
         ></b-img>
       </b-card>
     </div>
@@ -49,13 +49,17 @@ const myImg = computed(() => images);
 </script>
 
 <style scoped lang="scss">
-.last {
+.testimonial {
   padding-top: 10rem;
   padding-bottom: 10rem;
 
   @media (max-width: 600px) {
     padding-top: 12rem;
     padding-bottom: 6rem;
+  }
+
+  @media (max-width: 900px) and (min-width: 601px) {
+    padding-bottom: 4.5rem;
   }
 
   &__card {
@@ -65,9 +69,9 @@ const myImg = computed(() => images);
     padding-left: 4rem;
     padding-right: 1.5rem;
     margin-top: 3rem;
-
     border: 0;
-    @media (max-width: 600px) {
+
+    @media (max-width: 900px) {
       width: 100%;
       padding-top: 10rem;
       padding-left: 1.3rem;
@@ -84,6 +88,10 @@ const myImg = computed(() => images);
   &__after {
     padding: 0.5rem 4rem;
 
+    @media (max-width: 900px) and (min-width: 601px) {
+      padding-right: 2rem;
+    }
+
     &::after {
       content: "";
       width: 0;
@@ -92,6 +100,10 @@ const myImg = computed(() => images);
       border: 1px solid $gray-10;
       top: 20%;
       right: 40%;
+
+      @media (max-width: 900px) and (min-width: 601px) {
+        top: 40%;
+      }
     }
   }
 
@@ -110,7 +122,7 @@ const myImg = computed(() => images);
     left: -5%;
     transform: translate(-50%, -50%);
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
       top: 0;
       left: 50%;
     }
