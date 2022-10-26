@@ -36,7 +36,7 @@
             size="md"
             variant="secondary"
             class="w-btn"
-            :class="isOpen ? 'bg-white' : 'bg-blue-btn'"
+            :class="isOpen ? 'bg-white' : 'bg-secondary'"
           >
             <IOS class="mb-1" />
             <span v-if="isTablet" class="mx-2 text-white">iOS</span>
