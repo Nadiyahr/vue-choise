@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import Barcode from "../../icons/Barcode.vue";
-import Chat from "../../icons/Chat.vue";
-import MenuMobile from "../../icons/MenuMobile.vue";
-import Ellipse from "../../icons/Ellipse.vue";
-import HowToGetStart from "./HowToGetStart.vue";
-</script>
-
 <template>
   <section id="howTo" class="bg-light">
     <h2 class="fw-bolder text-center mb-3 pt-4">How do I use Choicie?</h2>
@@ -63,6 +55,14 @@ import HowToGetStart from "./HowToGetStart.vue";
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import Barcode from "../../icons/Barcode.vue";
+import Chat from "../../icons/Chat.vue";
+import MenuMobile from "../../icons/MenuMobile.vue";
+import Ellipse from "../../icons/Ellipse.vue";
+import HowToGetStart from "./HowToGetStart.vue";
+</script>
 
 <style scoped>
 .w-max {

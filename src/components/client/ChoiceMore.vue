@@ -10,11 +10,11 @@
               </h1>
               <p class="pb-3 lg-pb-0 lg-mb-5 lh-3">
                 Choicie is very familiar with the feeling of being an alien in another<br
-                  v-if="!isMobile"
+                  v-if="desktop"
                 />country (he is actually an alien). So Choicie decided to help people<br
-                  v-if="!isMobile"
+                  v-if="desktop"
                 />with the same problem to get rid of it and also improve cafes and<br
-                  v-if="!isMobile"
+                  v-if="desktop"
                 />restaurants.
               </p>
               <div class="py-2 lg-py-5">
@@ -34,12 +34,19 @@
             <div class="d-flex gap-3 md-gap-4">
               <Like class="mt-2" />
               <div>
-                <h5 class="fs-4 text p-0">Anastasia Glorman,</h5>
+                <h5 class="fs-5 text p-0">Anastasia Glorman,</h5>
                 <span>co-fouder @syngenta</span>
               </div>
             </div>
           </div>
-          <b-img fluid src="images/photo2.png" alt="Start Image"></b-img>
+          <b-img
+            src="images/photo.png"
+            :srcset="`${myImg.img_sm} 288w, ${myImg.img_lg} 470w`"
+            sizes="(max-width: 900px) 288px, 470px"
+            alt="Start Image"
+            class="more_image"
+          ></b-img>
+          <!-- <b-img fluid src="images/photo2.png" alt="Start Image"></b-img> -->
         </b-col>
       </b-row>
     </b-container>
@@ -49,15 +56,25 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
 import Like from "../icons/Like.vue";
+import smImage from "/images/photoMobile.png";
+import lgImage from "/images/photo.png";
+import { computed } from "vue";
+import { useBreakpoints } from "../../plugins/breakpoints";
+import { ref } from "vue";
 
-export interface Props {
-  isMobile?: boolean;
-}
+const { isDesktop } = useBreakpoints();
+
+const desktop = ref(isDesktop);
 
 const route = useRoute();
 const bgColor = route.meta.headerClass;
 
-const { isMobile = false } = defineProps<Props>();
+const images = {
+  img_sm: smImage,
+  img_lg: lgImage,
+};
+
+const myImg = computed(() => images);
 </script>
 
 <style scoped lang="scss">
@@ -84,11 +101,13 @@ const { isMobile = false } = defineProps<Props>();
     left: -25%;
 
     @media (max-width: 600px) {
-      width: 17rem;
+      width: 15rem;
+      height: 10rem;
       padding: 2em;
+      font-size: 12px;
       font-weight: 400;
       top: 90%;
-      left: 8%;
+      left: 17%;
     }
 
     @media (max-width: 900px) and (min-width: 601px) {
@@ -98,6 +117,12 @@ const { isMobile = false } = defineProps<Props>();
       top: 85%;
       left: 25%;
       transform: translate(-50%, -50%);
+    }
+  }
+
+  &_image {
+    @media (max-width: 600px) {
+      margin-left: 2rem;
     }
   }
 }

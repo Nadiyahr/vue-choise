@@ -15,7 +15,7 @@
         :class="isOpen ? 'text-white' : 'text-dark'"
         class="fs-2 text fw-bold d-flex flex justify-content-between align-items-center gap-3"
       >
-        <Alien :svgColor="primaryColor" />
+        <Alien :svg-color="primaryColor" />
         CHOICIE
       </b-navbar-brand>
       <!-- Right aligned nav items -->
@@ -24,13 +24,20 @@
           <b-button
             pill
             size="md"
-            style="background-color: rgba(96, 83, 177, 1)"
             class="w-btn"
+            :class="isOpen ? 'bg-white' : 'bg-blue-btn'"
           >
-            <Android class="mb-1" />
+            <!-- style="background-color: rgba(96, 83, 177, 1)" -->
+            <Android class="mb-1" :svg-color="isOpen ? '#2b146c' : '#fff'" />
             <span v-if="isTablet" class="mx-2 text-white">Android</span>
           </b-button>
-          <b-button pill size="md" variant="secondary" class="w-btn">
+          <b-button
+            pill
+            size="md"
+            variant="secondary"
+            class="w-btn"
+            :class="isOpen ? 'bg-white' : 'bg-blue-btn'"
+          >
             <IOS class="mb-1" />
             <span v-if="isTablet" class="mx-2 text-white">iOS</span>
           </b-button>
@@ -58,7 +65,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref, watchEffect } from "vue";
 import { useRoute } from "vue-router";
 import Alien from "../../icons/AlienIcon.vue";
 import Android from "../../icons/AndroidIcon.vue";
@@ -87,6 +94,15 @@ export default defineComponent({
       isMobile,
     };
   },
+  setup() {
+    const mobile = ref(null);
+    const tablet = ref(null);
+
+    return {
+      mobile,
+      tablet,
+    };
+  },
   methods: {
     togle(): void {
       this.isOpen = !this.isOpen;
@@ -111,5 +127,4 @@ export default defineComponent({
 .mobile-active {
   color: #f2cf7e;
 }
-
 </style>

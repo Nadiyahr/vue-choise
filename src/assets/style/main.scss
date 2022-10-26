@@ -16,7 +16,7 @@ $theme-colors: (
   'gray-20': $gray-20,
   'gray-10': $gray-10,
   'gray-0': $gray-0,
-  // 'title': #222,
+  'blue-btn': #6053b1,
   'body': $my-body,
   'line1': $line1,
   'white': $white,
@@ -40,6 +40,8 @@ $input-placeholder-color: #fff;
 @import "~bootstrap/scss/bootstrap";
 
 .btn {
+  padding-top: 8px;
+  padding-bottom: 8px;
   font-weight: 600;
   border: none;
 }

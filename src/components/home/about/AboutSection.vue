@@ -1,18 +1,8 @@
-<script setup lang="ts">
-export interface Props {
-  isMobile?: boolean;
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  isMobile: false,
-});
-</script>
-
 <template>
   <section class="md-p-2">
     <div fluid class="text-dark py-5">
       <b-row class="gap-3 pb-5">
-        <b-col v-if="props.isMobile">
+        <b-col v-if="mobile">
           <b-img
             center
             src="images/infoMobile1.png"
@@ -42,15 +32,15 @@ const props = withDefaults(defineProps<Props>(), {
             </div>
           </div>
         </b-col>
-        <b-col v-if="!props.isMobile">
+        <b-col v-if="desktop">
           <b-img fluid src="images/infoAbout1.png" alt="Info Image"></b-img>
         </b-col>
       </b-row>
-      <b-row class="gap-3 pt-5" :class="props.isMobile && 'flex-column'">
-        <b-col v-if="props.isMobile">
+      <b-row class="gap-3 pt-5" :class="mobile && 'flex-column'">
+        <b-col v-if="mobile">
           <b-img center src="images/infoMobile2.png" alt="Info Image"></b-img>
         </b-col>
-        <b-col v-if="!props.isMobile">
+        <b-col v-if="desktop">
           <b-img fluid src="images/infoAbout2.png" alt="Info Image"></b-img>
         </b-col>
         <b-col>
@@ -77,3 +67,13 @@ const props = withDefaults(defineProps<Props>(), {
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+import { useBreakpoints } from "../../../plugins/breakpoints";
+
+const { isMobile, isDesktop } = useBreakpoints();
+
+const mobile = ref(isMobile);
+const desktop = ref(isDesktop);
+</script>

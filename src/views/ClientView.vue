@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <ChoiceMore :is-mobile="isMobile" />
+    <ChoiceMore :is-mobile="mobile" />
     <Brands />
     <ManageMenu />
     <BecomePartner />
@@ -30,8 +30,9 @@ import ManageMenu from "../components/client/manageMenu/ManageMenu.vue";
 import BecomePartner from "../components/client/bacomePartner/BecomePartner.vue";
 import Testimonial from "../components/client/testimonial/Testimonial.vue";
 import { useBreakpoints } from "../plugins/breakpoints";
+import { ref } from "vue";
 
-const brackpoint = useBreakpoints().type.value;
+const { isMobile } = useBreakpoints();
 
-const { isMobile, isDesktop, isTablet } = useBreakpoints();
+const mobile = ref(isMobile);
 </script>

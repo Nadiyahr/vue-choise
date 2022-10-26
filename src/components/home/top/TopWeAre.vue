@@ -1,10 +1,3 @@
-<script setup lang="ts">
-import Review from "../../icons/Review.vue";
-import QrCodeMobile from "../../icons/QrCodeMobile.vue";
-import MapTagMobile from "../../icons/MapTagMobile.vue";
-import BonusMobile from "../../icons/BonusMobile.vue";
-</script>
-
 <template>
   <article class="p-2">
     <h4 class="mb-4">We are the first of our kind! Here you can find:</h4>
@@ -46,3 +39,10 @@ import BonusMobile from "../../icons/BonusMobile.vue";
     </div>
   </article>
 </template>
+
+<script setup lang="ts">
+import Review from "../../icons/Review.vue";
+import QrCodeMobile from "../../icons/QrCodeMobile.vue";
+import MapTagMobile from "../../icons/MapTagMobile.vue";
+import BonusMobile from "../../icons/BonusMobile.vue";
+</script>

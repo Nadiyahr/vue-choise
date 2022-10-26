@@ -5,7 +5,7 @@
         We work with cafe and restaurant <br v-if="isMobile" />
         owners from
       </p>
-      <h2 v-if="isMobile" class="fw-bolder fs-2 text-center mb-4">
+      <h2 v-if="mobile" class="fw-bolder fs-2 text-center mb-4">
         10 countries, 5 continents
       </h2>
       <h2 v-else class="fw-bolder text-center mb-4">All the world</h2>
@@ -20,9 +20,10 @@
 </template>
 
 <script setup lang="ts">
-export interface Props {
-  isMobile?: boolean;
-}
+import { ref } from "vue";
+import { useBreakpoints } from "../../../plugins/breakpoints";
 
-const { isMobile = false } = defineProps<Props>();
+const { isMobile } = useBreakpoints();
+
+const mobile = ref(isMobile);
 </script>

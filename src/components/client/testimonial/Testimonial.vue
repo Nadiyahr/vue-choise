@@ -56,6 +56,7 @@ const myImg = computed(() => images);
   @media (max-width: 600px) {
     padding-top: 12rem;
     padding-bottom: 6rem;
+    padding: 12rem 2rem 6rem;
   }
 
   @media (max-width: 900px) and (min-width: 601px) {
@@ -88,6 +89,11 @@ const myImg = computed(() => images);
   &__after {
     padding: 0.5rem 4rem;
 
+    @media (max-width: 600px) {
+      padding: 1rem;
+      // border-top: 2px solid $gray-20;
+    }
+
     @media (max-width: 900px) and (min-width: 601px) {
       padding-right: 2rem;
     }
@@ -101,6 +107,10 @@ const myImg = computed(() => images);
       top: 20%;
       right: 40%;
 
+      @media (max-width: 600px) {
+        border: 0;
+      }
+
       @media (max-width: 900px) and (min-width: 601px) {
         top: 40%;
       }
@@ -111,7 +121,7 @@ const myImg = computed(() => images);
     padding: 0.5rem 3rem;
 
     @media (max-width: 600px) {
-      padding: 2rem 7rem 1rem 0;
+      padding: 2rem 6rem 1rem 1rem;
       border-top: 2px solid $gray-20;
     }
   }

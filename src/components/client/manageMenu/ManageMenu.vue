@@ -1,5 +1,5 @@
 <template>
-  <section class="py-5">
+  <section class="pt-5">
     <div class="">
       <p class="text-primary fs-4 text-center text-uppercase fw-semibold md-fw-bold mb-4">
         Dashboard Performance
@@ -18,8 +18,8 @@
           bg-variant="info"
           border-variant="info"
           text-variant="content-heading"
-          style="min-height: 32rem"
-          class="pt-3 px-3 rounded-0 mb-3"
+          style="min-height: 30rem"
+          class="pt-3 px-3 rounded-0 mb-5"
         >
           <b-card-title class="fs-2 fw-bold">
             Creation of<br />a Restaurant menu
@@ -35,7 +35,7 @@
           border-variant="light"
           text-variant="content-heading"
           style="min-height: 30rem"
-          class="pt-3 px-3 rounded-0 mb-3"
+          class="pt-3 px-3 rounded-0 mb-5"
         >
           <b-card-title class="fs-2 fw-bold">
             The biggest feedback from your customers

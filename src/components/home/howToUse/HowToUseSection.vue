@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import QrMenu from "../../icons/QrMenu.vue";
-import QrOrder from "../../icons/QrOrder.vue";
-import OnlineMenu from "../../icons/OnlineMenu.vue";
-import Feadback from "../../icons/Feadback.vue";
-import HowToGetStart from "./HowToGetStart.vue";
-</script>
-
 <template>
   <section id="howTo" class="bg-light">
     <b-container fluid class="text-dark py-5">
@@ -70,6 +62,14 @@ import HowToGetStart from "./HowToGetStart.vue";
     </b-container>
   </section>
 </template>
+
+<script setup lang="ts">
+import QrMenu from "../../icons/QrMenu.vue";
+import QrOrder from "../../icons/QrOrder.vue";
+import OnlineMenu from "../../icons/OnlineMenu.vue";
+import Feadback from "../../icons/Feadback.vue";
+import HowToGetStart from "./HowToGetStart.vue";
+</script>
 
 <style scoped>
 .bg-posiiton {

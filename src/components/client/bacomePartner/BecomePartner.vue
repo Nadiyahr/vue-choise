@@ -35,7 +35,7 @@
       </b-button>
     </div>
     <div class="absolute">
-      <WaveMobile v-if="isMobile" />
+      <WaveMobile v-if="mobile" />
       <WaveLine v-else class="w-100" />
     </div>
   </section>
@@ -50,8 +50,12 @@ import Happy from "../../icons/Happy.vue";
 import WaveLine from "../../icons/WaveLine.vue";
 import WaveMobile from "../../icons/WaveMobile.vue";
 import { useBreakpoints } from "../../../plugins/breakpoints";
+import { ref } from "vue";
+// import { useBreakpoints } from "@/src/plugins/breakpoints";
 
 const { isMobile } = useBreakpoints();
+
+const mobile = ref(isMobile);
 </script>
 
 <style scoped lang="scss">

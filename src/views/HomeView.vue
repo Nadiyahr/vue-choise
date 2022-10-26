@@ -1,39 +1,30 @@
 <template>
   <div>
     <Layout is-home>
-      <TopDesctop v-if="isDesktop" />
-      <TopMobile v-if="isTablet || isMobile" />
-      <VideoComponent v-if="isTablet || isMobile" />
-      <AboutSection :is-mobile="isMobile" />
-      <HowToUseSection v-if="isDesktop" />
-      <HowToUseMobile v-if="isTablet || isMobile" />
-      <WorldMap :is-mobile="isTablet || isMobile" />
-      <!-- <main v-if="isDesktop()">
-        <TopDesctop />
-        <VideoComponent />
-        <AboutSection />
-        <HowToUseSection />
-        <WorldMap />
-      </main>
-      <main v-else>
-        <TopMobile />
-        <AboutSection is-mobile />
-        <HowToUseMobile />
-        <WorldMap is-mobile />
-      </main> -->
+      <TopDesctop v-if="desktop" />
+      <TopMobile v-if="tablet || mobile" />
+      <VideoComponent v-if="desktop" />
+      <AboutSection />
+      <HowToUseSection v-if="desktop" />
+      <HowToUseMobile v-if="tablet || mobile" />
+      <WorldMap />
     </Layout>
   </div>
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent } from "vue";
+import { defineAsyncComponent, ref } from "vue";
 import Layout from "../components/layout/index.vue";
 import VideoComponent from "../components/home/videoComponent/VideoComponent.vue";
 import AboutSection from "../components/home/about/AboutSection.vue";
 import WorldMap from "../components/home/worldMap/WorldMap.vue";
 import { useBreakpoints } from "../plugins/breakpoints";
 
-const {isMobile, isDesktop, isTablet } = useBreakpoints();
+const { isMobile, isDesktop, isTablet } = useBreakpoints();
+
+const mobile = ref(isMobile);
+const desktop = ref(isDesktop);
+const tablet = ref(isTablet);
 
 const TopDesctop = defineAsyncComponent(
   () => import("../components/home/top/TopDesctop.vue")
@@ -50,5 +41,4 @@ const HowToUseSection = defineAsyncComponent(
 const HowToUseMobile = defineAsyncComponent(
   () => import("../components/home/howToUse/HowToUseMobile.vue")
 );
-
 </script>

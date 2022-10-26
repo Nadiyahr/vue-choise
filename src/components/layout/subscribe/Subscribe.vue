@@ -13,11 +13,7 @@
         </b-col>
         <b-col>
           <b-form @submit="" @reset="" class="py-4 text-ligth">
-            <b-form-input
-              v-model="model"
-              placeholder="You email"
-              class="rounded-pill bg-dark mb-3 text-light"
-            ></b-form-input>
+            <Input :model="model" placeholder="Name" bg="bg-dark" />
             <b-button
               pill
               type="submit"
@@ -36,6 +32,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
+import Input from "../../utils/Input.vue";
 
 const props = defineProps({
   modelValue: {
