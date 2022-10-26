@@ -27,7 +27,6 @@
             class="w-btn"
             :class="isOpen ? 'bg-white' : 'bg-blue-btn'"
           >
-            <!-- style="background-color: rgba(96, 83, 177, 1)" -->
             <Android class="mb-1" :svg-color="isOpen ? '#2b146c' : '#fff'" />
             <span v-if="isTablet" class="mx-2 text-white">Android</span>
           </b-button>

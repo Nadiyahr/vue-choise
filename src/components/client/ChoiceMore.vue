@@ -46,7 +46,6 @@
             alt="Start Image"
             class="more_image"
           ></b-img>
-          <!-- <b-img fluid src="images/photo2.png" alt="Start Image"></b-img> -->
         </b-col>
       </b-row>
     </b-container>

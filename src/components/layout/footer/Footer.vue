@@ -42,19 +42,6 @@
           <Input :model="model" placeholder="Name" />
           <Input :model="model" placeholder="Email" />
           <Input :model="model" placeholder="Enter Text" />
-
-          <!-- <b-form-input
-            placeholder="Name"
-            class="rounded-pill bg-primary p-2 ps-4 mb-3 text-light border-primary"
-          ></b-form-input>
-          <b-form-input
-            placeholder="Email"
-            class="rounded-pill bg-primary p-2 ps-4 mb-3 text-light border-primary"
-          ></b-form-input>
-          <b-form-input
-            placeholder="Enter Text"
-            class="rounded-pill bg-primary p-2 ps-4 mb-3 text-light border-primary"
-          ></b-form-input> -->
           <b-button pill type="submit" variant="secondary" class="w-100"> Send </b-button>
         </b-form>
       </b-col>

@@ -5,20 +5,6 @@
     <ManageMenu />
     <BecomePartner />
     <Testimonial />
-    <!-- <main v-if="isDesktop()">
-      <ChoiceMore />
-      <Brands />
-      <ManageMenu />
-      <BecomePartner />
-      <Testimonial />
-    </main>
-    <main v-else>
-      <ChoiceMore is-mobile />
-      <Brands is-mobile />
-      <ManageMenu is-mobile />
-      <BecomePartner is-mobile />
-      <Testimonial />
-    </main> -->
   </Layout>
 </template>
 

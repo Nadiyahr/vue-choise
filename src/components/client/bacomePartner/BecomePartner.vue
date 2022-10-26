@@ -51,7 +51,6 @@ import WaveLine from "../../icons/WaveLine.vue";
 import WaveMobile from "../../icons/WaveMobile.vue";
 import { useBreakpoints } from "../../../plugins/breakpoints";
 import { ref } from "vue";
-// import { useBreakpoints } from "@/src/plugins/breakpoints";
 
 const { isMobile } = useBreakpoints();
 
