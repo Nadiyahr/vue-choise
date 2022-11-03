@@ -21,7 +21,7 @@ export default createStore({
         const local = JSON.parse(localStorage.posts)
         commit('SET_POSTS', local)
      } else {
-        const response = await axios.get(`${API}/users/${payload}/posts`)
+        const response = await axios.get(`${API}/posts`)
  
         commit('SET_POSTS', response.data)
      }
@@ -31,11 +31,7 @@ export default createStore({
         const local = JSON.parse(localStorage.photo)
         commit('SET_POHOTOS', local)
      } else {
-      const response = await axios.get(`${API}/albums/${payload}/photos`, {
-        params: {
-          _limit: 10
-        }
-      })
+      const response = await axios.get(`${API}/albums/${payload}/photos`)
       commit('SET_POHOTOS', response.data)
     }
    }

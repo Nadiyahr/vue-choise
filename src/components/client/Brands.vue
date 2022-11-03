@@ -48,7 +48,7 @@ import Brand5 from "../icons/Brand5.vue";
   &__container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
 
     @media (max-width: 600px) {

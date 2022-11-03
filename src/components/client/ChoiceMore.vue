@@ -3,19 +3,19 @@
     <b-container fluid class="text-dark py-5">
       <b-row>
         <b-col md="6">
-          <article class="sm-fs-7 text sm-flex">
+          <article class="sm-fs-7 text sm-flex pt-5">
             <div>
-              <h1 class="fw-bold fs-1 lh-2 py-4 lg-pb-5 lg-mb-5 ls-2">
-                Choicie:&nbsp;more<br />client,&nbsp;esier<br />comunication
+              <h1 class="fw-bold fs-1 lh-2 py-4 lg-pb-5 lg-mb-5 ls-2 more_title">
+                Choicie:&nbsp;more<br />client,&nbsp;esier<br />communication
               </h1>
-              <p class="pb-3 lg-pb-0 lg-mb-5 lh-3">
-                Choicie is very familiar with the feeling of being an alien in another<br
-                  v-if="desktop"
-                />country (he is actually an alien). So Choicie decided to help people<br
-                  v-if="desktop"
-                />with the same problem to get rid of it and also improve cafes and<br
-                  v-if="desktop"
-                />restaurants.
+              <p class="pb-5 lg-pb-0 lg-mb-5 lh-3">
+                Choicie is very familiar with the feeling of being an alien in another
+                <br v-if="desktop" />
+                country (he is actually an alien). So Choicie decided to help people
+                <br v-if="desktop" />
+                with the same problem to get rid of it and also improve cafes and
+                <br v-if="desktop" />
+                restaurants.
               </p>
               <div class="py-2 lg-py-5">
                 <b-button variant="link" size="md" to="/" class="px-0">
@@ -25,7 +25,7 @@
             </div>
           </article>
         </b-col>
-        <b-col></b-col>
+        <!-- <b-col lg="1"></b-col> -->
         <b-col :class="bgColor" md="5" class="position-relative pt-5 md-pt-0">
           <div class="position-absolute bg-white rounded-3 more_comment">
             <p class="fst-italic">
@@ -84,6 +84,10 @@ const myImg = computed(() => images);
   @media (max-width: 600px) {
     padding-top: 0;
     padding-bottom: 8rem;
+  }
+
+  &_title {
+    letter-spacing: 0.1rem;
   }
 
   &_span {

@@ -21,7 +21,7 @@
           style="min-height: 30rem"
           class="pt-3 px-3 rounded-0 mb-5"
         >
-          <b-card-title class="fs-2 fw-bold">
+          <b-card-title class="fs-2 fw-bold title">
             Creation of<br />a Restaurant menu
           </b-card-title>
           <b-card-text class="position-relative">
@@ -37,7 +37,7 @@
           style="min-height: 30rem"
           class="pt-3 px-3 rounded-0 mb-5"
         >
-          <b-card-title class="fs-2 fw-bold">
+          <b-card-title class="fs-2 fw-bold title">
             The biggest feedback from your customers
           </b-card-title>
           <b-card-text class="position-relative">
@@ -56,4 +56,8 @@
 import ManageMenuCard from "./menuCard/ManageMenuCard.vue";
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.title {
+  letter-spacing: 1px;
+}
+</style>

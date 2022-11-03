@@ -1,6 +1,6 @@
 <template>
   <b-form-input
-    :v-model="props.model"
+    v-model="model"
     :placeholder="placeholder"
     class="rounded-pill p-2 ps-4 mb-3 text-light border-primary"
     :class="bg"
@@ -8,8 +8,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+
 interface Props {
-  model: string | number;
+  // model: string | number;
   placeholder: string;
   bg?: string;
 }
@@ -17,4 +19,6 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   bg: "bg-primary",
 });
+
+const model = ref("");
 </script>

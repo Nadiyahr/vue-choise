@@ -38,10 +38,10 @@
         >
       </b-col>
       <b-col id="contact" xs="12" md="4" class="footer__form">
-        <b-form @submit="" @reset="" class="text-ligth">
-          <Input :model="model" placeholder="Name" />
-          <Input :model="model" placeholder="Email" />
-          <Input :model="model" placeholder="Enter Text" />
+        <b-form @submit="onClick" @reset="" class="text-ligth">
+          <Input v-model="data.name" placeholder="Name" />
+          <Input v-model="data.email" placeholder="Email" />
+          <Input v-model="data.text" placeholder="Enter Text" />
           <b-button pill type="submit" variant="secondary" class="w-100"> Send </b-button>
         </b-form>
       </b-col>
@@ -50,28 +50,23 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { reactive } from "vue";
 import Alien from "@/components/icons/AlienIcon.vue";
 import Input from "@/components/utils/Input.vue";
 
-const props = defineProps({
-  modelValue: {
-    type: [String, Number],
-    default: "",
-  },
+const data = reactive({
+  name: "",
+  email: "",
+  text: "",
 });
 
-const emit = defineEmits(["update:modelValue"]);
+const onClick = () => {
+  console.log(data);
 
-const model = computed({
-  get() {
-    return props.modelValue;
-  },
-
-  set(value) {
-    return emit("update:modelValue", value);
-  },
-});
+  data.name = "";
+  data.email = "";
+  data.text = "";
+};
 </script>
 
 <style scoped lang="scss">

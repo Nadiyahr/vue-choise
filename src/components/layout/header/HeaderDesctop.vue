@@ -1,30 +1,30 @@
 <template>
   <header :class="bgColor">
-    <b-navbar type="light" class="fs-4" :class="bgColor">
+    <b-navbar type="light" :class="bgColor">
       <b-navbar-nav class="fs-6 fw-bold">
         <b-navbar-brand
           to="/"
-          class="fs-3 fw-bolder d-flex flex justify-content-between align-items-center gap-3"
+          class="fs-3 fw-bolder d-flex flex align-items-center gap-2"
           :class="(bgColor, brandColor)"
         >
           <Alien :svgColor="iconColor" />
           CHOICIE
         </b-navbar-brand>
-        <router-link to="/" active-class="active-link-home" :class="textColor"
-          >Home</router-link
-        >
-        <router-link to="/about" active-class="active-link" :class="textColor"
-          >About</router-link
-        >
-        <router-link to="/client" active-class="active-link" :class="textColor"
-          >Client</router-link
-        >
-        <b-nav-item v-if="name === 'home'" href="#howTo" class="py-2 pe-2"
-          ><span :class="textColor">How to use</span></b-nav-item
-        >
-        <b-nav-item href="#contact" class="py-2"
-          ><span :class="textColor">Contact</span></b-nav-item
-        >
+        <router-link to="/" active-class="active-link-home" :class="textColor">
+          Home
+        </router-link>
+        <router-link to="/about" active-class="active-link" :class="textColor">
+          About
+        </router-link>
+        <router-link to="/client" active-class="active-link" :class="textColor">
+          Client
+        </router-link>
+        <b-nav-item v-if="name === 'home'" href="#howTo" class="py-2 fs-5">
+          <span :class="textColor">How to use</span>
+        </b-nav-item>
+        <b-nav-item href="#contact" class="py-2 fs-5">
+          <span :class="textColor">Contact</span>
+        </b-nav-item>
       </b-navbar-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="">
@@ -65,6 +65,7 @@ const name = route.name;
 
 <style scoped lang="css">
 a {
+  font-size: 16px;
   padding: 16px;
   text-decoration: none;
 }

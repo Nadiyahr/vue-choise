@@ -46,20 +46,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-
 interface Props {
   args: List;
 }
 
 const { args } = defineProps<Props>();
 
-const images = {
-  img_sm: args.thumbnailUrl,
-  img_lg: args.url,
-};
-
-const myImg = computed(() => images);
+console.log(args);
 
 function randomNum(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -142,8 +135,8 @@ function randomNum(min: number, max: number) {
   }
 
   &__absolute {
-    width: 250px;
-    height: 300px;
+    width: 270px;
+    height: 360px;
     position: absolute;
     top: 20%;
     left: -5%;
