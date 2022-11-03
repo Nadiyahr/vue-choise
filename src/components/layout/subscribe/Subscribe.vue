@@ -32,7 +32,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import Input from "../../utils/Input.vue";
+import Input from "@/components/utils/Input.vue";
 
 const props = defineProps({
   modelValue: {

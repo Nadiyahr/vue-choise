@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '@/views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,7 +10,7 @@ const router = createRouter({
       component: HomeView,
       meta: {
         headerClass: 'bg-dark',
-        headerMobile: 'bg-light',
+        headerMobile: 'light',
         iconClass: '#f2cf7e',
         textClass: 'text-white',
         brandClass: 'text-white'
@@ -19,10 +19,10 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/AboutView.vue'),
+      component: () => import('@/views/AboutView.vue'),
       meta: {
         headerClass: 'bg-info',
-        headerMobile: 'bg-info',
+        headerMobile: 'info',
         iconClass: '#2b146c',
         textClass: 'text-dark',
         brandClass: ''
@@ -31,11 +31,11 @@ const router = createRouter({
     {
       path: '/client',
       name: 'client',
-      component: () => import('../views/ClientView.vue'),
+      component: () => import('@/views/ClientView.vue'),
       props: true,
       meta: {
         headerClass: 'bg-info',
-        headerMobile: 'bg-info',
+        headerMobile: 'info',
         iconClass: '#2b146c',
         textClass: 'text-dark',
         brandClass: ''

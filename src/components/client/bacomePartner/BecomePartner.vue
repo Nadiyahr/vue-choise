@@ -42,14 +42,14 @@
 </template>
 
 <script setup lang="ts">
-import Quality from "../../icons/Quality.vue";
-import Reputation from "../../icons/Reputation.vue";
-import Scan from "../../icons/Scan.vue";
-import UserProfile from "../../icons/UserProfile.vue";
-import Happy from "../../icons/Happy.vue";
-import WaveLine from "../../icons/WaveLine.vue";
-import WaveMobile from "../../icons/WaveMobile.vue";
-import { useBreakpoints } from "../../../plugins/breakpoints";
+import Quality from "@/components/icons/Quality.vue";
+import Reputation from "@/components/icons/Reputation.vue";
+import Scan from "@/components/icons/Scan.vue";
+import UserProfile from "@/components/icons/UserProfile.vue";
+import Happy from "@/components/icons/Happy.vue";
+import WaveLine from "@/components/icons/WaveLine.vue";
+import WaveMobile from "@/components/icons/WaveMobile.vue";
+import { useBreakpoints } from "@/plugins/breakpoints";
 import { ref } from "vue";
 
 const { isMobile } = useBreakpoints();

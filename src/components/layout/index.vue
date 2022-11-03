@@ -12,7 +12,7 @@
 import { defineAsyncComponent, ref } from "vue";
 import Subscribe from "./subscribe/Subscribe.vue";
 import Footer from "./footer/Footer.vue";
-import { useBreakpoints } from "../../plugins/breakpoints";
+import { useBreakpoints } from "@/plugins/breakpoints";
 
 export interface Props {
   isHome?: boolean;

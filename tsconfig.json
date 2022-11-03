@@ -4,11 +4,12 @@
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "../App.vue.ts"],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
+    "allowJs": true,
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "~/*": ["./*"]
+      "@/*": ["src/*"],
+      "~/*": ["src/*"]
     },
     "types": ["vite/client"]
   },

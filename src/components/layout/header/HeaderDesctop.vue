@@ -50,9 +50,9 @@
 </template>
 
 <script setup lang="ts">
-import Alien from "../../icons/AlienIcon.vue";
-import Android from "../../icons/AndroidIcon.vue";
-import IOS from "../../icons/iOSIcon.vue";
+import Alien from "@/components/icons/AlienIcon.vue";
+import Android from "@/components/icons/AndroidIcon.vue";
+import IOS from "@/components/icons/iOSIcon.vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();

@@ -1,11 +1,13 @@
 import { createApp } from 'vue'
+import VueCookies from 'vue-cookies'
+import stores from './stores';
 import BootstrapVue3 from 'bootstrap-vue-3'
-import { useBreakpoints } from "./plugins/breakpoints";
+import { useBreakpoints } from "@/plugins/breakpoints";
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
-import '../src/assets/style/main.scss'
+import '@/assets/style/main.scss'
 
 import App from './App.vue'
 import router from './router'
@@ -13,7 +15,14 @@ import router from './router'
 const app = createApp(App)
 
 app.use(router)
+.use(VueCookies)
+.use(stores)
 .use(BootstrapVue3 as any)
 .use(useBreakpoints)
+
+stores.subscribe( (mutation, state) => {
+  localStorage.setItem('posts', JSON.stringify(state.posts));  
+  localStorage.setItem('photos', JSON.stringify(state.photos));  
+})
 
 router.isReady().then(() => app.mount('#app'))

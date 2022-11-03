@@ -22,3 +22,4 @@ export const useBreakpoints = () => {
 
   return { width, type, isDesktop, isMobile, isTablet }
 }
+

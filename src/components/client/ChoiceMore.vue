@@ -58,7 +58,7 @@ import Like from "../icons/Like.vue";
 import smImage from "/images/photoMobile.png";
 import lgImage from "/images/photo.png";
 import { computed } from "vue";
-import { useBreakpoints } from "../../plugins/breakpoints";
+import { useBreakpoints } from "@/plugins/breakpoints";
 import { ref } from "vue";
 
 const { isDesktop } = useBreakpoints();

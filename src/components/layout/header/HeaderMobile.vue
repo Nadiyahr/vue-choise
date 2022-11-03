@@ -1,13 +1,12 @@
 <template>
   <div>
-    <b-navbar toggleable :class="isOpen ? 'bg-primary' : bgColor">
+    <b-navbar toggleable :variant="isOpen ? 'primary' : bgColor">
       <b-button
         @click="togle"
         id="menu-toggle"
         v-b-toggle="'sidebar-toggle'"
-        :class="isOpen ? 'bg-primary' : bgColor"
+        :class="isOpen ? 'bg-primary' : `bg-${bgColor}`"
       >
-        <!-- <span class="navbar-toggler-icon mb-1" aria-hidden="true"></span> -->
         <Menu :svg-color="isOpen ? '#fff' : '#2b146c'" />
       </b-button>
       <b-navbar-brand
@@ -28,7 +27,9 @@
             :class="isOpen ? 'bg-white' : 'bg-blue-btn'"
           >
             <Android class="mb-1" :svg-color="isOpen ? '#2b146c' : '#fff'" />
-            <span v-if="isTablet" class="mx-2 text-white">Android</span>
+            <span v-if="tablet" class="mx-2" :class="isOpen ? 'text-dark' : 'text-white'"
+              >Android</span
+            >
           </b-button>
           <b-button
             pill
@@ -38,7 +39,9 @@
             :class="isOpen ? 'bg-white' : 'bg-secondary'"
           >
             <IOS class="mb-1" />
-            <span v-if="isTablet" class="mx-2 text-white">iOS</span>
+            <span v-if="tablet" class="mx-2" :class="isOpen ? 'text-dark' : 'text-white'"
+              >iOS</span
+            >
           </b-button>
         </b-nav-form>
       </b-navbar-nav>
@@ -66,11 +69,11 @@
 <script lang="ts">
 import { defineComponent, ref, watchEffect } from "vue";
 import { useRoute } from "vue-router";
-import Alien from "../../icons/AlienIcon.vue";
-import Android from "../../icons/AndroidIcon.vue";
-import IOS from "../../icons/iOSIcon.vue";
-import Menu from "../../icons/Menu.vue";
-import { useBreakpoints } from "../../../plugins/breakpoints";
+import Alien from "@/components/icons/AlienIcon.vue";
+import Android from "@/components/icons/AndroidIcon.vue";
+import IOS from "@/components/icons/iOSIcon.vue";
+import Menu from "@/components/icons/Menu.vue";
+import { useBreakpoints } from "@/plugins/breakpoints";
 
 export default defineComponent({
   components: {
@@ -81,7 +84,6 @@ export default defineComponent({
   },
   data() {
     const route = useRoute();
-    const { isMobile, isTablet } = useBreakpoints();
     const bgColor = route.meta.headerMobile as string;
     const name = route.name as string;
     return {
@@ -89,13 +91,12 @@ export default defineComponent({
       primaryColor: "#3b2186",
       bgColor,
       name,
-      isTablet,
-      isMobile,
     };
   },
   setup() {
-    const mobile = ref(null);
-    const tablet = ref(null);
+    const { isMobile, isTablet } = useBreakpoints();
+    const mobile = ref(isMobile);
+    const tablet = ref(isTablet);
 
     return {
       mobile,

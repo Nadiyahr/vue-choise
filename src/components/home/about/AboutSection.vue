@@ -32,7 +32,7 @@
             </div>
           </div>
         </b-col>
-        <b-col v-if="desktop">
+        <b-col v-if="desktop || tablet">
           <b-img fluid src="images/infoAbout1.png" alt="Info Image"></b-img>
         </b-col>
       </b-row>
@@ -40,7 +40,7 @@
         <b-col v-if="mobile">
           <b-img center src="images/infoMobile2.png" alt="Info Image"></b-img>
         </b-col>
-        <b-col v-if="desktop">
+        <b-col v-if="desktop || tablet">
           <b-img fluid src="images/infoAbout2.png" alt="Info Image"></b-img>
         </b-col>
         <b-col>
@@ -70,10 +70,11 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { useBreakpoints } from "../../../plugins/breakpoints";
+import { useBreakpoints } from "@/plugins/breakpoints";
 
-const { isMobile, isDesktop } = useBreakpoints();
+const { isMobile, isDesktop, isTablet } = useBreakpoints();
 
 const mobile = ref(isMobile);
 const desktop = ref(isDesktop);
+const tablet = ref(isTablet);
 </script>

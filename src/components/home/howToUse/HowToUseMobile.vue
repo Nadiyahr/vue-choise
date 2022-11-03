@@ -57,10 +57,10 @@
 </template>
 
 <script setup lang="ts">
-import Barcode from "../../icons/Barcode.vue";
-import Chat from "../../icons/Chat.vue";
-import MenuMobile from "../../icons/MenuMobile.vue";
-import Ellipse from "../../icons/Ellipse.vue";
+import Barcode from "@/components/icons/Barcode.vue";
+import Chat from "@/components/icons/Chat.vue";
+import MenuMobile from "@/components/icons/MenuMobile.vue";
+import Ellipse from "@/components/icons/Ellipse.vue";
 import HowToGetStart from "./HowToGetStart.vue";
 </script>
 

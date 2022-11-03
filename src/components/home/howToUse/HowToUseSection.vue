@@ -64,10 +64,10 @@
 </template>
 
 <script setup lang="ts">
-import QrMenu from "../../icons/QrMenu.vue";
-import QrOrder from "../../icons/QrOrder.vue";
-import OnlineMenu from "../../icons/OnlineMenu.vue";
-import Feadback from "../../icons/Feadback.vue";
+import QrMenu from "@/components/icons/QrMenu.vue";
+import QrOrder from "@/components/icons/QrOrder.vue";
+import OnlineMenu from "@/components/icons/OnlineMenu.vue";
+import Feadback from "@/components/icons/Feadback.vue";
 import HowToGetStart from "./HowToGetStart.vue";
 </script>
 

@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { useBreakpoints } from "../../../plugins/breakpoints";
+import { useBreakpoints } from "@/plugins/breakpoints";
 
 const { isMobile } = useBreakpoints();
 

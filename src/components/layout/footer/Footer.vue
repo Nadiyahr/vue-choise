@@ -51,8 +51,8 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import Alien from "../../icons/AlienIcon.vue";
-import Input from "../../utils/Input.vue";
+import Alien from "@/components/icons/AlienIcon.vue";
+import Input from "@/components/utils/Input.vue";
 
 const props = defineProps({
   modelValue: {

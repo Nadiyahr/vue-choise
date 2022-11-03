@@ -55,9 +55,9 @@
 </template>
 
 <script setup lang="ts">
-import RestaurantReview from "../../icons/RestaurantReviewIcon.vue";
-import QrCode from "../../icons/QrCode.vue";
-import MapRestaurantIcon from "../../icons/MapRestaurantIcon.vue";
-import BonusIcon from "../../icons/BonusIcon.vue";
+import RestaurantReview from "@/components/icons/RestaurantReviewIcon.vue";
+import QrCode from "@/components/icons/QrCode.vue";
+import MapRestaurantIcon from "@/components/icons/MapRestaurantIcon.vue";
+import BonusIcon from "@/components/icons/BonusIcon.vue";
 import TopGetStarted from "./TopGetStarted.vue";
 </script>
