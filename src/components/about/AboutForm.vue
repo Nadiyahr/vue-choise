@@ -41,8 +41,6 @@ const data = reactive({
 });
 
 const onClick = () => {
-  console.log(data);
-
   data.title = "";
   data.body = "";
   data.title1 = "";

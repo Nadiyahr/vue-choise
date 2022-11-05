@@ -15,6 +15,7 @@
                 args.title.split(" ").slice(0, 2).join(" ")
               }}</span>
               —
+              {{ args.id }}
               {{ args.title.split(" ").slice(2).join(" ") }}
             </p>
           </b-col>
@@ -51,8 +52,6 @@ interface Props {
 }
 
 const { args } = defineProps<Props>();
-
-console.log(args);
 
 function randomNum(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1) + min);

@@ -7,7 +7,15 @@ const path = require('path')
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/vue-choise/',
-  plugins: [vue(), vueJsx()],
+  plugins: [vue({
+    template: {
+      compilerOptions: {
+        compatConfig: {
+          MODE: 3
+        }
+      }
+    }
+  }), vueJsx()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

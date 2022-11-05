@@ -61,8 +61,6 @@ const data = reactive({
 });
 
 const onClick = () => {
-  console.log(data);
-
   data.name = "";
   data.email = "";
   data.text = "";

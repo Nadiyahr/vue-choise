@@ -1,5 +1,5 @@
 declare type Post = {
-[x: string]: string;
+  [key: string]: string;
   body: string;
   id: number;
   title: string;
@@ -16,4 +16,6 @@ declare type Photo = {
 
 declare interface List extends Post, Photo {
   title1: string;
-} 
+}
+
+
