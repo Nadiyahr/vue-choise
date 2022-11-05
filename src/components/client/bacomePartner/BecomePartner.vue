@@ -36,7 +36,7 @@
     </div>
     <div class="absolute">
       <WaveMobile v-if="mobile" />
-      <!-- <WaveLine v-else class="w-100" /> -->
+      <WaveLine v-else class="w-100" />
     </div>
   </section>
 </template>
@@ -62,14 +62,14 @@ const mobile = ref(isMobile);
   position: relative;
   padding-top: 2rem;
   padding-bottom: 22rem;
-  background-image: url(images/wave.svg);
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position-y: bottom;
+  // background-image: url(images/wave.svg);
+  // background-color: transparent;
+  // background-repeat: no-repeat;
+  // background-size: 100%;
+  // background-position-y: bottom;
 
   @media (max-width: 500px) {
-    background-image: none;
+    // background-image: none;
     padding: 2rem 1.25rem 20rem;
   }
 
