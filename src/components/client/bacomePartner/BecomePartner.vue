@@ -104,7 +104,7 @@ const mobile = ref(isMobile);
 
 .absolute {
   width: 100%;
-  height: 42em;
+  height: 45em;
   position: absolute;
   bottom: 0em;
   left: 0em;

@@ -1,5 +1,5 @@
 <template>
-  <section :class="bgColor" class="py-5">
+  <section :class="bgColor" class="py-5 mt-5">
     <div class="">
       <h1>This is an example request from {JSON} Placeholder</h1>
       <div class="py-5 lg-py-5 d-flex justify-content-between">

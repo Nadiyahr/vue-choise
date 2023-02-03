@@ -1,4 +1,4 @@
-import { computed, onMounted, onUnmounted, ref } from "vue"
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 
 export const useBreakpoints = () => {
   let windowWidth = ref(window.innerWidth)

@@ -1,5 +1,5 @@
 declare type Post = {
-  [key: string]: string;
+  [key: string]: string | number;
   body: string;
   id: number;
   title: string;

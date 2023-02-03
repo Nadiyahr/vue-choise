@@ -29,7 +29,6 @@ export default createStore({
           post.title1 = post.title
           return {...post, ...photos.data[i]}
         })
-        console.log(feeds)
         commit('SET_LOADING')
         localStorage.setItem('feedbaks', JSON.stringify(feeds))
         commit('SET_FEEDBACKS', feeds)

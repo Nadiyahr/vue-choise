@@ -1,7 +1,7 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
   // "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "../App.vue.ts"],
+  "include": ["env.d.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "../App.vue.ts"],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "allowJs": true,
@@ -11,7 +11,10 @@
       "@/*": ["src/*"],
       "~/*": ["src/*"]
     },
-    "types": ["vite/client"]
+    "typeRoots": ["./node_modules/@types"],
+    "target": "es5",
+    "lib": ["es5", "es6", "DOM"],
+    "sourceMap": true
   },
 
   "references": [

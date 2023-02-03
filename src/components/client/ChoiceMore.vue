@@ -32,7 +32,10 @@
               “We edited the menu after using this app. Now our sales are 30% higher“
             </p>
             <div class="d-flex gap-3 md-gap-4">
-              <Like class="mt-2" />
+              <svg class="icon icon--like">
+                <use href="/src/assets/icons/icons_list.svg#like"></use>
+              </svg>
+              <!-- <Like class="mt-2" /> -->
               <div>
                 <h5 class="fs-5 text p-0">Anastasia Glorman,</h5>
                 <span>co-fouder @syngenta</span>
@@ -127,6 +130,12 @@ const myImg = computed(() => images);
     @media (max-width: 600px) {
       margin-left: 2rem;
     }
+  }
+
+  .icon--like {
+    width: 36px;
+    height: 36px;
+    margin-top: 12px;
   }
 }
 </style>
