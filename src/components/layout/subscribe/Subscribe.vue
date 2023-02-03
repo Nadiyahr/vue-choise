@@ -1,6 +1,6 @@
 <template>
   <section class="bg-primary text-light py-4">
-    <b-container fluid class="">
+    <b-container fluid class="mt-3">
       <b-row>
         <b-col sm="12" md="8">
           <div class="py-4">
@@ -13,7 +13,7 @@
         </b-col>
         <b-col>
           <b-form @submit="" @reset="" class="py-4 text-ligth">
-            <Input :model="model" placeholder="Name" bg="bg-dark" />
+            <Input :model="model" placeholder="Name" bg="bg-dark" class="mb-3" />
             <b-button
               pill
               type="submit"
