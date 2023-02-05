@@ -3,7 +3,7 @@
     <b-row class="px-2">
       <b-col xs="12" md="12" lg="3" class="footer__brand">
         <div
-          class="fs-4 mb-3 lg-fs-3 text-light fw-bolder d-flex flex gap-4 align-items-center"
+          class="fs-3 mb-3 lg-fs-3 text-light fw-bolder d-flex flex gap-4 align-items-center"
         >
           <svg class="icon icon--yelow">
             <use
@@ -14,7 +14,6 @@
               fill="#f2cf7e"
             ></use>
           </svg>
-          <!-- <Alien :svgColor="'#f2cf7e'" /> -->
           CHOICIE
         </div>
         <p class="fs-7">You know what you choose!</p>
@@ -57,7 +56,6 @@
 
 <script setup lang="ts">
 import { reactive } from "vue";
-import Alien from "@/components/icons/AlienIcon.vue";
 import Input from "@/components/utils/Input.vue";
 
 const data = reactive({
@@ -78,10 +76,10 @@ const onClick = () => {
   &__position {
     padding-top: 4.2rem;
     padding-bottom: 4.2rem;
-    background-image: url("//src/assets/icons/icons_list.svg#alien");
+    background-image: url("../icons/cover.svg");
     background-repeat: no-repeat;
     background-position: 100% 100%;
-    background-size: 400px;
+    background-size: 800px;
   }
 
   &__form {
