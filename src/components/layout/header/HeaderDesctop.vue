@@ -24,7 +24,7 @@
           class="route-link"
           :class="textColor"
         >
-          Home
+          {{ $t("General.Home") }}
         </router-link>
         <router-link
           to="/about"
@@ -32,7 +32,7 @@
           class="route-link"
           :class="textColor"
         >
-          About
+          {{ $t("General.About") }}
         </router-link>
         <router-link
           to="/client"
@@ -40,13 +40,13 @@
           class="route-link"
           :class="textColor"
         >
-          Client
+          {{ $t("General.Client") }}
         </router-link>
-        <b-nav-item v-if="name === 'home'" href="#howTo" class="py-2 fs-5">
-          <span :class="textColor">How to use</span>
+        <b-nav-item v-if="isMain" href="#howTo" class="py-2 fs-6">
+          <span :class="textColor">{{ $t("General.How to use") }}</span>
         </b-nav-item>
-        <b-nav-item href="#contact" class="py-2 fs-5">
-          <span :class="textColor">Contact</span>
+        <b-nav-item href="#contact" class="py-2 fs-6">
+          <span :class="textColor">{{ $t("General.Contact") }}</span>
         </b-nav-item>
       </b-navbar-nav>
       <!-- Right aligned nav items -->
@@ -62,16 +62,17 @@
             <svg class="icon icon--android" viewBox="0 0 16 16">
               <use href="/src/assets/icons/icons_list.svg#android"></use>
             </svg>
-            <!-- <Android class="mb-1" /> -->
             <span class="mx-2">Android</span>
           </b-button>
           <b-button pill size="md" variant="secondary" class="w-btn">
             <svg class="icon icon--ios">
               <use href="/src/assets/icons/icons_list.svg#ios"></use>
             </svg>
-            <!-- <IOS class="mb-1" /> -->
             <span class="mx-2">iOS</span>
           </b-button>
+          <div class="select">
+            <LanguageSwitch :is-main="isMain" />
+          </div>
         </b-nav-form>
       </b-navbar-nav>
     </b-navbar>
@@ -79,24 +80,32 @@
 </template>
 
 <script setup lang="ts">
-import Android from "@/components/icons/AndroidIcon.vue";
-import IOS from "@/components/icons/iOSIcon.vue";
 import { useRoute } from "vue-router";
+import LanguageSwitch from "./LanguageSwitch.vue";
 
 const route = useRoute();
-const bgColor = route.meta.headerClass;
+const bgColor = route.meta.headerClass as string;
 const iconColor = route.meta.iconClass as string;
-const textColor = route.meta.textClass;
+const textColor = route.meta.textClass as string;
 const brandColor = route.meta.brandClass;
 const name = route.name;
+const isMain = name === "home";
 </script>
 
 <style scoped lang="scss">
 a {
-  font-size: 16px;
-  padding: 16px;
+  font-size: 14px;
+  padding-top: 15px;
   margin-top: 3px;
-  line-height: 20px;
+  margin-right: 20px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.route-link {
+  font-size: 14px;
+  margin-top: 3px;
+  line-height: 18px;
   text-decoration: none;
 }
 
@@ -125,6 +134,10 @@ a {
 
 .my-header {
   box-shadow: 0 0 16px 8px rgba(59, 33, 134, 0.54);
-  padding: 0 148px;
+  padding: 0 60px 0 135px;
+}
+
+.select {
+  width: 50px;
 }
 </style>

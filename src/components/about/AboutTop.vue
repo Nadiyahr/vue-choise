@@ -1,13 +1,13 @@
 <template>
   <section :class="bgColor" class="py-5 mt-5">
     <div class="">
-      <h1>This is an example request from {JSON} Placeholder</h1>
+      <h2>{{ $t('About.About title') }}</h2>
       <div class="py-5 lg-py-5 d-flex justify-content-between">
         <b-button pill size="md" variant="primary" @click="toggleForm()">
-          {{ isForm ? `Return to feedbacks` : `Add feedback` }}
+          {{ toggleFormBtnName }}
         </b-button>
         <b-button pill size="md" variant="primary" @click="clearStorage()" class="">
-          Clear storage
+          {{ $t('About.Clear storage') }}
         </b-button>
       </div>
       <div v-if="!isForm">
@@ -35,38 +35,43 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, reactive, onMounted, onUnmounted } from "vue";
-import { useRoute } from "vue-router";
-import { useStore } from "vuex";
-import AboutPost from "./AboutPost.vue";
-import AboutForm from "./AboutForm.vue";
+import { computed, ref, reactive, onMounted, onUnmounted } from 'vue';
+import { useRoute } from 'vue-router';
+import { useStore } from 'vuex';
+import { useI18n } from 'vue-i18n';
+import AboutPost from './AboutPost.vue';
+import AboutForm from './AboutForm.vue';
 
 onMounted(async () => {
-  store.dispatch("GET_FEEDBACK");
+  store.dispatch('GET_FEEDBACK');
 });
 
 const route = useRoute();
 const bgColor = route.meta.headerClass;
+const { t } = useI18n();
 
 const store = useStore();
 
 const list = computed(() => store.state.feedbacks);
 const perPage = computed(() => store.state.perPage);
 let curr = computed(() => store.state.currentPage);
+const rows = computed(() => store.getters.gelLength);
+const toggleFormBtnName = computed(() =>
+  isForm ? t('About.Return to feedbacks') : t('About.Add feedback')
+);
 let cur = curr.value;
 const current = ref(cur);
-const rows = computed(() => store.getters.gelLength);
 
 let isForm = ref(false);
 
-function onPageChanged(bvEvent: Event, page: number) {
-  store.commit("SET_PAGE", page);
+const onPageChanged = (bvEvent: Event, page: number) => {
+  store.commit('SET_PAGE', page);
   window.scrollTo({
     top: 200,
     left: 0,
-    behavior: "smooth",
+    behavior: 'smooth',
   });
-}
+};
 
 const toggleForm = () => {
   isForm.value = !isForm.value;

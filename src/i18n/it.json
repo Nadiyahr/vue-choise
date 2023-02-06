@@ -1,0 +1,40 @@
+{
+  "General": {
+    "Home": "Home",
+    "About": "Chi Siamo",
+    "Client": "Il Cliente",
+    "Contact": "Contatti",
+    "How to use": "Istruzioni",
+    "Universal Menu": "Menu Universale",
+    "Growth Factor": "Fattore di creshita",
+    "Privacy Policy": "Politica sulla Riservatezza",
+    "You know what you choose!": "Sai esattamente cosa scegli!"
+  },
+  "Forms": {
+    "Full Name and position": "Nome completo e la posizione",
+    "Title": "Title",
+    "Enter Text": "Inizia a digitare",
+    "Name": "Nome",
+    "Email": "Email",
+    "Send": "Invia"
+  },
+  "About": {
+    "About title": "Questo è un esempio di request da JSON Placeholder",
+    "Return to feedbacks": "Ritorna ai feedback",
+    "Add feedback": "Aggiungi feedback",
+    "Clear storage": "Ripristina local storage"
+  },
+  "Home": {
+    "Title About Section": "Choicie è un menu universale per tutti i ristoranti",
+    "First paragraph": "I nomi in lingua straniera non sono più un problema.",
+    "Second paragraph": "Prova nuovi piatti quando sei in viaggio o semplicemente esci con amuci: con Choicie puoi ordinare qualsiasi cosa utilizzando la traduzione automatica delle immagini dei piatti dal menu. Effettua l'ordine mentre vai al ristorante, quindi mostra il codice QR al cameriere.",
+    "Get Started": "Iniziare",
+    "Fourth paragraph": "Per chi ama il cibo! Diventa un influencer: aggiungi nuovi ristoranti alla mappa della città, guadagna punti, ottieni follower.",
+    "Fifth paragraph": "Mantieni private le informazioni importanti sugli ordini nel tuo account: segna i piatti che ti sono piaciuti e quelli che non ti sono piaciuti e gli alimenti a cui sei allergico."
+  },
+  "Subscribe": {
+    "Subscribe title": "Iscriviti e diventa parte di Choicie",
+    "Subscribe paragraph": "Lascia la tua email e ricevi tutte le informazioni sugli aggiornamenti dei prodotti, aggiornamenti del blog e aggiornamenti esclusivi.",
+    "Register to Newsletter": "Registrati per ricevere Newsletter"
+   }
+}

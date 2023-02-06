@@ -16,15 +16,27 @@
           </svg>
           CHOICIE
         </div>
-        <p class="fs-7">You know what you choose!</p>
+        <p class="fs-7">{{ $t("General.You know what you choose!") }}</p>
       </b-col>
       <b-col class="pb-4 fs-5 text ps-5">
-        <b-nav-item href="#"><p>Home</p></b-nav-item>
-        <b-nav-item href="#"><p>Universal Menu</p></b-nav-item>
-        <b-nav-item href="#howTo"><p>How do use</p></b-nav-item>
-        <b-nav-item href="#map"><p>Growth Factor</p></b-nav-item>
-        <b-nav-item href="#contact"><p>Contact</p></b-nav-item>
-        <b-nav-item href="#"><p>Privacy Policy</p></b-nav-item>
+        <b-nav-item href="#"
+          ><p>{{ $t("General.Home") }}</p></b-nav-item
+        >
+        <b-nav-item href="#"
+          ><p>{{ $t("General.Universal Menu") }}</p></b-nav-item
+        >
+        <b-nav-item href="#howTo"
+          ><p>{{ $t("General.How do use") }}</p></b-nav-item
+        >
+        <b-nav-item href="#map"
+          ><p>{{ $t("General.Growth Factor") }}</p></b-nav-item
+        >
+        <b-nav-item href="#contact"
+          ><p>{{ $t("General.Contact") }}</p></b-nav-item
+        >
+        <b-nav-item href="#"
+          ><p>{{ $t("General.Privacy Policy") }}</p></b-nav-item
+        >
       </b-col>
       <b-col class="ps-4 fs-5 text">
         <b-nav-item target="_blank" href="https://www.facebook.com/"
@@ -44,10 +56,12 @@
       </b-col>
       <b-col id="contact" xs="12" md="4" class="footer__form">
         <b-form @submit="onClick" @reset="" class="text-ligth">
-          <Input v-model="data.name" placeholder="Name" class="mb-3" />
-          <Input v-model="data.email" placeholder="Email" class="mb-3" />
-          <Input v-model="data.text" placeholder="Enter Text" class="mb-3" />
-          <b-button pill type="submit" variant="secondary" class="w-100"> Send </b-button>
+          <Input v-model="data.name" :placeholder="$t('Forms.Name')" class="mb-3" />
+          <Input v-model="data.email" :placeholder="$t('Forms.Email')" class="mb-3" />
+          <Input v-model="data.text" :placeholder="$t('Forms.Enter Text')" class="mb-3" />
+          <b-button pill type="submit" variant="secondary" class="w-100">
+            {{ $t("Forms.Send") }}
+          </b-button>
         </b-form>
       </b-col>
     </b-row>

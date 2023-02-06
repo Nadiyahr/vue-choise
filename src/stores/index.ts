@@ -8,13 +8,13 @@ export default createStore({
       feedbacks: [] as List[],
       perPage: 5,
       currentPage: 1,
-      loading: false
+      loading: false,
   },
   getters: {
     getPerPage: (state) => state.perPage,
     getCurrentPage: (state) => state.currentPage,
     gelLength: (state) => state.feedbacks.length,
-    getFeedbacksPerPage: (state) => state.feedbacks.slice((state.currentPage - 1) * state.perPage, state.currentPage * state.perPage)
+    getFeedbacksPerPage: (state) => state.feedbacks.slice((state.currentPage - 1) * state.perPage, state.currentPage * state.perPage),
   },
   actions: {
     GET_FEEDBACK: async function ({commit}) {
@@ -33,7 +33,7 @@ export default createStore({
         localStorage.setItem('feedbaks', JSON.stringify(feeds))
         commit('SET_FEEDBACKS', feeds)
       }
-    }
+    },
   },
   mutations: {
     SET_LOADING(state) {

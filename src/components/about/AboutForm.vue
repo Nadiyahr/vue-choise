@@ -6,11 +6,19 @@
           <div class="error">
             <p class="m-0 ms-5" v-if="error.title1">{{ error.title1 }}!</p>
           </div>
-          <Input v-model="data.title1" placeholder="Full Name and position" class="" />
+          <Input
+            v-model="data.title1"
+            :placeholder="$t('Forms.Full Name and position')"
+            class=""
+          />
           <div class="error">
             <p class="m-0 ms-5" v-if="error.title">{{ error.title }}!</p>
           </div>
-          <Input v-model="data.title" placeholder="Title" @keyup="validateInput" />
+          <Input
+            v-model="data.title"
+            :placeholder="$t('Forms.Title')"
+            @keyup="validateInput"
+          />
         </b-col>
         <b-col lg="6">
           <div class="error">
@@ -19,7 +27,7 @@
           <b-form-textarea
             id="textarea"
             v-model="data.body"
-            placeholder="Enter Text"
+            :placeholder="$t('Forms.Enter Text')"
             rows="4"
             max-rows="6"
             @keyup="validateInput"
@@ -29,7 +37,7 @@
       </b-row>
       <b-col>
         <b-button pill type="submit" variant="secondary" class="w-25" size="lg">
-          Send
+          {{ $t("General.Send") }}
         </b-button>
       </b-col>
     </b-form>

@@ -9,6 +9,9 @@
       >
         <Menu :svg-color="isOpen ? '#fff' : '#2b146c'" />
       </b-button>
+      <!-- <b-nav-item>
+        <LanguageSwitch :is-main="isMain" :is-mobile="mobile" />
+      </b-nav-item> -->
       <b-navbar-brand
         href="#"
         :class="isOpen ? 'text-white' : 'text-dark'"
@@ -48,18 +51,23 @@
       <b-collapse id="collapse" v-model="isOpen" is-nav>
         <b-navbar-nav class="fs-4 text-white">
           <b-nav-item align="center" to="/" class="border-bottom border-light">
-            Home</b-nav-item
+            {{ $t("General.Home") }}</b-nav-item
           >
-          <b-nav-item align="center" to="/about" class="border-bottom border-light"
-            >About</b-nav-item
-          >
-          <b-nav-item align="center" to="/client" class="border-bottom border-light"
-            >Client</b-nav-item
-          >
-          <b-nav-item align="center" href="#howTo" class="border-bottom border-light"
-            >How to use</b-nav-item
-          >
-          <b-nav-item align="center" href="#contact" class="">Contact</b-nav-item>
+          <b-nav-item align="center" to="/about" class="border-bottom border-light">{{
+            $t("General.About")
+          }}</b-nav-item>
+          <b-nav-item align="center" to="/client" class="border-bottom border-light">{{
+            $t("General.Client")
+          }}</b-nav-item>
+          <b-nav-item align="center" href="#howTo" class="border-bottom border-light">{{
+            $t("General.How to use")
+          }}</b-nav-item>
+          <b-nav-item align="center" href="#contact" class="border-bottom border-light">{{
+            "General.Contact"
+          }}</b-nav-item>
+          <b-nav-item align="center" href="" class="">
+            <LanguageSwitch is-mobile />
+          </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -74,6 +82,7 @@ import Android from "@/components/icons/AndroidIcon.vue";
 import IOS from "@/components/icons/iOSIcon.vue";
 import Menu from "@/components/icons/Menu.vue";
 import { useBreakpoints } from "@/plugins/breakpoints";
+import LanguageSwitch from "./LanguageSwitch.vue";
 
 export default defineComponent({
   components: {
@@ -81,16 +90,19 @@ export default defineComponent({
     Android,
     IOS,
     Menu,
+    LanguageSwitch,
   },
   data() {
     const route = useRoute();
     const bgColor = route.meta.headerMobile as string;
     const name = route.name as string;
+    const isMain = name === "home";
     return {
       isOpen: false,
       primaryColor: "#3b2186",
       bgColor,
       name,
+      isMain,
     };
   },
   setup() {

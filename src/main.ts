@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import i18n from './i18n';
 import VueCookies from 'vue-cookies'
 import stores from './stores';
 import BootstrapVue3 from 'bootstrap-vue-3'
@@ -16,6 +17,7 @@ import router from './router'
 const app = createApp(App)
 
 app.use(router)
+.use(i18n)
 .use(VueCookies)
 .use(stores)
 .use(BootstrapVue3 as any)
@@ -30,3 +32,4 @@ stores.subscribe( (mutation, state) => {
 })
 
 router.isReady().then(() => app.mount('#app'))
+app.config.globalProperties
