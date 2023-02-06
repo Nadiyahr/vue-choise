@@ -1,8 +1,8 @@
-# vue-choise-app
+# vue-choisie-app
 
 [Demo](https://nadiyahr.github.io/vue-choise/)
 
-This template should help get you started developing with Vue 3 in Vite.
+#### Hello Guest! I present you this app which is my training in technologies like Vue 3, Composition API, i18n and others. It's certainly not perfect, work is still in progress and suggestions are welcome! Thanks for taking a look!
 
 ## TechStack
 
@@ -10,9 +10,11 @@ This template should help get you started developing with Vue 3 in Vite.
 * Vuex 4
 * Vite
 * Composition API
-* Bootstrapp
+* Typescript
+* i18n
 * Axios
-* TS
+* Bootstrapp
 
-* node v14.18.0 and higher
-* npm v6.14.15 and higher
+
+* node v16.18.1
+* npm v8.19.2
