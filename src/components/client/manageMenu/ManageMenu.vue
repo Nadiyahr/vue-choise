@@ -53,7 +53,7 @@
 </template>
 
 <script setup lang="ts">
-import ManageMenuCard from "./menuCard/ManageMenuCard.vue";
+import ManageMenuCard from './menuCard/ManageMenuCard.vue';
 </script>
 
 <style scoped lang="scss">

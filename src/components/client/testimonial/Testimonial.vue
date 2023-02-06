@@ -25,7 +25,7 @@
         </b-row>
         <b-img
           src="images/testimonial.png"
-          :srcset="`${myImg.img_sm} 272w, ${myImg.img_lg} 390w`"
+          :srcset="`${images.img_sm} 272w, ${images.img_lg} 390w`"
           sizes="(max-width: 900px) 272px, 390px"
           alt="Map Image"
           class="testimonial__absolute"
@@ -36,16 +36,16 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "@vue/reactivity";
-import smImage from "/images/testimonialMobile.png";
-import lgImage from "/images/testimonial.png";
+// import { computed, onMounted, watch } from 'vue';
+import smImage from '/images/testimonialMobile.png';
+import lgImage from '/images/testimonial.png';
 
-const images = {
+let images = {
   img_sm: smImage,
   img_lg: lgImage,
 };
 
-const myImg = computed(() => images);
+console.log(images);
 </script>
 
 <style scoped lang="scss">
@@ -99,7 +99,7 @@ const myImg = computed(() => images);
     }
 
     &::after {
-      content: "";
+      content: '';
       width: 0;
       height: 48%;
       position: absolute;

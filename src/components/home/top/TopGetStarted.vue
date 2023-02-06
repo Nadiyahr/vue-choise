@@ -6,14 +6,13 @@
         class="fw-bolder py-4 lg-pb-4 lg-mb-5 lg-p-2"
         :class="mobile || tablet ? 'text-content-heading' : 'text-white'"
       >
-        All&nbsp;the&nbsp;restaurants
-        <br />in&nbsp;the&nbsp;world&nbsp;-<br />with&nbsp;one&nbsp;tap
+        {{ $t('Home.All the restaurants') }}
+        <br />
+        {{ $t('Home.in the world') }}
+        <br />
+        {{ $t('Home.with one tap') }}
       </h1>
-      <p class="pb-3 lg-pb-0 lg-mb-5">
-        And a good friend with the same name. He understands that feeling of being an
-        alien in another country, so here is Choicie, an app. It can make your journey,
-        date or meeting with friends much better.
-      </p>
+      <p class="pb-3 lg-pb-0 lg-mb-5">{{ $t('Home.And a good friend') }}</p>
       <div class="p-2">
         <b-button
           pill
@@ -21,7 +20,7 @@
           :variant="mobile ? 'primary' : 'secondary'"
           class="w-btn"
         >
-          Get Started
+          {{ $t('Home.Get Started') }}
         </b-button>
       </div>
     </div>
@@ -33,8 +32,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { useBreakpoints } from "@/plugins/breakpoints";
+import { ref } from 'vue';
+import { useBreakpoints } from '@/plugins/breakpoints';
 
 const { isMobile, isTablet } = useBreakpoints();
 

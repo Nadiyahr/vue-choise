@@ -39,7 +39,9 @@
         </b-col>
         <b-col>
           <div class="p-4">
-            <h2 class="fw-bolder mb-3 lg-p-2">And a new social network</h2>
+            <h2 class="fw-bolder mb-3 lg-p-2">
+              {{ $t('Home.And a new social network') }}
+            </h2>
             <div class="fs-xs">
               <p class="mb-3 lg-p-2">{{ $t('Home.Fourth paragraph') }}</p>
               <p class="mb-5 lg-p-2">{{ $t('Home.Fifth paragraph') }}</p>

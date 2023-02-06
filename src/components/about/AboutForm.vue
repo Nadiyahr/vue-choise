@@ -37,7 +37,7 @@
       </b-row>
       <b-col>
         <b-button pill type="submit" variant="secondary" class="w-25" size="lg">
-          {{ $t("General.Send") }}
+          {{ $t('General.Send') }}
         </b-button>
       </b-col>
     </b-form>
@@ -45,31 +45,31 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from "vue";
-import Input from "@/components/utils/Input.vue";
-import useFormValidation from "@/plugins/useFormValidation";
+import { reactive, ref } from 'vue';
+import Input from '@/components/utils/Input.vue';
+import useFormValidation from '@/plugins/useFormValidation';
 export type Err = {
   [key: string]: string;
 };
 
 const data = reactive({
-  title: "",
-  body: "",
-  title1: "",
+  title: '',
+  body: '',
+  title1: '',
 });
 
 const error: Err = reactive({});
 
 const validateInput = (fieldName: string, fieldValue: string) => {
-  error[fieldName] = fieldValue === "" ? "The " + fieldName + " field is required" : "";
+  error[fieldName] = fieldValue === '' ? 'The ' + fieldName + ' field is required' : '';
 };
 
 const onClick = () => {
   console.log(data);
 
-  data.title = "";
-  data.body = "";
-  data.title1 = "";
+  data.title = '';
+  data.body = '';
+  data.title1 = '';
 };
 </script>
 

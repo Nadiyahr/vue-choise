@@ -12,11 +12,11 @@
             </p>
             <p class="pt-2">
               <span class="fw-bold">{{
-                args.title.split(" ").slice(0, 2).join(" ")
+                args.title.split(' ').slice(0, 2).join(' ')
               }}</span>
               —
               {{ args.id }}
-              {{ args.title.split(" ").slice(2).join(" ") }}
+              {{ args.title.split(' ').slice(2).join(' ') }}
             </p>
           </b-col>
           <b-col class="testimonial__col">
@@ -106,7 +106,7 @@ function randomNum(min: number, max: number) {
     }
 
     &::after {
-      content: "";
+      content: '';
       width: 0;
       height: 48%;
       position: absolute;

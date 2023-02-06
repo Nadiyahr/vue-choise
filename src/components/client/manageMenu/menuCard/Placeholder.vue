@@ -16,9 +16,9 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  width: "90%",
-  height: "3%",
-  addClass: "mb-2",
-  gray: "20",
+  width: '90%',
+  height: '3%',
+  addClass: 'mb-2',
+  gray: '20',
 });
 </script>

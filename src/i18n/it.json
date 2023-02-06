@@ -25,12 +25,50 @@
     "Clear storage": "Ripristina local storage"
   },
   "Home": {
+    "All the restaurants": "Tutti i ristoranti",
+    "in the world": "all mondo -",
+    "with one tap": "in un chlick",
+    "And a good friend": "E un buon amico con lo stesso nome. Capisce quella sensazione di essere un alieno in un altro paese, quindi ecco Choicie, un'app. Può rendere molto migliore il tuo viaggio, appuntamento o incontro con gli amici.",
+
+    "We are the first of our kind! Here you can find:": "Siamo i primi del nostro genere! Qui puoi trovare:",
+    "Restaurant Review": "Recensione del ristorante",
+    "Get best tips from our users and Choicie": "Ottieni i migliori consigli dai nostri utenti e da Choicie",
+    "Map with Restaurant Tags": "Mappa ristorante con il tag",
+    "Make simple selection by your criteria": "Fai una semplice selezione in base ai tuoi criteri",
+    "QR Code Menu": "Menù Codice QR",
+    "Use fast and convenient way to create orders": "Usa un modo veloce e conveniente per creare ordini",
+    "Bonus Points for Clients": "Punti bonus per i clienti",
+    "Spend it and get free drinks and dishes": "Spendilo e ottieni bevande e piatti gratuiti",
+
+    "Learn more about Choicie in 1 minute": "Scopri di più su Choicie in 1 minuto",
+
+    "How do I use Choicie?": "Come si usa Choicie?",
+    "Scan the QR-code on the foreign language menu.": "Scansiona il codice QR nel menu in lingua straniera.",
+    "Automatically get to the online version of menu — it will be translated into your native language.": "Accedi automaticamente alla versione online del menu: verrà tradotto nella tua lingua madre.",
+    "Choose and order one or more dishes you like, then show your QR-code from Choicie to the waiter.": "Scegli e ordina uno o più piatti che ti piacciono, quindi mostra il tuo codice QR da Choicie al cameriere.",
+    "Share your impressions, tips, and ratings to help other Choicie users.": "Condividi le tue impressioni, suggerimenti e valutazioni per aiutare altri utenti di Choicie.",
+
+    "No language barrier": "Nessuna barriera linguistica",
+    "No need to search for reviews — all collected in one place": "Non è necessario cercare le recensioni: tutte raccolte in un unico posto",
+    "No need to install any translator — all you need is Choicie": "Non è necessario installare alcun traduttore: tutto ciò di cui hai bisogno è Choicie",
+
+    "We work with cafe and restaurant": "Lavoriamo con proprietari di",
+    "owners from": "bar e ristoranti da",
+    "10 countries, 5 continents": "10 paesi, 5 continenti",
+    "All the world": "Tutto il mondo",
+    "And there will be more!": "E ce ne saranno altri!",
+    "Choicie is ready to work": "Choicie è pronta a lavorare a livello internazionale. Lavoriamo con clienti in 8 diversi fusi orari.",
+
     "Title About Section": "Choicie è un menu universale per tutti i ristoranti",
     "First paragraph": "I nomi in lingua straniera non sono più un problema.",
     "Second paragraph": "Prova nuovi piatti quando sei in viaggio o semplicemente esci con amuci: con Choicie puoi ordinare qualsiasi cosa utilizzando la traduzione automatica delle immagini dei piatti dal menu. Effettua l'ordine mentre vai al ristorante, quindi mostra il codice QR al cameriere.",
-    "Get Started": "Iniziare",
+    "And a new social network": "E un nuovo social network",
     "Fourth paragraph": "Per chi ama il cibo! Diventa un influencer: aggiungi nuovi ristoranti alla mappa della città, guadagna punti, ottieni follower.",
-    "Fifth paragraph": "Mantieni private le informazioni importanti sugli ordini nel tuo account: segna i piatti che ti sono piaciuti e quelli che non ti sono piaciuti e gli alimenti a cui sei allergico."
+    "Fifth paragraph": "Mantieni private le informazioni importanti sugli ordini nel tuo account: segna i piatti che ti sono piaciuti e quelli che non ti sono piaciuti e gli alimenti a cui sei allergico.",
+    "Get Started": "Iniziare"
+  },
+  "Client": {
+
   },
   "Subscribe": {
     "Subscribe title": "Iscriviti e diventa parte di Choicie",

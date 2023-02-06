@@ -65,8 +65,8 @@
 </template>
 
 <script setup lang="ts">
-import Placeholder from "./Placeholder.vue";
-import CardPlaceholder from "./CardPlaceholder.vue";
+import Placeholder from './Placeholder.vue';
+import CardPlaceholder from './CardPlaceholder.vue';
 export interface Props {
   inner?: boolean;
   bottom: string;
