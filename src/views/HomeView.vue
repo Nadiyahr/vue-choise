@@ -13,32 +13,30 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent, ref } from "vue";
-import Layout from "@/components/layout/index.vue";
-import VideoComponent from "@/components/home/videoComponent/VideoComponent.vue";
-import AboutSection from "@/components/home/about/AboutSection.vue";
-import WorldMap from "@/components/home/worldMap/WorldMap.vue";
-import { useBreakpoints } from "@/plugins/breakpoints";
+import { defineAsyncComponent, ref } from 'vue';
+import Layout from '@/components/layout/index.vue';
+import VideoComponent from '@/components/home/videoComponent/VideoComponent.vue';
+import AboutSection from '@/components/home/about/AboutSection.vue';
+import WorldMap from '@/components/home/worldMap/WorldMap.vue';
+import { breakpoints } from '@/plugins/breakpoints';
+
+const mobile = ref(breakpoints.smaller('tablet'));
+const desktop = ref(breakpoints.between('laptop', 'desktop'));
+const tablet = ref(breakpoints.between('tablet', 'laptop'));
 
 const TopDesctop = defineAsyncComponent(
-  () => import("../components/home/top/TopDesctop.vue")
+  () => import('../components/home/top/TopDesctop.vue')
 );
 
 const TopMobile = defineAsyncComponent(
-  () => import("../components/home/top/TopMobile.vue")
+  () => import('../components/home/top/TopMobile.vue')
 );
 
 const HowToUseSection = defineAsyncComponent(
-  () => import("../components/home/howToUse/HowToUseSection.vue")
+  () => import('../components/home/howToUse/HowToUseSection.vue')
 );
 
 const HowToUseMobile = defineAsyncComponent(
-  () => import("../components/home/howToUse/HowToUseMobile.vue")
+  () => import('../components/home/howToUse/HowToUseMobile.vue')
 );
-
-const { isMobile, isDesktop, isTablet } = useBreakpoints();
-
-const mobile = ref(isMobile);
-const desktop = ref(isDesktop);
-const tablet = ref(isTablet);
 </script>

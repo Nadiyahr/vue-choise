@@ -59,23 +59,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useBreakpoints } from '@/plugins/breakpoints';
+import { ref } from 'vue';
+import { breakpoints } from '@/plugins/breakpoints';
 
-const { isMobile, isDesktop, isTablet } = useBreakpoints();
-const { t } = useI18n();
-
-const mobile = ref(isMobile);
-const desktop = ref(isDesktop);
-const tablet = ref(isTablet);
-
-const SectionTitle = computed(
-  () =>
-    `Choicie ${t('Home.is')} ${t('Home.a')} ${t('Home.universal menu')} ${t(
-      'Home.for'
-    )} ${t('Home.all')} ${t('Home.restaurants')}.`
-);
-
-//`Choicie&nbsp;is&nbsp;a&nbsp;universal menu&nbsp;for&nbsp;all&nbsp;restaurants.`
+const mobile = ref(breakpoints.between('mobile', 'tablet'));
+const desktop = ref(breakpoints.between('laptop', 'desktop'));
+const tablet = ref(breakpoints.between('tablet', 'laptop'));
 </script>

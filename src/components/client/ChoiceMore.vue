@@ -56,17 +56,15 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from "vue-router";
-import Like from "../icons/Like.vue";
-import smImage from "/images/photoMobile.png";
-import lgImage from "/images/photo.png";
-import { computed } from "vue";
-import { useBreakpoints } from "@/plugins/breakpoints";
-import { ref } from "vue";
+import { useRoute } from 'vue-router';
+import Like from '../icons/Like.vue';
+import smImage from '/images/photoMobile.png';
+import lgImage from '/images/photo.png';
+import { computed } from 'vue';
+import { breakpoints } from '@/plugins/breakpoints';
+import { ref } from 'vue';
 
-const { isDesktop } = useBreakpoints();
-
-const desktop = ref(isDesktop);
+const desktop = ref(breakpoints.between('laptop', 'desktop'));
 
 const route = useRoute();
 const bgColor = route.meta.headerClass;
@@ -80,7 +78,7 @@ const myImg = computed(() => images);
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/style/vars.scss";
+@import '@/assets/style/vars.scss';
 .more {
   padding-top: 2rem;
   padding-bottom: 4rem;

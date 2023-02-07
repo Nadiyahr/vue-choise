@@ -24,7 +24,7 @@
           class="route-link"
           :class="textColor"
         >
-          {{ $t("General.Home") }}
+          {{ $t('General.Home') }}
         </router-link>
         <router-link
           to="/about"
@@ -32,7 +32,7 @@
           class="route-link"
           :class="textColor"
         >
-          {{ $t("General.About") }}
+          {{ $t('General.About') }}
         </router-link>
         <router-link
           to="/client"
@@ -40,16 +40,16 @@
           class="route-link"
           :class="textColor"
         >
-          {{ $t("General.Client") }}
+          {{ $t('General.Client') }}
         </router-link>
         <b-nav-item v-if="isMain" href="#howTo" class="py-2 fs-6">
-          <span :class="textColor">{{ $t("General.How to use") }}</span>
+          <span :class="textColor">{{ $t('General.How to use') }}</span>
         </b-nav-item>
         <b-nav-item href="#contact" class="py-2 fs-6">
-          <span :class="textColor">{{ $t("General.Contact") }}</span>
+          <span :class="textColor">{{ $t('General.Contact') }}</span>
         </b-nav-item>
       </b-navbar-nav>
-      <!-- Right aligned nav items -->
+
       <b-navbar-nav class="pr-5">
         <b-nav-form class="gap-3">
           <b-button
@@ -80,8 +80,8 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from "vue-router";
-import LanguageSwitch from "./LanguageSwitch.vue";
+import { useRoute } from 'vue-router';
+import LanguageSwitch from './LanguageSwitch.vue';
 
 const route = useRoute();
 const bgColor = route.meta.headerClass as string;
@@ -89,7 +89,7 @@ const iconColor = route.meta.iconClass as string;
 const textColor = route.meta.textClass as string;
 const brandColor = route.meta.brandClass;
 const name = route.name;
-const isMain = name === "home";
+const isMain = name === 'home';
 </script>
 
 <style scoped lang="scss">
@@ -115,6 +115,11 @@ a {
   &--yelow {
     width: 53px;
     height: 52px;
+  }
+
+  &--mobile {
+    width: 44px;
+    height: 44px;
   }
 
   &--android {

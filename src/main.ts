@@ -3,7 +3,6 @@ import i18n from './i18n';
 import VueCookies from 'vue-cookies'
 import stores from './stores';
 import BootstrapVue3 from 'bootstrap-vue-3'
-import { useBreakpoints } from "@/plugins/breakpoints";
 // import PaginationPlugin from 'bootstrap-vue-3'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -21,7 +20,6 @@ app.use(router)
 .use(VueCookies)
 .use(stores)
 .use(BootstrapVue3 as any)
-.use(useBreakpoints)
 // .use(PaginationPlugin)
 
 

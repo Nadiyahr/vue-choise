@@ -4,16 +4,14 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent, ref } from "vue";
-import { useBreakpoints } from "@/plugins/breakpoints";
+import { defineAsyncComponent, ref } from 'vue';
+import { breakpoints } from '@/plugins/breakpoints';
 
-const { isMobile, isDesktop, isTablet } = useBreakpoints();
+const mobile = ref(breakpoints.between('mobile', 'tablet'));
+const desktop = ref(breakpoints.between('laptop', 'desktop'));
+const tablet = ref(breakpoints.between('tablet', 'laptop'));
 
-const mobile = ref(isMobile);
-const desktop = ref(isDesktop);
-const tablet = ref(isTablet);
+const TopDesctop = defineAsyncComponent(() => import('./TopDesctop.vue'));
 
-const TopDesctop = defineAsyncComponent(() => import("./TopDesctop.vue"));
-
-const TopMobile = defineAsyncComponent(() => import("./TopMobile.vue"));
+const TopMobile = defineAsyncComponent(() => import('./TopMobile.vue'));
 </script>

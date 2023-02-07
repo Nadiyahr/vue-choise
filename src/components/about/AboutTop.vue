@@ -1,5 +1,5 @@
 <template>
-  <section :class="bgColor" class="py-5 mt-5">
+  <section :class="bgColor" class="py-5 mt-lg-5">
     <div class="">
       <h2>{{ $t('About.About title') }}</h2>
       <div class="py-5 lg-py-5 d-flex justify-content-between">
@@ -35,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, reactive, onMounted, onUnmounted } from 'vue';
+import { computed, ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { useStore } from 'vuex';
 import { useI18n } from 'vue-i18n';

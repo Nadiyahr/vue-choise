@@ -49,12 +49,10 @@ import UserProfile from '@/components/icons/UserProfile.vue';
 import Happy from '@/components/icons/Happy.vue';
 import WaveLine from '@/components/icons/WaveLine.vue';
 import WaveMobile from '@/components/icons/WaveMobile.vue';
-import { useBreakpoints } from '@/plugins/breakpoints';
+import { breakpoints } from '@/plugins/breakpoints';
 import { ref } from 'vue';
 
-const { isMobile } = useBreakpoints();
-
-const mobile = ref(isMobile);
+const mobile = ref(breakpoints.between('mobile', 'tablet'));
 </script>
 
 <style scoped lang="scss">

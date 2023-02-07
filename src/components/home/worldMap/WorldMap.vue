@@ -2,7 +2,7 @@
   <section id="map" class="py-5">
     <div class="">
       <p class="md-fs-5 text-primary fw-semibold md-fw-bold text-center mb-4">
-        {{ $t('Home.We work with cafe and restaurant') }}<br v-if="isMobile" />
+        {{ $t('Home.We work with cafe and restaurant') }}<br v-if="mobile" />
         {{ $t('Home.owners from') }}
       </p>
       <h2 v-if="mobile" class="fw-bolder fs-2 text-center mb-4">
@@ -22,9 +22,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useBreakpoints } from '@/plugins/breakpoints';
+import { breakpoints } from '@/plugins/breakpoints';
 
-const { isMobile } = useBreakpoints();
-
-const mobile = ref(isMobile);
+const mobile = ref(breakpoints.between('mobile', 'tablet'));
 </script>
