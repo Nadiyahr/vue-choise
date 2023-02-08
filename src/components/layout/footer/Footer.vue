@@ -20,13 +20,13 @@
       </b-col>
       <b-col class="pb-4 fs-5 text ps-lg-5 pl-5 pl-md-0">
         <b-nav-item href="#"
-          ><p>{{ $t('General.Home') }}</p></b-nav-item
+          ><p>{{ $t('Forms.Home') }}</p></b-nav-item
         >
         <b-nav-item href="#"
           ><p>{{ $t('General.Universal Menu') }}</p></b-nav-item
         >
         <b-nav-item href="#howTo"
-          ><p>{{ $t('General.How do use') }}</p></b-nav-item
+          ><p>{{ $t('General.How to use') }}</p></b-nav-item
         >
         <b-nav-item href="#map"
           ><p>{{ $t('General.Growth Factor') }}</p></b-nav-item

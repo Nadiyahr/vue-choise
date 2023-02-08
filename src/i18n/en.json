@@ -16,7 +16,8 @@
     "Enter Text": "Enter Text",
     "Name": "Name",
     "Email": "Email",
-    "Send": "Send"
+    "Send": "Send",
+    "Home": "Home"
   },
   "About": {
     "About title": "This is an example request from JSON Placeholder",
