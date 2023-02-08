@@ -8,17 +8,20 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: {}
     },
     {
       path: '/about',
       name: 'about',
       component: () => import('@/views/AboutView.vue'),
+      meta: {}
     },
     {
       path: '/client',
       name: 'client',
       component: () => import('@/views/ClientView.vue'),
       props: true,
+      meta: {}
     },
   ],
   scrollBehavior(to, from, savedPosition) {
