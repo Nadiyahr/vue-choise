@@ -18,5 +18,5 @@ import Testimonial from '@/components/client/testimonial/Testimonial.vue';
 import { breakpoints } from '@/plugins/breakpoints';
 import { ref } from 'vue';
 
-const mobile = ref(breakpoints.between('mobile', 'tablet'));
+const mobile = breakpoints.between('mobile', 'tablet');
 </script>

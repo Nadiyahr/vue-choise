@@ -72,7 +72,7 @@ import { computed } from 'vue';
 import { breakpoints } from '@/plugins/breakpoints';
 import { ref } from 'vue';
 
-const desktop = ref(breakpoints.between('laptop', 'desktop'));
+const desktop = breakpoints.isGreaterOrEqual('laptop');
 
 const images = {
   img_sm: smImage,

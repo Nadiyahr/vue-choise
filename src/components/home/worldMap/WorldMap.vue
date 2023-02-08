@@ -24,5 +24,5 @@
 import { ref } from 'vue';
 import { breakpoints } from '@/plugins/breakpoints';
 
-const mobile = ref(breakpoints.between('mobile', 'tablet'));
+const mobile = breakpoints.between('mobile', 'tablet');
 </script>

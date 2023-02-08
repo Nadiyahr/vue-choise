@@ -80,29 +80,19 @@
 </template>
 
 <script setup lang="ts">
-// import { computed, ref } from 'vue';
-// import { useRoute } from 'vue-router';
-// import LanguageSwitch from './LanguageSwitch.vue';
-
-// const { name } = useRoute();
-
-// const routeName = ref(name);
-
-// const isMain = computed(() => routeName.value === 'home');
-// const bgColor = computed(() => (isMain.value ? 'bg-dark' : 'bg-info'));
-// const iconColor = computed(() => (isMain.value ? '#f2cf7e' : '#2b146c'));
-// const brandColor = computed(() => (isMain.value ? 'text-white' : ''));
-// const textColor = computed(() => (isMain.value ? 'text-white' : 'text-dark'));
+import { computed, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import LanguageSwitch from './LanguageSwitch.vue';
 
-const route = useRoute();
-const bgColor = route.meta.headerClass as string;
-const iconColor = route.meta.iconClass as string;
-const textColor = route.meta.textClass as string;
-const brandColor = route.meta.brandClass;
-const name = route.name;
-const isMain = name === 'home';
+const { name } = useRoute();
+
+const routeName = ref(name);
+
+const isMain = computed(() => routeName.value === 'home');
+const bgColor = computed(() => (isMain.value ? 'bg-dark' : 'bg-info'));
+const iconColor = computed(() => (isMain.value ? '#f2cf7e' : '#2b146c'));
+const brandColor = computed(() => (isMain.value ? 'text-white' : ''));
+const textColor = computed(() => (isMain.value ? 'text-white' : 'text-dark'));
 </script>
 
 <style scoped lang="scss">

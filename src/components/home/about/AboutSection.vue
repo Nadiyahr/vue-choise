@@ -62,7 +62,7 @@
 import { ref } from 'vue';
 import { breakpoints } from '@/plugins/breakpoints';
 
-const mobile = ref(breakpoints.between('mobile', 'tablet'));
-const desktop = ref(breakpoints.between('laptop', 'desktop'));
-const tablet = ref(breakpoints.between('tablet', 'laptop'));
+const mobile = breakpoints.between('mobile', 'tablet');
+const desktop = breakpoints.greaterOrEqual('laptop');
+const tablet = breakpoints.between('tablet', 'laptop');
 </script>

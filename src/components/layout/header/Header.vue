@@ -8,19 +8,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { breakpoints } from '@/plugins/breakpoints';
 import HeaderDesctop from './HeaderDesctop.vue';
 import HeaderMobile from './HeaderMobile.vue';
 
-const route = useRoute();
+const { name } = useRoute();
 
-const isDesktop = breakpoints.between('laptop', 'desktop');
-const isMobile = breakpoints.between('mobile', 'laptop');
+const mobile = breakpoints.between('mobile', 'laptop');
+const desktop = breakpoints.greaterOrEqual('laptop');
 
-const mobile = ref(isMobile);
-const desktop = ref(isDesktop);
-
-const bgColor = route.meta.headerClass as string;
+const isMain = computed(() => name === 'home');
+const bgColor = computed(() => (isMain.value ? 'bg-dark' : 'bg-info'));
 </script>

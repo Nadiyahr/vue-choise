@@ -20,9 +20,9 @@ import AboutSection from '@/components/home/about/AboutSection.vue';
 import WorldMap from '@/components/home/worldMap/WorldMap.vue';
 import { breakpoints } from '@/plugins/breakpoints';
 
-const mobile = ref(breakpoints.smaller('tablet'));
-const desktop = ref(breakpoints.between('laptop', 'desktop'));
-const tablet = ref(breakpoints.between('tablet', 'laptop'));
+const mobile = breakpoints.smaller('tablet');
+const desktop = breakpoints.greaterOrEqual('laptop');
+const tablet = breakpoints.between('tablet', 'laptop');
 
 const TopDesctop = defineAsyncComponent(
   () => import('../components/home/top/TopDesctop.vue')

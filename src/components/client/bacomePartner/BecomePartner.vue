@@ -62,7 +62,7 @@ import WaveMobile from '@/components/icons/WaveMobile.vue';
 import { breakpoints } from '@/plugins/breakpoints';
 import { ref } from 'vue';
 
-const mobile = ref(breakpoints.between('mobile', 'tablet'));
+const mobile = breakpoints.between('mobile', 'tablet');
 </script>
 
 <style scoped lang="scss">

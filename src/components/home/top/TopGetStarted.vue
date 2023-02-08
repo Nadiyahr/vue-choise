@@ -32,12 +32,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 import { breakpoints } from '@/plugins/breakpoints';
 
-const isMobile = breakpoints.between('mobile', 'tablet');
-const isTablet = breakpoints.between('tablet', 'laptop');
-
-const mobile = ref(isMobile);
-const tablet = ref(isTablet);
+const mobile = breakpoints.between('mobile', 'tablet');
+const tablet = breakpoints.between('tablet', 'laptop');
 </script>
