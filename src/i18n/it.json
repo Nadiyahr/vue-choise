@@ -43,10 +43,10 @@
     "Learn more about Choicie in 1 minute": "Scopri di più su Choicie in 1 minuto",
 
     "How do I use Choicie?": "Come si usa Choicie?",
-    "Scan the QR-code on the foreign language menu.": "Scansiona il codice QR nel menu in lingua straniera.",
-    "Automatically get to the online version of menu — it will be translated into your native language.": "Accedi automaticamente alla versione online del menu: verrà tradotto nella tua lingua madre.",
-    "Choose and order one or more dishes you like, then show your QR-code from Choicie to the waiter.": "Scegli e ordina uno o più piatti che ti piacciono, quindi mostra il tuo codice QR da Choicie al cameriere.",
-    "Share your impressions, tips, and ratings to help other Choicie users.": "Condividi le tue impressioni, suggerimenti e valutazioni per aiutare altri utenti di Choicie.",
+    "Scan the QR-code on the foreign language menu": "Scansiona il codice QR nel menu in lingua straniera.",
+    "Automatically get to the online version of menu — it will be translated into your native language": "Accedi automaticamente alla versione online del menu: verrà tradotto nella tua lingua madre.",
+    "Choose and order one or more dishes you like, then show your QR-code from Choicie to the waiter": "Scegli e ordina uno o più piatti che ti piacciono, quindi mostra il tuo codice QR da Choicie al cameriere.",
+    "Share your impressions, tips, and ratings to help other Choicie users": "Condividi le tue impressioni, suggerimenti e valutazioni per aiutare altri utenti di Choicie.",
 
     "No language barrier": "Nessuna barriera linguistica",
     "No need to search for reviews — all collected in one place": "Non è necessario cercare le recensioni: tutte raccolte in un unico posto",
@@ -68,7 +68,41 @@
     "Get Started": "Iniziare"
   },
   "Client": {
+    "Choicie for cafes and restaurants": "Choicie per bar e ristoranti.",
+    "Five growth drivers for your development": "Cinque fattori di crescita per il tuo sviluppo",
+    "Choicie helps you analyze user actions and improve your cafe or restaurant": "Choicie ti aiuta ad analizzare le azioni degli utenti e a migliorare il tuo bar o ristorante.",
+    "Quality of Service": "Qualità del Servizio",
+    "Reputation and promotion on the web": "Reputazione e promozione sul web",
+    "Visibility": "Visibilità",
+    "Number of orders": "Numero di ordini",
+    "Convenience of work with clients": "Convenienza del lavoro con i clienti",
+    "What Does it Take?": "Cosa ci vuole?",
+    "Become a Choicie partner!": "Diventa un partner di Choice!",
 
+    "Dashboard Performance": "Prestazioni del Panello di Controllo",
+    "Manage your menu so your customers’ll like it": "Gestisci il tuo menu in modo che piaccia ai tuoi clienti",
+    "We created an advanced dashboard": "Abbiamo creato una dashboard avanzata. Puoi vedere: è molto facile implementare il nostro prodotto.",
+    "Creation of": "Creazione del",
+    "a Restaurant menu": "menù del ristorante",
+    "Upload your cafe or restaurant menu": "Carica il menu del tuo bar o ristorante sull'app. Choicie lo tradurrà automaticamente nella lingua madre degli utenti e aggiungerà foto di cibo.",
+    "The biggest feedback from your customers": "Il feedback più grande dai tuoi clienti",
+    "Rating on the waiter": "Valutazione sul lavoro del cameriere e sulla velocità del servizio, revisione della pulizia del locale e del gusto del cibo: tutti i feedback sono disponibili in un unico posto.",
+
+    "Our restaurant becomes more popular after joining Choicie!": "Il nostro ristorante diventa più popolare dopo l'adesione a Choicie!",
+    "We started using Choicie quite recently": "Abbiamo iniziato a usare Choicie abbastanza di recente. Abbiamo modificato il nostro menu e aumentato le entrate del ristorante grazie al feedback dal vivo.",
+    "The restaurant’s revenue increased": "Le entrate del ristorante sono aumentate grazie agli aggiustamenti del menu e alla riduzione dei costi della spesa.",
+
+    "RESTAURANTS TRUST CHOICIE": "500+ RISTORANTI SI FIDANO DI CHOICIE",
+
+    "Choicie: more": "Choicie: più",
+    "client, esier": "clienti, più facile",
+    "communication": "comunicazione",
+    "Choicie is very familiar with the feeling of being an alien in another": "Choicie conosce molto bene la sensazione di essere un alieno in un altro",
+    "he is actually an alien": "paese (in realtà è un alieno). Così Choicie ha deciso di aiutare le persone",
+    "with the same problem to get rid of it and also improve cafes and": "con lo stesso problema per sbarazzarsene e migliorare anche i caffè e",
+    "restaurants": "restaurants.",
+    "Watch Choicie in action — 2 min": "Guarda Choicie in azione — 2 min",
+    "We edited the menu after using this app": "Abbiamo modificato il menu dopo aver utilizzato questa app. Ora le nostre vendite sono aumentate del 30%."
   },
   "Subscribe": {
     "Subscribe title": "Iscriviti e diventa parte di Choicie",

@@ -3,6 +3,7 @@ import { Locales } from "./Locales.service";
 
 import en from './en.json'
 import it from "./it.json";
+import ua from './ua.json'
 
 const locale = 'en';
 
@@ -11,7 +12,9 @@ const i18n = createI18n({
   legacy: false,
   messages: {
     [Locales.EN]: en,
-    [Locales.IT]: it
+    [Locales.IT]: it,
+    [Locales.UA]: ua,
+
   }
 });
 

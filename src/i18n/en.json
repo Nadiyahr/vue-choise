@@ -42,10 +42,10 @@
     "Learn more about Choicie in 1 minute": "Learn more about Choicie in 1 minute",
 
     "How do I use Choicie?": "How do I use Choicie?",
-    "Scan the QR-code on the foreign language menu.": "Scan the QR-code on the foreign language menu.",
-    "Automatically get to the online version of menu — it will be translated into your native language.": "Automatically get to the online version of menu — it will be translated into your native language.",
-    "Choose and order one or more dishes you like, then show your QR-code from Choicie to the waiter.": "Choose and order one or more dishes you like, then show your QR-code from Choicie to the waiter.",
-    "Share your impressions, tips, and ratings to help other Choicie users.": "Share your impressions, tips, and ratings to help other Choicie users.",
+    "Scan the QR-code on the foreign language menu": "Scan the QR-code on the foreign language menu.",
+    "Automatically get to the online version of menu — it will be translated into your native language": "Automatically get to the online version of menu — it will be translated into your native language.",
+    "Choose and order one or more dishes you like, then show your QR-code from Choicie to the waiter": "Choose and order one or more dishes you like, then show your QR-code from Choicie to the waiter.",
+    "Share your impressions, tips, and ratings to help other Choicie users": "Share your impressions, tips, and ratings to help other Choicie users.",
 
     "No language barrier": "No language barrier",
     "No need to search for reviews — all collected in one place": "No need to search for reviews — all collected in one place",
@@ -68,6 +68,42 @@
     "Get Started": "Get Started"
   },
   "Client": {
+    "Choicie for cafes and restaurants": "Choicie for cafes and restaurants.",
+    "Five growth drivers for your development": "Five growth drivers for your development",
+    "Choicie helps you analyze user actions and improve your cafe or restaurant": "Choicie helps you analyze user actions and improve your cafe or restaurant.",
+    "Quality of Service": "Quality of Service",
+    "Reputation and promotion on the web": "Reputation and promotion on the web",
+    "Visibility": "Visibility",
+    "Number of orders": "Number of orders",
+    "Convenience of work with clients": "Convenience of work with clients",
+    "What Does it Take?": "What Does it Take?",
+    "Become a Choicie partner!": "Become a Choicie partner!",
+
+    "Dashboard Performance": "Dashboard Performance",
+    "Manage your menu so your customers’ll like it": "Manage your menu so your customers’ll like it",
+    "We created an advanced dashboard": "We created an advanced dashboard. You can see: it’s very easy to implement our product.",
+    "Creation of": "Creation of",
+    "a Restaurant menu": "a Restaurant menu",
+    "Upload your cafe or restaurant menu": "Upload your cafe or restaurant menu to the app. Choicie will automatically translate it into the users’ native language and add food photos.",
+    "The biggest feedback from your customers": "The biggest feedback from your customers",
+    "Rating on the waiter": "Rating on the waiter’s work and speed of service, review of the cleanliness of the place and the taste of the food — all the feedback is available in one place.",
+
+    "Our restaurant becomes more popular after joining Choicie!": "Our restaurant becomes more popular after joining Choicie!",
+    "We started using Choicie quite recently": "We started using Choicie quite recently. We adjusted our menu and increased the restaurant’s revenue thanks to live feedback.",
+    "Nelly Spender": "Nelly Spender",
+    "The restaurant’s revenue increased": "The restaurant’s revenue increased due to menu adjustments, as well as lower grocery costs.",
+
+    "RESTAURANTS TRUST CHOICIE": "500+ RESTAURANTS TRUST CHOICIE",
+
+    "Choicie: more": "Choicie: more",
+    "client, esier": "client, esier",
+    "communication": "communication",
+    "Choicie is very familiar with the feeling of being an alien in another": "Choicie is very familiar with the feeling of being an alien in another",
+    "he is actually an alien": "country (he is actually an alien). So Choicie decided to help people",
+    "with the same problem to get rid of it and also improve cafes and": "with the same problem to get rid of it and also improve cafes and",
+    "restaurants": "restaurants.",
+    "Watch Choicie in action — 2 min": "Watch Choicie in action — 2 min",
+    "We edited the menu after using this app": "We edited the menu after using this app. Now our sales are 30% higher"
 
   },
   "Subscribe": {
