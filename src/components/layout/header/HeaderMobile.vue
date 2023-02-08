@@ -1,11 +1,11 @@
 <template>
   <div>
-    <b-navbar toggleable :variant="isOpen ? 'primary' : mainColor">
+    <b-navbar toggleable :variant="mainColor">
       <b-button
-        @click="togle"
+        @click="toggle"
         id="menu-toggle"
         v-b-toggle="'sidebar-toggle'"
-        :class="isOpen ? 'bg-primary' : `bg-${mainColor}`"
+        :class="`bg-${mainColor}`"
       >
         <Menu :svg-color="isOpen ? '#fff' : '#2b146c'" />
       </b-button>
@@ -65,23 +65,48 @@
       <!-- collapse nav items -->
       <b-collapse id="collapse" v-model="isOpen" is-nav>
         <b-navbar-nav class="fs-4 text-white">
-          <b-nav-item align="center" to="/" class="border-bottom border-light">
+          <b-nav-item
+            align="center"
+            to="/"
+            class="border-bottom border-light"
+            @click="toggle"
+          >
             {{ $t('General.Home') }}
           </b-nav-item>
-          <b-nav-item align="center" to="/about" class="border-bottom border-light">
+          <b-nav-item
+            align="center"
+            to="/about"
+            class="border-bottom border-light"
+            @click="toggle"
+          >
             {{ $t('General.About') }}
           </b-nav-item>
-          <b-nav-item align="center" to="/client" class="border-bottom border-light">
+          <b-nav-item
+            align="center"
+            to="/client"
+            class="border-bottom border-light"
+            @click="toggle"
+          >
             {{ $t('General.Client') }}
           </b-nav-item>
-          <b-nav-item align="center" href="#howTo" class="border-bottom border-light">
+          <b-nav-item
+            align="center"
+            href="#howTo"
+            class="border-bottom border-light"
+            @click="toggle"
+          >
             {{ $t('General.How to use') }}
           </b-nav-item>
-          <b-nav-item align="center" href="#contact" class="border-bottom border-light">
+          <b-nav-item
+            align="center"
+            href="#contact"
+            class="border-bottom border-light"
+            @click="toggle"
+          >
             {{ 'General.Contact' }}
           </b-nav-item>
           <div class="lang">
-            <LanguageSwitch is-mobile />
+            <LanguageSwitch is-mobile @on-input="toggle" />
           </div>
         </b-navbar-nav>
       </b-collapse>
@@ -91,19 +116,26 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { breakpoints } from '@/plugins/breakpoints';
 import LanguageSwitch from './LanguageSwitch.vue';
 import Menu from '@/components/icons/Menu.vue';
 
-const { meta } = useRoute();
+const { name } = useRoute();
 
 const tablet = ref(breakpoints.between('tablet', 'laptop'));
-const mainColor = ref(meta.headerMobile);
+const routName = ref(name);
 const isOpen = ref(false);
 const primaryColor = ref('#3b2186');
 
-const togle = (): void => {
+const mainColor = computed(() => {
+  if (isOpen.value) return 'primary';
+  if (routName.value === 'home' && !isOpen.value) return 'light';
+  if (routName.value !== 'home' && !isOpen.value) return 'info';
+  return 'info';
+});
+
+const toggle = (): void => {
   isOpen.value = !isOpen.value;
   primaryColor.value = primaryColor.value === '#3b2186' ? '#f2cf7e' : '#3b2186';
 };
@@ -126,7 +158,7 @@ const togle = (): void => {
   &__android {
     width: 16px;
     height: 16px;
-    /* margin-bottom: 2px; */
+    margin-bottom: 4px;
   }
 
   &--ios {
@@ -138,7 +170,7 @@ const togle = (): void => {
 }
 
 .lang {
-  pading: 2px 12px 2px 0;
+  padding: 2px 12px 2px 0;
 
   .form-select {
     width: 90% !important;

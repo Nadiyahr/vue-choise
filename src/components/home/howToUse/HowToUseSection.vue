@@ -13,7 +13,7 @@
                 style="background-image: url('images/1.png')"
               >
                 <QrMenu class="mb-4" />
-                <p>{{ $t('Home.Scan the QR-code on the foreign language menu.') }}</p>
+                <p>{{ $t('Home.Scan the QR-code on the foreign language menu') }}</p>
               </div>
             </b-col>
             <b-col>
@@ -25,7 +25,7 @@
                 <p>
                   {{
                     $t(
-                      'Home.Automatically get to the online version of menu — it will be translated into your native language.'
+                      'Home.Automatically get to the online version of menu — it will be translated into your native language'
                     )
                   }}
                 </p>
@@ -42,7 +42,7 @@
                 <p>
                   {{
                     $t(
-                      'Home.Choose and order one or more dishes you like, then show your QR-code from Choicie to the waiter.'
+                      'Home.Choose and order one or more dishes you like, then show your QR-code from Choicie to the waiter'
                     )
                   }}
                 </p>
@@ -51,13 +51,13 @@
             <b-col>
               <div
                 class="bg-posiiton bg-image"
-                style="background-image: url('images/4.png')"
+                style="background-image: url('../images/4.png')"
               >
                 <Feadback class="mb-4" />
                 <p>
                   {{
                     $t(
-                      'Home.Share your impressions, tips, and ratings to help other Choicie users.'
+                      'Home.Share your impressions, tips, and ratings to help other Choicie users'
                     )
                   }}
                 </p>
@@ -66,7 +66,7 @@
           </b-row>
         </div>
         <div class="border-start pl-5">
-          <b-col class="px-5">
+          <b-col class="px-4">
             <HowToGetStart />
           </b-col>
         </div>
