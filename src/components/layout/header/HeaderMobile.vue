@@ -115,25 +115,42 @@
 </template>
 
 <script setup lang="ts">
+// import { useRoute } from 'vue-router';
+// import { ref, computed } from 'vue';
+// import { breakpoints } from '@/plugins/breakpoints';
+// import LanguageSwitch from './LanguageSwitch.vue';
+// import Menu from '@/components/icons/Menu.vue';
+
+// const { name } = useRoute();
+
+// const tablet = ref(breakpoints.between('tablet', 'laptop'));
+// const routName = ref(name);
+// const isOpen = ref(false);
+// const primaryColor = ref('#3b2186');
+
+// const mainColor = computed(() => {
+//   if (isOpen.value) return 'primary';
+//   if (routName.value === 'home' && !isOpen.value) return 'light';
+//   if (routName.value !== 'home' && !isOpen.value) return 'info';
+//   return 'info';
+// });
+
+// const toggle = (): void => {
+//   isOpen.value = !isOpen.value;
+//   primaryColor.value = primaryColor.value === '#3b2186' ? '#f2cf7e' : '#3b2186';
+// };
 import { useRoute } from 'vue-router';
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 import { breakpoints } from '@/plugins/breakpoints';
 import LanguageSwitch from './LanguageSwitch.vue';
 import Menu from '@/components/icons/Menu.vue';
 
-const { name } = useRoute();
+const { meta } = useRoute();
 
 const tablet = ref(breakpoints.between('tablet', 'laptop'));
-const routName = ref(name);
+const mainColor = ref(meta.headerMobile);
 const isOpen = ref(false);
 const primaryColor = ref('#3b2186');
-
-const mainColor = computed(() => {
-  if (isOpen.value) return 'primary';
-  if (routName.value === 'home' && !isOpen.value) return 'light';
-  if (routName.value !== 'home' && !isOpen.value) return 'info';
-  return 'info';
-});
 
 const toggle = (): void => {
   isOpen.value = !isOpen.value;

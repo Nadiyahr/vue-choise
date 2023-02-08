@@ -8,20 +8,38 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      meta: {}
+      meta: {
+        headerClass: 'bg-dark',
+        headerMobile: 'light',
+        iconClass: '#f2cf7e',
+        textClass: 'text-white',
+        brandClass: 'text-white'
+      }
     },
     {
       path: '/about',
       name: 'about',
       component: () => import('@/views/AboutView.vue'),
-      meta: {}
+      meta: {
+        headerClass: 'bg-info',
+        headerMobile: 'info',
+        iconClass: '#2b146c',
+        textClass: 'text-dark',
+        brandClass: ''
+      }
     },
     {
       path: '/client',
       name: 'client',
       component: () => import('@/views/ClientView.vue'),
       props: true,
-      meta: {}
+      meta: {
+        headerClass: 'bg-info',
+        headerMobile: 'info',
+        iconClass: '#2b146c',
+        textClass: 'text-dark',
+        brandClass: ''
+      }
     },
   ],
   scrollBehavior(to, from, savedPosition) {
