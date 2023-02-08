@@ -3,6 +3,7 @@
     v-model="$i18n.locale"
     :options="languages"
     class="my-select"
+    @input="$emit('on-input')"
     :class="{
       mobile: props.isMobile,
       main: props.isMain,
@@ -22,7 +23,7 @@ const props = defineProps({
     default: false,
   },
 });
-const languages = ["en", "it"];
+const languages = ['en', 'it', 'ua'];
 </script>
 
 <style scoped lang="scss">
@@ -33,7 +34,7 @@ const languages = ["en", "it"];
   margin-left: 20px;
   margin-top: 3px;
   line-height: 18px;
-  background-image: url("../icons/chevron-white.svg");
+  background-image: url('../icons/chevron-white.svg');
   background-position: 90% 55%;
   background-size: 10px 10px, 10px 10px;
   background-repeat: no-repeat;
@@ -62,7 +63,7 @@ const languages = ["en", "it"];
 
 .secondary {
   background-color: $my-prymary-2 !important;
-  background-image: url("../icons/chevron.svg") !important;
+  background-image: url('../icons/chevron.svg') !important;
   color: $my-prymary !important;
 }
 </style>

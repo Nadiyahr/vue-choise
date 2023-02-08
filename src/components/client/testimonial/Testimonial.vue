@@ -5,11 +5,12 @@
         <b-row no-gutters class="testimonial__row">
           <b-col sm="12" md="7" class="testimonial__after">
             <h6 class="text-primary">
-              Our restaurant becomes more popular after joining Choicie!
+              {{
+                $t('Client.Our restaurant becomes more popular after joining Choicie!')
+              }}
             </h6>
             <p class="py-2">
-              We started using Choicie quite recently. We adjusted our menu and increased
-              the restaurant’s revenue thanks to live feedback.
+              {{ $t('Client.We started using Choicie quite recently') }}
             </p>
             <p class="pt-2">
               <span class="fw-bold">Nelly Spender</span> — Restaurant name
@@ -18,8 +19,7 @@
           <b-col class="testimonial__col">
             <h4 class="text-primary">+40%</h4>
             <p class="pt-2">
-              The restaurant’s revenue increased due to menu adjustments, as well as lower
-              grocery costs.
+              {{ $t('Client.The restaurant’s revenue increased') }}
             </p>
           </b-col>
         </b-row>
@@ -36,7 +36,6 @@
 </template>
 
 <script setup lang="ts">
-// import { computed, onMounted, watch } from 'vue';
 import smImage from '/images/testimonialMobile.png';
 import lgImage from '/images/testimonial.png';
 

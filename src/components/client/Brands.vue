@@ -3,7 +3,9 @@
     <b-container fluid class="brand">
       <b-row>
         <b-col sm="12" lg="3" class="text-center brand__text">
-          <p class="fs-7 text-white p-0 m-0 mt-2 w-fit">500+ RESTAURANTS TRUST CHOICIE</p>
+          <p class="fs-7 text-white p-0 m-0 mt-2 w-fit">
+            {{ $t('Client.RESTAURANTS TRUST CHOICIE') }}
+          </p>
         </b-col>
         <b-col class="brand__stamp">
           <div class="brand__container">
@@ -21,11 +23,11 @@
 </template>
 
 <script setup lang="ts">
-import Brand1 from "../icons/Brand1.vue";
-import Brand2 from "../icons/Brand2.vue";
-import Brand3 from "../icons/Brand3.vue";
-import Brand4 from "../icons/Brand4.vue";
-import Brand5 from "../icons/Brand5.vue";
+import Brand1 from '../icons/Brand1.vue';
+import Brand2 from '../icons/Brand2.vue';
+import Brand3 from '../icons/Brand3.vue';
+import Brand4 from '../icons/Brand4.vue';
+import Brand5 from '../icons/Brand5.vue';
 </script>
 
 <style scoped lang="scss">

@@ -16,29 +16,29 @@
           </svg>
           CHOICIE
         </div>
-        <p class="fs-7">{{ $t("General.You know what you choose!") }}</p>
+        <p class="fs-7">{{ $t('General.You know what you choose!') }}</p>
       </b-col>
-      <b-col class="pb-4 fs-5 text ps-5">
+      <b-col class="pb-4 fs-5 text ps-lg-5 pl-5 pl-md-0">
         <b-nav-item href="#"
-          ><p>{{ $t("General.Home") }}</p></b-nav-item
+          ><p>{{ $t('General.Home') }}</p></b-nav-item
         >
         <b-nav-item href="#"
-          ><p>{{ $t("General.Universal Menu") }}</p></b-nav-item
+          ><p>{{ $t('General.Universal Menu') }}</p></b-nav-item
         >
         <b-nav-item href="#howTo"
-          ><p>{{ $t("General.How do use") }}</p></b-nav-item
+          ><p>{{ $t('General.How do use') }}</p></b-nav-item
         >
         <b-nav-item href="#map"
-          ><p>{{ $t("General.Growth Factor") }}</p></b-nav-item
+          ><p>{{ $t('General.Growth Factor') }}</p></b-nav-item
         >
         <b-nav-item href="#contact"
-          ><p>{{ $t("General.Contact") }}</p></b-nav-item
+          ><p>{{ $t('General.Contact') }}</p></b-nav-item
         >
         <b-nav-item href="#"
-          ><p>{{ $t("General.Privacy Policy") }}</p></b-nav-item
+          ><p>{{ $t('General.Privacy Policy') }}</p></b-nav-item
         >
       </b-col>
-      <b-col class="ps-4 fs-5 text">
+      <b-col class="ps-5 ps-md-4 fs-5 text">
         <b-nav-item target="_blank" href="https://www.facebook.com/"
           ><p>Facebook</p></b-nav-item
         >
@@ -60,7 +60,7 @@
           <Input v-model="data.email" :placeholder="$t('Forms.Email')" class="mb-3" />
           <Input v-model="data.text" :placeholder="$t('Forms.Enter Text')" class="mb-3" />
           <b-button pill type="submit" variant="secondary" class="w-100">
-            {{ $t("Forms.Send") }}
+            {{ $t('Forms.Send') }}
           </b-button>
         </b-form>
       </b-col>
@@ -69,19 +69,19 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from "vue";
-import Input from "@/components/utils/Input.vue";
+import { reactive } from 'vue';
+import Input from '@/components/utils/Input.vue';
 
 const data = reactive({
-  name: "",
-  email: "",
-  text: "",
+  name: '',
+  email: '',
+  text: '',
 });
 
 const onClick = () => {
-  data.name = "";
-  data.email = "";
-  data.text = "";
+  data.name = '';
+  data.email = '';
+  data.text = '';
 };
 </script>
 
@@ -90,10 +90,14 @@ const onClick = () => {
   &__position {
     padding-top: 4.2rem;
     padding-bottom: 4.2rem;
-    background-image: url("../icons/cover.svg");
+    background-image: url('../icons/cover.svg');
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: 800px;
+
+    @media (max-width: 601px) {
+      background-size: 400px;
+    }
   }
 
   &__form {
@@ -101,6 +105,10 @@ const onClick = () => {
 
     @media (max-width: 900px) and (min-width: 601px) {
       padding: 0 0.5rem;
+    }
+
+    @media (max-width: 601px) {
+      padding: 0;
     }
   }
 }
