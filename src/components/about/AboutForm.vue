@@ -6,7 +6,7 @@
           <div class="error">
             <p class="m-0 ms-5" v-if="error.title1">{{ error.title1 }}!</p>
           </div>
-          <Input
+          <CInput
             v-model="data.title1"
             :placeholder="$t('Forms.Full Name and position')"
             class=""
@@ -14,7 +14,7 @@
           <div class="error">
             <p class="m-0 ms-5" v-if="error.title">{{ error.title }}!</p>
           </div>
-          <Input
+          <CInput
             v-model="data.title"
             :placeholder="$t('Forms.Title')"
             @keyup="validateInput"
@@ -46,7 +46,7 @@
 
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
-import Input from '@/components/utils/Input.vue';
+import CInput from '@/components/utils/CInput.vue';
 import useFormValidation from '@/plugins/useFormValidation';
 export type Err = {
   [key: string]: string;

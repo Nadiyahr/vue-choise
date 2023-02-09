@@ -65,7 +65,14 @@
       <!-- collapse nav items -->
       <b-collapse id="collapse" v-model="isOpen" is-nav>
         <b-navbar-nav class="fs-4 text-white">
-          <b-nav-item
+          <CNavItem
+            v-for="(link, i) in links"
+            :key="i"
+            :link-name="link.name"
+            :is-hreaf="link.href"
+            @toggle="toggle"
+          />
+          <!-- <b-nav-item
             align="center"
             to="/"
             class="border-bottom border-light"
@@ -104,7 +111,7 @@
             @click="toggle"
           >
             {{ 'General.Contact' }}
-          </b-nav-item>
+          </b-nav-item> -->
           <div class="lang">
             <LanguageSwitch is-mobile @on-input="toggle" />
           </div>
@@ -118,8 +125,10 @@
 import { useRoute } from 'vue-router';
 import { ref, computed } from 'vue';
 import { breakpoints } from '@/plugins/breakpoints';
+import CNavItem from '@/components/utils/CNavItemMobile.vue';
 import LanguageSwitch from './LanguageSwitch.vue';
 import Menu from '@/components/icons/Menu.vue';
+import { links } from '@/components/utils/vars/headerLinks';
 
 const { name } = useRoute();
 

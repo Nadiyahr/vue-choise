@@ -1,10 +1,10 @@
 <template>
   <header :class="bgColor">
     <b-navbar type="light" fixed="top" class="my-header" :class="bgColor">
-      <b-navbar-nav class="fs-6 fw-normal align-middle pl-5">
+      <b-navbar-nav class="fs-6 fw-normal align-middle">
         <b-navbar-brand
           to="/"
-          class="fs-3 fw-bold d-flex flex align-items-center gap-2"
+          class="fs-3 fw-bold d-flex flex align-items-center gap-2 me-4"
           :class="(bgColor, brandColor)"
         >
           <svg class="icon icon--yelow">
@@ -42,10 +42,10 @@
         >
           {{ $t('General.Client') }}
         </router-link>
-        <b-nav-item v-if="isMain" href="#howTo" class="py-2 fs-6">
+        <b-nav-item v-if="isMain" href="#howTo" class="py-2 href-link fs-6">
           <span :class="textColor">{{ $t('General.How to use') }}</span>
         </b-nav-item>
-        <b-nav-item href="#contact" class="py-2 fs-6">
+        <b-nav-item href="#contact" class="py-2 href-link fs-6">
           <span :class="textColor">{{ $t('General.Contact') }}</span>
         </b-nav-item>
       </b-navbar-nav>
@@ -103,17 +103,25 @@ a.font {
 a {
   font-size: 14px;
   padding-top: 15px;
-  margin-top: 3px;
+  margin-top: 6px;
   margin-right: 20px;
   line-height: 18px;
   text-decoration: none;
+
+  &:last-of-type {
+    margin-right: 12px;
+  }
 }
 
 .route-link {
   font-size: 14px;
-  margin-top: 3px;
+  margin-top: 6px;
   line-height: 18px;
   text-decoration: none;
+}
+
+.href-link {
+  margin-top: 3px;
 }
 
 .icon {

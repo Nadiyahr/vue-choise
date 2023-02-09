@@ -14,7 +14,7 @@
         </b-col>
         <b-col>
           <b-form @submit="" @reset="" class="py-4 text-ligth">
-            <Input
+            <CInput
               :model="model"
               :placeholder="$t('Forms.Name')"
               bg="bg-dark"
@@ -32,7 +32,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import Input from '@/components/utils/Input.vue';
+import CInput from '@/components/utils/CInput.vue';
 
 const props = defineProps({
   modelValue: {

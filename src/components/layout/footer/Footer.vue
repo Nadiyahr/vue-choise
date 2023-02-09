@@ -58,9 +58,13 @@
       </b-col>
       <b-col id="contact" xs="12" md="4" class="footer__form">
         <b-form @submit="onClick" @reset="" class="text-ligth">
-          <Input v-model="data.name" :placeholder="$t('Forms.Name')" class="mb-3" />
-          <Input v-model="data.email" :placeholder="$t('Forms.Email')" class="mb-3" />
-          <Input v-model="data.text" :placeholder="$t('Forms.Enter Text')" class="mb-3" />
+          <CInput v-model="data.name" :placeholder="$t('Forms.Name')" class="mb-3" />
+          <CInput v-model="data.email" :placeholder="$t('Forms.Email')" class="mb-3" />
+          <CInput
+            v-model="data.text"
+            :placeholder="$t('Forms.Enter Text')"
+            class="mb-3"
+          />
           <b-button pill type="submit" variant="secondary" class="w-100">
             {{ $t('Forms.Send') }}
           </b-button>
@@ -72,7 +76,7 @@
 
 <script setup lang="ts">
 import { reactive } from 'vue';
-import Input from '@/components/utils/Input.vue';
+import CInput from '@/components/utils/CInput.vue';
 
 const data = reactive({
   name: '',

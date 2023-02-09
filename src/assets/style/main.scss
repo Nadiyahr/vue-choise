@@ -36,6 +36,7 @@ $font-sizes: (
 
 $input-placeholder-color: #ffffff80;
 $font-weight-bold: 900;
+$active: #f2cf7e;
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -70,4 +71,10 @@ $font-weight-bold: 900;
 
 .nav-link:hover {
   color: #d4d4d7;
+}
+
+.navbar {
+  .nav-link.active {
+    color: #f2cf7e;
+  }
 }
