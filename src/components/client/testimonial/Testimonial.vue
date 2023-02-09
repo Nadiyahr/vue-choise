@@ -13,7 +13,7 @@
               {{ $t('Client.We started using Choicie quite recently') }}
             </p>
             <p class="pt-2">
-              <span class="fw-bold">Nelly Spender</span> — Restaurant name
+              <span class="fw-bolder">Nelly Spender</span> — Restaurant name
             </p>
           </b-col>
           <b-col class="testimonial__col">

@@ -4,7 +4,7 @@
       <b-navbar-nav class="fs-6 fw-normal align-middle pl-5">
         <b-navbar-brand
           to="/"
-          class="fs-3 fw-bolder d-flex flex align-items-center gap-2"
+          class="fs-3 fw-bold d-flex flex align-items-center gap-2"
           :class="(bgColor, brandColor)"
         >
           <svg class="icon icon--yelow">
@@ -96,6 +96,10 @@ const textColor = computed(() => (isMain.value ? 'text-white' : 'text-dark'));
 </script>
 
 <style scoped lang="scss">
+a.font {
+  font-weight: 900 !important;
+}
+
 a {
   font-size: 14px;
   padding-top: 15px;

@@ -1,7 +1,7 @@
 <template>
   <section class="relative">
     <div class="relative__container">
-      <h2 class="fw-bold pb-2 lh-sm">
+      <h2 class="fw-bolder pb-2 lh-sm">
         {{ $t('Client.Choicie for cafes and restaurants') }}
         <br />
         {{ $t('Client.Five growth drivers for your development') }}
@@ -16,25 +16,25 @@
       <div class="d-flex flex-wrap py-3">
         <div class="d-flex align-items-center gap-3 py-2 pe-4 m-2">
           <Quality />
-          <p class="fs-7 text fw-bold">{{ $t('Client.Quality of Service') }}</p>
+          <p class="fs-7 text fw-bolder">{{ $t('Client.Quality of Service') }}</p>
         </div>
         <div class="d-flex align-items-center gap-3 py-2 pe-4 m-2">
           <Reputation />
-          <p class="fs-7 text fw-bold">
+          <p class="fs-7 text fw-bolder">
             {{ $t('Client.Reputation and promotion on the web') }}
           </p>
         </div>
         <div class="d-flex align-items-center gap-3 py-2 pe-4 m-2">
           <Scan />
-          <p class="fs-7 text fw-bold">{{ $t('Client.Visibility') }}</p>
+          <p class="fs-7 text fw-bolder">{{ $t('Client.Visibility') }}</p>
         </div>
         <div class="d-flex align-items-center gap-3 lg-2 pe-4 m-2">
           <UserProfile />
-          <p class="fs-7 text fw-bold">{{ $t('Client.Number of orders') }}</p>
+          <p class="fs-7 text fw-bolder">{{ $t('Client.Number of orders') }}</p>
         </div>
         <div class="d-flex align-items-center gap-3 py-2 pe-4 m-2">
           <Happy />
-          <p class="fs-7 text fw-bold">
+          <p class="fs-7 text fw-bolder">
             {{ $t('Client.Convenience of work with clients') }}
           </p>
         </div>

@@ -5,10 +5,10 @@
         <b-col sm="12" md="8">
           <div class="py-4">
             <h2 class="text-white fw-bolder">
-              {{ $t("Subscribe.Subscribe title") }}
+              {{ $t('Subscribe.Subscribe title') }}
             </h2>
             <p class="fs-4">
-              {{ $t("Subscribe.Subscribe paragraph") }}
+              {{ $t('Subscribe.Subscribe paragraph') }}
             </p>
           </div>
         </b-col>
@@ -20,14 +20,8 @@
               bg="bg-dark"
               class="mb-3"
             />
-            <b-button
-              pill
-              type="submit"
-              variant="secondary"
-              text-variant="light"
-              class="w-100 text-light"
-            >
-              {{ $t("Subscribe.Register to Newsletter") }}
+            <b-button pill type="submit" variant="secondary" class="w-100">
+              {{ $t('Subscribe.Register to Newsletter') }}
             </b-button>
           </b-form>
         </b-col>
@@ -37,17 +31,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import Input from "@/components/utils/Input.vue";
+import { computed } from 'vue';
+import Input from '@/components/utils/Input.vue';
 
 const props = defineProps({
   modelValue: {
     type: [String, Number],
-    default: "",
+    default: '',
   },
 });
 
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(['update:modelValue']);
 
 const model = computed({
   get() {
@@ -55,7 +49,7 @@ const model = computed({
   },
 
   set(value) {
-    return emit("update:modelValue", value);
+    return emit('update:modelValue', value);
   },
 });
 </script>

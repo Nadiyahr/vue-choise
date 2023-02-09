@@ -1,7 +1,9 @@
 <template>
   <section class="pt-5">
     <div class="">
-      <p class="text-primary fs-4 text-center text-uppercase fw-semibold md-fw-bold mb-4">
+      <p
+        class="text-primary fs-4 text-center text-uppercase fw-semibold md-fw-bolder mb-4"
+      >
         {{ $t('Client.Dashboard Performance') }}
       </p>
       <h2 class="fw-bolder fs-2 text-center mb-4">
@@ -20,7 +22,7 @@
           style="min-height: 30rem"
           class="pt-3 px-3 rounded-0 mb-5"
         >
-          <b-card-title class="fs-2 fw-bold title">
+          <b-card-title class="fs-2 fw-bolder title">
             {{ $t('Client.Creation of') }}<br />{{ $t('Client.a Restaurant menu') }}
           </b-card-title>
           <b-card-text class="position-relative">
@@ -35,7 +37,7 @@
           style="min-height: 30rem"
           class="pt-3 px-3 rounded-0 mb-5"
         >
-          <b-card-title class="fs-2 fw-bold title">
+          <b-card-title class="fs-2 fw-bolder title">
             {{ $t('Client.The biggest feedback from your customers') }}
           </b-card-title>
           <b-card-text class="position-relative">

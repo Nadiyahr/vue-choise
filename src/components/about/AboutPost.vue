@@ -11,7 +11,7 @@
               {{ args.body }}
             </p>
             <p class="pt-2">
-              <span class="fw-bold">{{
+              <span class="fw-bolder">{{
                 args.title.split(' ').slice(0, 2).join(' ')
               }}</span>
               —

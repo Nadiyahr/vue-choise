@@ -3,7 +3,7 @@
     <b-row class="px-2">
       <b-col xs="12" md="12" lg="3" class="footer__brand">
         <div
-          class="fs-3 mb-3 lg-fs-3 text-light fw-bolder d-flex flex gap-4 align-items-center"
+          class="fs-3 mb-3 lg-fs-3 text-light fw-bold d-flex flex gap-4 align-items-center"
         >
           <svg class="icon icon--yelow">
             <use
@@ -16,7 +16,9 @@
           </svg>
           CHOICIE
         </div>
-        <p class="fs-7">{{ $t('General.You know what you choose!') }}</p>
+        <p class="fs-7 ps-0 ps-lg-2 mb-5 mb-lg-0">
+          {{ $t('General.You know what you choose!') }}
+        </p>
       </b-col>
       <b-col class="pb-4 fs-5 text ps-lg-5 pl-5 pl-md-0">
         <b-nav-item href="#"
@@ -96,7 +98,9 @@ const onClick = () => {
     background-size: 800px;
 
     @media (max-width: 601px) {
-      background-size: 400px;
+      background-image: url('../icons/cover-mobile.svg');
+      background-size: 900px;
+      background-position: 40% 45%;
     }
   }
 

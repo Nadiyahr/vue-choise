@@ -5,7 +5,7 @@
         <b-col md="6">
           <article class="sm-fs-7 text sm-flex pt-5">
             <div>
-              <h1 class="fw-bold fs-1 lh-2 py-4 lg-pb-5 lg-mb-5 ls-2 more_title">
+              <h1 class="fw-bolder fs-1 lh-2 py-4 lg-pb-5 lg-mb-5 ls-2 more_title">
                 {{ $t('Client.Choicie: more') }}<br />{{ $t('Client.client, esier')
                 }}<br />{{ $t('Client.communication') }}
               </h1>

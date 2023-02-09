@@ -1,7 +1,7 @@
 <template>
   <section :class="bgColor" class="py-5 mt-lg-5">
-    <div class="">
-      <h2>{{ $t('About.About title') }}</h2>
+    <div>
+      <h2 class="fw-bolder">{{ $t('About.About title') }}</h2>
       <div class="py-5 lg-py-5 d-flex justify-content-between">
         <b-button pill size="md" variant="primary" @click="toggleForm()">
           {{ toggleFormBtnName }}
